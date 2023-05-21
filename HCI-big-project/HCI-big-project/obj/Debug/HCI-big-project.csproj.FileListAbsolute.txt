@@ -1,0 +1,15 @@
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\bin\Debug\HCI_big_project.exe.config
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\bin\Debug\HCI_big_project.exe
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\bin\Debug\HCI_big_project.pdb
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\HCI-big-project.csproj.AssemblyReference.cache
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\MainWindow.g.cs
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\App.g.cs
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\HCI_big_project_MarkupCompile.cache
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\HCI_big_project_MarkupCompile.lref
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\MainWindow.baml
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\HCI_big_project.g.resources
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\HCI_big_project.Properties.Resources.resources
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\HCI-big-project.csproj.GenerateResource.cache
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\HCI-big-project.csproj.CoreCompileInputs.cache
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\HCI_big_project.exe
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\HCI_big_project.pdb
