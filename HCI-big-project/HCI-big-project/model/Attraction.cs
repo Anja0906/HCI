@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.IO;
 
 namespace HCI_big_project.model
@@ -7,11 +8,11 @@ namespace HCI_big_project.model
         public string Name { get; set; }
         public Location Address { get; set; }
         public string Caption { get; set; }
-        public FileStream Pictures { get; set; }
+        public List<Picture> Pictures { get; set; }
 
         public Attraction(){}
 
-        public Attraction(string name, Location address, string caption, FileStream pictures)
+        public Attraction(string name, Location address, string caption, List<Picture> pictures)
         {
             Name = name;
             Address = address;

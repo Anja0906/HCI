@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace HCI_big_project.model
 {
@@ -11,13 +12,13 @@ namespace HCI_big_project.model
         public DateTime To { get; set; }
         public string Caption { get; set; }
         public double Price { get; set; }
-        public Attraction[] Attractions { get; set; }
-        public Accommodation[] Accommodations { get; set; }
-        public Restaurant[] Restaurants { get; set; }
+        public List<Attraction> Attractions { get; set; }
+        public List<Accommodation> Accommodations { get; set; }
+        public List<Restaurant> Restaurants { get; set; }
         
         public Trip(){}
 
-        public Trip(string name, Location beginning, Location end, DateTime form, DateTime to, string caption, double price, Attraction[] attractions, Accommodation[] accommodations, Restaurant[] restaurants)
+        public Trip(string name, Location beginning, Location end, DateTime form, DateTime to, string caption, double price, List<Attraction> attractions, List<Accommodation> accommodations, List<Restaurant> restaurants)
         {
             Name = name;
             Beginning = beginning;

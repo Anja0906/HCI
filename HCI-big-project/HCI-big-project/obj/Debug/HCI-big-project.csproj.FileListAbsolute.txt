@@ -13,3 +13,6 @@ C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\HCI-big-proj
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\HCI-big-project.csproj.CoreCompileInputs.cache
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\HCI_big_project.exe
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\HCI_big_project.pdb
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\HCI-big-project.csproj.CopyComplete
