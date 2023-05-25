@@ -16,12 +16,12 @@ namespace HCI_big_project.model
 
         public Accommodation(string name, Location address, string caption, List<Picture> pictures, double rating, string link)
         {
-            Name = name;
-            Address = address;
-            Caption = caption;
-            Pictures = pictures;
-            Rating = rating;
-            Link = link;
+            Name        = name;
+            Address     = address;
+            Caption     = caption;
+            Pictures    = pictures;
+            Rating      = rating;
+            Link        = link;
         }
     }
 }

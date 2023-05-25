@@ -6,7 +6,7 @@ namespace HCI_big_project.repository
 {
     public class AccommodationRepository
     {
-        private const string FilePath = "./accommodations.json";
+        private const string FilePath = "../../files/accommodations.json";
         private List<Accommodation> Accommodations { get; set; }
 
         public AccommodationRepository()

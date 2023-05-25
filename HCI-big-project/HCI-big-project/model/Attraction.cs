@@ -14,9 +14,9 @@ namespace HCI_big_project.model
 
         public Attraction(string name, Location address, string caption, List<Picture> pictures)
         {
-            Name = name;
-            Address = address;
-            Caption = caption;
+            Name     = name;
+            Address  = address;
+            Caption  = caption;
             Pictures = pictures;
         }
     }

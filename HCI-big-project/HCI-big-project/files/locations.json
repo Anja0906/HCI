@@ -1,0 +1,102 @@
+﻿[
+  {
+    "Latitude": 44.7866,
+    "Longitude": 20.4489,
+    "Address": "Beograd"
+  },
+  {
+    "Latitude": 44.0165,
+    "Longitude": 21.0059,
+    "Address": "Niš"
+  },
+  {
+    "Latitude": 45.2671,
+    "Longitude": 19.8335,
+    "Address": "Novi Sad"
+  },
+  {
+    "Latitude": 43.3209,
+    "Longitude": 21.8958,
+    "Address": "Leskovac"
+  },
+  {
+    "Latitude": 43.8992,
+    "Longitude": 20.3306,
+    "Address": "Čačak"
+  },
+  {
+    "Latitude": 43.7419,
+    "Longitude": 20.6846,
+    "Address": "Kraljevo"
+  },
+  {
+    "Latitude": 43.9088,
+    "Longitude": 22.2572,
+    "Address": "Pirot"
+  },
+  {
+    "Latitude": 44.3989,
+    "Longitude": 20.5531,
+    "Address": "Smederevo"
+  },
+  {
+    "Latitude": 44.3652,
+    "Longitude": 21.4837,
+    "Address": "Smederevska Palanka"
+  },
+  {
+    "Latitude": 44.0167,
+    "Longitude": 21.7167,
+    "Address": "Knjaževac"
+  },
+  {
+    "Latitude": 43.1475,
+    "Longitude": 20.5278,
+    "Address": "Vranje"
+  },
+  {
+    "Latitude": 42.5561,
+    "Longitude": 21.7172,
+    "Address": "Kosovska Mitrovica"
+  },
+  {
+    "Latitude": 43.1244,
+    "Longitude": 20.5011,
+    "Address": "Bujanovac"
+  },
+  {
+    "Latitude": 43.5456,
+    "Longitude": 21.9109,
+    "Address": "Prokuplje"
+  },
+  {
+    "Latitude": 43.9271,
+    "Longitude": 20.0963,
+    "Address": "Kragujevac"
+  },
+  {
+    "Latitude": 43.7428,
+    "Longitude": 19.695,
+    "Address": "Ivanjica"
+  },
+  {
+    "Latitude": 43.214,
+    "Longitude": 22.6185,
+    "Address": "Zaječar"
+  },
+  {
+    "Latitude": 44.4131,
+    "Longitude": 22.6171,
+    "Address": "Negotin"
+  },
+  {
+    "Latitude": 44.2278,
+    "Longitude": 21.4447,
+    "Address": "Majdanpek"
+  },
+  {
+    "Latitude": 43.1891,
+    "Longitude": 21.7134,
+    "Address": "Vladičin Han"
+  }
+]

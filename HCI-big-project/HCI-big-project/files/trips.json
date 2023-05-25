@@ -1,0 +1,419 @@
+﻿[
+  {
+    "Name": "Trip A",
+    "Beginning": {
+      "Latitude": 44.7866,
+      "Longitude": 20.4489,
+      "Address": "Beograd"
+    },
+    "End": {
+      "Latitude": 44.0165,
+      "Longitude": 21.0059,
+      "Address": "Niš"
+    },
+    "Form": "2023-06-01T00:00:00",
+    "To": "2023-06-07T00:00:00",
+    "Caption": "Explore the best of Serbia on Trip A",
+    "Price": 500.0,
+    "Attractions": [
+      {
+        "Name": "National Park A",
+        "Address": {
+          "Latitude": 44.7866,
+          "Longitude": 20.4489,
+          "Address": "Beograd"
+        },
+        "Caption": "Explore the beauty of nature in National Park A",
+        "Pictures": [
+          {
+            "Name": "Animals",
+            "Size": 512,
+            "Content": "QW5pbWFscyB0aGF0IGJlZW4gYSBzYW1lIGluIHRoZSBwaWN0dXJlIQ==",
+            "Type": "gif"
+          },
+          {
+            "Name": "Abstract",
+            "Size": 768,
+            "Content": "QWJzdHJhY3QgdGhhdCBkYXRhIG5lZWRzIHNvbWV0aGluZyBkYXRhIHN0b3JlZCB0byBwaWN0dXJlIQ==",
+            "Type": "jpg"
+          }
+        ]
+      },
+      {
+        "Name": "Historical Site B",
+        "Address": {
+          "Latitude": 44.0165,
+          "Longitude": 21.0059,
+          "Address": "Niš"
+        },
+        "Caption": "Step into history at Historical Site B",
+        "Pictures": [
+          {
+            "Name": "Beach",
+            "Size": 1536,
+            "Content": "QmVhY2ggc2hvdWxkIGJlIGEgYmVhY2ggc3Bpbm5lcg==",
+            "Type": "png"
+          },
+          {
+            "Name": "Mountains",
+            "Size": 1280,
+            "Content": "TW91bnRhaW5zIHRvIGJlIGEgbW91bnRhaW4gY29tcGxleCBvZiB3aXRob3V0IG1vdW50YWlucyE=",
+            "Type": "jpg"
+          }
+        ]
+      }
+    ],
+    "Accommodations": [
+      {
+        "Name": "Hotel A",
+        "Address": {
+          "Latitude": 44.7866,
+          "Longitude": 20.4489,
+          "Address": "Beograd"
+        },
+        "Caption": "Luxurious hotel in the heart of Beograd",
+        "Pictures": [
+          {
+            "Name": "Sunset",
+            "Size": 896,
+            "Content": "U3Vuc2V0IGluIFN1bnNldCBvciBTdW5zZXQgY29tcGxleCBvZiBCZW9ncmFk",
+            "Type": "jpg"
+          }
+        ]
+      }
+    ],
+    "Restaurants": [
+      {
+        "Name": "Restaurant A",
+        "Address": {
+          "Latitude": 44.7866,
+          "Longitude": 20.4489,
+          "Address": "Beograd"
+        },
+        "Caption": "Experience exquisite dining at Restaurant A",
+        "Pictures": [
+          {
+            "Name": "Animals",
+            "Size": 512,
+            "Content": "QW5pbWFscyB0aGF0IGJlZW4gYSBzYW1lIGluIHRoZSBwaWN0dXJlIQ==",
+            "Type": "gif"
+          },
+          {
+            "Name": "Abstract",
+            "Size": 768,
+            "Content": "QWJzdHJhY3QgdGhhdCBkYXRhIG5lZWRzIHNvbWV0aGluZyBkYXRhIHN0b3JlZCB0byBwaWN0dXJlIQ==",
+            "Type": "jpg"
+          }
+        ],
+        "Link": "https://www.restaurant-a.com"
+      },
+      {
+        "Name": "Restaurant B",
+        "Address": {
+          "Latitude": 44.0165,
+          "Longitude": 21.0059,
+          "Address": "Niš"
+        },
+        "Caption": "Savor the flavors at Restaurant B in Niš",
+        "Pictures": [
+          {
+            "Name": "Beach",
+            "Size": 1536,
+            "Content": "QmVhY2ggc2hvdWxkIGJlIGEgYmVhY2ggc3Bpbm5lcg==",
+            "Type": "png"
+          },
+          {
+            "Name": "Mountains",
+            "Size": 1280,
+            "Content": "TW91bnRhaW5zIHRvIGJlIGEgbW91bnRhaW4gY29tcGxleCBvZiB3aXRob3V0IG1vdW50YWlucyE=",
+            "Type": "jpg"
+          }
+        ],
+        "Link": "https://www.restaurant-b.com"
+      }
+    ],
+    "State": "Rezervisan"
+  },
+  {
+    "Name": "Trip B",
+    "Beginning": {
+      "Latitude": 43.3209,
+      "Longitude": 21.8958,
+      "Address": "Leskovac"
+    },
+    "End": {
+      "Latitude": 43.214,
+      "Longitude": 22.6185,
+      "Address": "Zaječar"
+    },
+    "Form": "2023-07-10T00:00:00",
+    "To": "2023-07-15T00:00:00",
+    "Caption": "Discover the cultural heritage of Leskovac and Zaječar",
+    "Price": 400.0,
+    "Attractions": [
+      {
+        "Name": "Archaeological Site C",
+        "Address": {
+          "Latitude": 43.3209,
+          "Longitude": 21.8958,
+          "Address": "Leskovac"
+        },
+        "Caption": "Explore the ancient ruins at Archaeological Site C",
+        "Pictures": [
+          {
+            "Name": "Mountains",
+            "Size": 1280,
+            "Content": "TW91bnRhaW5zIHRvIGJlIGEgbW91bnRhaW4gY29tcGxleCBvZiB3aXRob3V0IG1vdW50YWlucyE=",
+            "Type": "jpg"
+          },
+          {
+            "Name": "Abstract",
+            "Size": 768,
+            "Content": "QWJzdHJhY3QgdGhhdCBkYXRhIG5lZWRzIHNvbWV0aGluZyBkYXRhIHN0b3JlZCB0byBwaWN0dXJlIQ==",
+            "Type": "jpg"
+          }
+        ]
+      },
+      {
+        "Name": "Historical Monument D",
+        "Address": {
+          "Latitude": 43.214,
+          "Longitude": 22.6185,
+          "Address": "Zaječar"
+        },
+        "Caption": "Immerse yourself in history at Historical Monument D",
+        "Pictures": [
+          {
+            "Name": "Beach",
+            "Size": 1536,
+            "Content": "QmVhY2ggc2hvdWxkIGJlIGEgYmVhY2ggc3Bpbm5lcg==",
+            "Type": "png"
+          },
+          {
+            "Name": "Sunset",
+            "Size": 896,
+            "Content": "U3Vuc2V0IGluIFN1bnNldCBvciBTdW5zZXQgU3VwcG9ydCBzdW5zZXQ=",
+            "Type": "png"
+          }
+        ]
+      }
+    ],
+    "Accommodations": [
+      {
+        "Name": "Hotel B",
+        "Address": {
+          "Latitude": 43.3209,
+          "Longitude": 21.8958,
+          "Address": "Leskovac"
+        },
+        "Caption": "Comfortable hotel in the center of Leskovac",
+        "Pictures": [
+          {
+            "Name": "Abstract",
+            "Size": 768,
+            "Content": "QWJzdHJhY3QgdGhhdCBkYXRhIG5lZWRzIHNvbWV0aGluZyBkYXRhIHN0b3JlZCB0byBwaWN0dXJlIQ==",
+            "Type": "jpg"
+          },
+          {
+            "Name": "Waterfall",
+            "Size": 2304,
+            "Content": "V2F0ZXJmYWxsIGluIFdhdGVyZmFsbCBvZiBXYXRlcmZhbGw=",
+            "Type": "png"
+          }
+        ],
+        "Restaurants": [
+          {
+            "Name": "Restaurant C",
+            "Address": {
+              "Latitude": 43.3209,
+              "Longitude": 21.8958,
+              "Address": "Leskovac"
+            },
+            "Caption": "Taste local delicacies at Restaurant C",
+            "Pictures": [
+              {
+                "Name": "Animals",
+                "Size": 512,
+                "Content": "QW5pbWFscyB0aGF0IGJlZW4gYSBzYW1lIGluIHRoZSBwaWN0dXJlIQ==",
+                "Type": "gif"
+              },
+              {
+                "Name": "Abstract",
+                "Size": 768,
+                "Content": "QWJzdHJhY3QgdGhhdCBkYXRhIG5lZWRzIHNvbWV0aGluZyBkYXRhIHN0b3JlZCB0byBwaWN0dXJlIQ==",
+                "Type": "jpg"
+              }
+            ],
+            "Link": "https://www.restaurant-c.com"
+          },
+          {
+            "Name": "Restaurant D",
+            "Address": {
+              "Latitude": 43.214,
+              "Longitude": 22.6185,
+              "Address": "Zaječar"
+            },
+            "Caption": "Enjoy a memorable dining experience at Restaurant D",
+            "Pictures": [
+              {
+                "Name": "Beach",
+                "Size": 1536,
+                "Content": "QmVhY2ggc2hvdWxkIGJlIGEgYmVhY2ggc3Bpbm5lcg==",
+                "Type": "png"
+              },
+              {
+                "Name": "Mountains",
+                "Size": 1280,
+                "Content": "TW91bnRhaW5zIHRvIGJlIGEgbW91bnRhaW4gY29tcGxleCBvZiB3aXRob3V0IG1vdW50YWlucyE=",
+                "Type": "jpg"
+              }
+            ],
+            "Link": "https://www.restaurant-d.com"
+          }
+        ],
+        "State": "Kupljen"
+      }
+    ]
+  },
+  {
+    "Name": "Trip C",
+    "Beginning": {
+      "Latitude": 45.2671,
+      "Longitude": 19.8335,
+      "Address": "Novi Sad"
+    },
+    "End": {
+      "Latitude": 43.5456,
+      "Longitude": 21.9109,
+      "Address": "Prokuplje"
+    },
+    "Form": "2023-08-15T00:00:00",
+    "To": "2023-08-20T00:00:00",
+    "Caption": "Experience the charm of Novi Sad and Prokuplje",
+    "Price": 450.0,
+    "Attractions": [
+      {
+        "Name": "Landmark E",
+        "Address": {
+          "Latitude": 45.2671,
+          "Longitude": 19.8335,
+          "Address": "Novi Sad"
+        },
+        "Caption": "Admire the iconic Landmark E in Novi Sad",
+        "Pictures": [
+          {
+            "Name": "Beach",
+            "Size": 1536,
+            "Content": "QmVhY2ggc2hvdWxkIGJlIGEgYmVhY2ggc3Bpbm5lcg==",
+            "Type": "png"
+          },
+          {
+            "Name": "Sunset",
+            "Size": 896,
+            "Content": "U3Vuc2V0IGluIFN1bnNldCBvciBTdW5zZXQgU3VwcG9ydCBzdW5zZXQ=",
+            "Type": "png"
+          }
+        ]
+      },
+      {
+        "Name": "Historical Site F",
+        "Address": {
+          "Latitude": 43.5456,
+          "Longitude": 21.9109,
+          "Address": "Prokuplje"
+        },
+        "Caption": "Discover the rich history of Historical Site F",
+        "Pictures": [
+          {
+            "Name": "Mountains",
+            "Size": 1280,
+            "Content": "TW91bnRhaW5zIHRvIGJlIGEgbW91bnRhaW4gY29tcGxleCBvZiB3aXRob3V0IG1vdW50YWlucyE=",
+            "Type": "jpg"
+          },
+          {
+            "Name": "Abstract",
+            "Size": 768,
+            "Content": "QWJzdHJhY3QgdGhhdCBkYXRhIG5lZWRzIHNvbWV0aGluZyBkYXRhIHN0b3JlZCB0byBwaWN0dXJlIQ==",
+            "Type": "jpg"
+          }
+        ]
+      }
+    ],
+    "Accommodations": [
+      {
+        "Name": "Hotel C",
+        "Address": {
+          "Latitude": 45.2671,
+          "Longitude": 19.8335,
+          "Address": "Novi Sad"
+        },
+        "Caption": "Stylish hotel in the heart of Novi Sad",
+        "Pictures": [
+          {
+            "Name": "Sunset",
+            "Size": 896,
+            "Content": "U3Vuc2V0IGluIFN1bnNldCBvciBTdW5zZXQgU3VwcG9ydCBzdW5zZXQ=",
+            "Type": "png"
+          },
+          {
+            "Name": "Waterfall",
+            "Size": 2304,
+            "Content": "V2F0ZXJmYWxsIGluIFdhdGVyZmFsbCBvZiBXYXRlcmZhbGw=",
+            "Type": "png"
+          }
+        ],
+        "Restaurants": [
+          {
+            "Name": "Restaurant E",
+            "Address": {
+              "Latitude": 45.2671,
+              "Longitude": 19.8335,
+              "Address": "Novi Sad"
+            },
+            "Caption": "Indulge in culinary delights at Restaurant E",
+            "Pictures": [
+              {
+                "Name": "Animals",
+                "Size": 512,
+                "Content": "QW5pbWFscyB0aGF0IGJlZW4gYSBzYW1lIGluIHRoZSBwaWN0dXJlIQ==",
+                "Type": "gif"
+              },
+              {
+                "Name": "Abstract",
+                "Size": 768,
+                "Content": "QWJzdHJhY3QgdGhhdCBkYXRhIG5lZWRzIHNvbWV0aGluZyBkYXRhIHN0b3JlZCB0byBwaWN0dXJlIQ==",
+                "Type": "jpg"
+              }
+            ],
+            "Link": "https://www.restaurant-e.com"
+          },
+          {
+            "Name": "Restaurant F",
+            "Address": {
+              "Latitude": 43.5456,
+              "Longitude": 21.9109,
+              "Address": "Prokuplje"
+            },
+            "Caption": "Enjoy a delightful dining experience at Restaurant F",
+            "Pictures": [
+              {
+                "Name": "Beach",
+                "Size": 1536,
+                "Content": "QmVhY2ggc2hvdWxkIGJlIGEgYmVhY2ggc3Bpbm5lcg==",
+                "Type": "png"
+              },
+              {
+                "Name": "Mountains",
+                "Size": 1280,
+                "Content": "TW91bnRhaW5zIHRvIGJlIGEgbW91bnRhaW4gY29tcGxleCBvZiB3aXRob3V0IG1vdW50YWlucyE=",
+                "Type": "jpg"
+              }
+            ],
+            "Link": "https://www.restaurant-f.com"
+          }
+        ],
+        "State": "Rezervisan"
+      }
+    ]
+  }
+]

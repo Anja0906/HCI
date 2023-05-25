@@ -10,9 +10,9 @@ namespace HCI_big_project.model
 
         public Location(double latitude, double longitude, string address)
         {
-            Latitude = latitude;
-            Longitude = longitude;
-            Address = address;
+            Latitude    = latitude;
+            Longitude   = longitude;
+            Address     = address;
         }
     }
 }

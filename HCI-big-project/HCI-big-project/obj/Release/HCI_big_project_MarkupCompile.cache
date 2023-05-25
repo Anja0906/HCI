@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\bangi\Documents\GitHub\HCI\HCI-big-project\HCI-big-project\obj\Debug\
+C:\Users\bangi\Documents\GitHub\HCI\HCI-big-project\HCI-big-project\obj\Release\
 HCI_big_project
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\bangi\Documents\GitHub\HCI\HCI-big-project\HCI-big-project\App.xaml
 11151548125
 
@@ -16,5 +16,5 @@ C:\Users\bangi\Documents\GitHub\HCI\HCI-big-project\HCI-big-project\App.xaml
 10397965840
 MainWindow.xaml;
 
-False
+True
 

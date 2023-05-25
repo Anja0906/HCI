@@ -1,0 +1,177 @@
+﻿[
+  {
+    "Name": "Hotel F",
+    "Address": {
+      "Latitude": 43.7419,
+      "Longitude": 20.6846,
+      "Address": "Kraljevo"
+    },
+    "Caption": "Elegant hotel in Kraljevo city center",
+    "Pictures": [
+      {
+        "Name": "Mountains",
+        "Size": 1792,
+        "Content": "TW91bnRhaW5zIHRvIGJlIGEgbW91bnRhaW4gY29tcGxleCBvZiB3aXRob3V0IG1vdW50YWlucyE=",
+        "Type": "jpg"
+      },
+      {
+        "Name": "Sunset",
+        "Size": 896,
+        "Content": "U3Vuc2V0IGluIFN1bnNldCBvciBTdW5zZXQgU3VwcG9ydCBzdW5zZXQ=",
+        "Type": "png"
+      }
+    ],
+    "Rating": 4.2,
+    "Link": "https://www.hotel-f.com"
+  },
+  {
+    "Name": "Hotel G",
+    "Address": {
+      "Latitude": 43.9088,
+      "Longitude": 22.2572,
+      "Address": "Pirot"
+    },
+    "Caption": "Traditional hotel in the heart of Pirot",
+    "Pictures": [
+      {
+        "Name": "Animals",
+        "Size": 512,
+        "Content": "QW5pbWFscyB0aGF0IGJlZW4gYSBzYW1lIGluIHRoZSBwaWN0dXJlIQ==",
+        "Type": "gif"
+      },
+      {
+        "Name": "Forest",
+        "Size": 1792,
+        "Content": "Rm9yZXN0IGluIFN0YW5kYXJkIEZvcmVzdCBvZiBGb3Jlc3Q=",
+        "Type": "jpg"
+      }
+    ],
+    "Rating": 4.3,
+    "Link": "https://www.hotel-g.com"
+  },
+  {
+    "Name": "Hotel H",
+    "Address": {
+      "Latitude": 44.3989,
+      "Longitude": 20.5531,
+      "Address": "Smederevo"
+    },
+    "Caption": "Historical hotel in Smederevo fortress",
+    "Pictures": [
+      {
+        "Name": "Waterfall",
+        "Size": 2304,
+        "Content": "V2F0ZXJmYWxsIGluIFdhdGVyZmFsbCBvZiBXYXRlcmZhbGw=",
+        "Type": "png"
+      },
+      {
+        "Name": "Abstract",
+        "Size": 1536,
+        "Content": "QWJzdHJhY3QgdGhhdCBkYXRhIG5lZWRzIHNvbWV0aGluZyBkYXRhIHN0b3JlZCB0byBwaWN0dXJlIQ==",
+        "Type": "jpg"
+      }
+    ],
+    "Rating": 4.4,
+    "Link": "https://www.hotel11-f.com"
+  },
+  {
+    "Name": "Hotel I",
+    "Address": {
+      "Latitude": 44.3652,
+      "Longitude": 21.4837,
+      "Address": "Smederevska Palanka"
+    },
+    "Caption": "Relaxing hotel in Smederevska Palanka",
+    "Pictures": [
+      {
+        "Name": "Beach",
+        "Size": 1280,
+        "Content": "QmVhY2ggc2hvdWxkIGJlIGEgYmVhY2ggc3Bpbm5lcg==",
+        "Type": "png"
+      },
+      {
+        "Name": "Mountains",
+        "Size": 1792,
+        "Content": "TW91bnRhaW5zIHRvIGJlIGEgbW91bnRhaW4gY29tcGxleCBvZiB3aXRob3V0IG1vdW50YWlucyE=",
+        "Type": "jpg"
+      }
+    ],
+    "Rating": 4.1,
+    "Link": "https://www.hotel-i.com"
+  },
+  {
+    "Name": "Hotel J",
+    "Address": {
+      "Latitude": 44.0167,
+      "Longitude": 21.7167,
+      "Address": "Knjaževac"
+    },
+    "Caption": "Scenic hotel in the charming town of Knjaževac",
+    "Pictures": [
+      {
+        "Name": "Sunset",
+        "Size": 896,
+        "Content": "U3Vuc2V0IGluIFN1bnNldCBvciBTdW5zZXQgU3VwcG9ydCBzdW5zZXQ=",
+        "Type": "png"
+      },
+      {
+        "Name": "Animals",
+        "Size": 768,
+        "Content": "QW5pbWFscyB0aGF0IGJlZW4gYSBzYW1lIGluIHRoZSBwaWN0dXJlIQ==",
+        "Type": "gif"
+      }
+    ],
+    "Rating": 4.3,
+    "Link": "https://www.hotel-j.com"
+  },
+    {
+    "Name": "Hotel K",
+    "Address": {
+      "Latitude": 43.1475,
+      "Longitude": 20.5278,
+      "Address": "Vranje"
+    },
+    "Caption": "Cozy hotel in the heart of Vranje",
+    "Pictures": [
+      {
+        "Name": "Abstract",
+        "Size": 1536,
+        "Content": "QWJzdHJhY3QgdGhhdCBkYXRhIG5lZWRzIHNvbWV0aGluZyBkYXRhIHN0b3JlZCB0byBwaWN0dXJlIQ==",
+        "Type": "jpg"
+      },
+      {
+        "Name": "Beach",
+        "Size": 1280,
+        "Content": "QmVhY2ggc2hvdWxkIGJlIGEgYmVhY2ggc3Bpbm5lcg==",
+        "Type": "png"
+      }
+    ],
+    "Rating": 4.2,
+    "Link": "https://www.hotel-k.com"
+  },
+  {
+    "Name": "Hotel L",
+    "Address": {
+      "Latitude": 42.5561,
+      "Longitude": 21.7172,
+      "Address": "Kosovska Mitrovica"
+    },
+    "Caption": "Stylish hotel in Kosovska Mitrovica",
+    "Pictures": [
+      {
+        "Name": "Mountains",
+        "Size": 1792,
+        "Content": "TW91bnRhaW5zIHRvIGJlIGEgbW91bnRhaW4gY29tcGxleCBvZiB3aXRob3V0IG1vdW50YWlucyE=",
+        "Type": "jpg"
+      },
+      {
+        "Name": "Sunset",
+        "Size": 896,
+        "Content": "U3Vuc2V0IGluIFN1bnNldCBvciBTdW5zZXQgU3VwcG9ydCBzdW5zZXQ=",
+        "Type": "png"
+      }
+    ],
+    "Rating": 4.1,
+    "Link": "https://www.hotel-l.com"
+  }
+]

@@ -17,11 +17,11 @@ namespace HCI_big_project.model
 
         public Restaurant(string name, Location address, string caption, List<Picture> pictures, string link)
         {
-            Name = name;
-            Address = address;
-            Caption = caption;
-            Pictures = pictures;
-            Link = link;
+            Name            = name;
+            Address         = address;
+            Caption         = caption;
+            Pictures        = pictures;
+            Link            = link;
         }
     }
 }

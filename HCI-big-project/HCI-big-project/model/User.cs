@@ -16,12 +16,12 @@ namespace HCI_big_project.model
 
         public User(string name, string surname, string email, string password, DateTime birthdate, Role role)
         {
-            Name = name;
-            Surname = surname;
-            Email = email;
-            Password = password;
-            Birthdate = birthdate;
-            Role = role;
+            Name            = name;
+            Surname         = surname;
+            Email           = email;
+            Password        = password;
+            Birthdate       = birthdate;
+            Role            = role;
         }
     }
 }
