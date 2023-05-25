@@ -13,14 +13,7 @@ namespace HCI_big_project
         public MainWindow()
         {
             InitializeComponent();
-            UserRepository userRepository = new UserRepository();
-            var users = userRepository.GetAllUsers();
             
-            foreach (var user in users)
-            {
-                outputTextBlock.Text += $"Username: {user.Name}, Email: {user.Email}\n";
-            }
         }
     }
 }
-            //outputTextBlock.Text += $"Username: {users[0].Name}, Email: {users[0].Email}\n";
