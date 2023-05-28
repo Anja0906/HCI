@@ -1,5 +1,6 @@
 ﻿[
   {
+    "id": 0,
     "Name": "Restaurant A",
     "Address": {
       "Latitude": 44.7866,
@@ -9,21 +10,31 @@
     "Caption": "Experience exquisite dining at Restaurant A",
     "Pictures": [
       {
+        "id": 0,
+        "Name": "Nature",
+        "Size": 1024,
+        "Content": "SGVsbG8gd29ybGQh",
+        "Type": "jpg"
+      },
+      {
+        "id": 1,
+        "Name": "Cityscape",
+        "Size": 2048,
+        "Content": "V2VsY29tZSB0byBjcmVhdGUgdGhpcyBmaWxlISAg",
+        "Type": "png"
+      },
+      {
+        "id": 2,
         "Name": "Animals",
         "Size": 512,
         "Content": "QW5pbWFscyB0aGF0IGJlZW4gYSBzYW1lIGluIHRoZSBwaWN0dXJlIQ==",
         "Type": "gif"
-      },
-      {
-        "Name": "Abstract",
-        "Size": 768,
-        "Content": "QWJzdHJhY3QgdGhhdCBkYXRhIG5lZWRzIHNvbWV0aGluZyBkYXRhIHN0b3JlZCB0byBwaWN0dXJlIQ==",
-        "Type": "jpg"
       }
     ],
     "Link": "https://www.restaurant-a.com"
   },
   {
+    "id": 1,
     "Name": "Restaurant B",
     "Address": {
       "Latitude": 44.0165,
@@ -31,23 +42,11 @@
       "Address": "Niš"
     },
     "Caption": "Savor the flavors at Restaurant B in Niš",
-    "Pictures": [
-      {
-        "Name": "Beach",
-        "Size": 1536,
-        "Content": "QmVhY2ggc2hvdWxkIGJlIGEgYmVhY2ggc3Bpbm5lcg==",
-        "Type": "png"
-      },
-      {
-        "Name": "Mountains",
-        "Size": 1280,
-        "Content": "TW91bnRhaW5zIHRvIGJlIGEgbW91bnRhaW4gY29tcGxleCBvZiB3aXRob3V0IG1vdW50YWlucyE=",
-        "Type": "jpg"
-      }
-    ],
+    "Pictures": [],
     "Link": "https://www.restaurant-b.com"
   },
   {
+    "id": 2,
     "Name": "Restaurant C",
     "Address": {
       "Latitude": 45.2671,
@@ -57,16 +56,18 @@
     "Caption": "Indulge in culinary delights at Restaurant C in Novi Sad",
     "Pictures": [
       {
-        "Name": "Sunset",
-        "Size": 896,
-        "Content": "U3Vuc2V0IGluIFN1bnNldCBvciBTdW5zZXQgU3VwcG9ydCBzdW5zZXQ=",
-        "Type": "png"
+        "id": 3,
+        "Name": "Abstract",
+        "Size": 768,
+        "Content": "QWJzdHJhY3QgdGhhdCBkYXRhIG5lZWRzIHNvbWV0aGluZyBkYXRhIHN0b3JlZCB0byBwaWN0dXJlIQ==",
+        "Type": "jpg"
       },
       {
-        "Name": "Animals",
-        "Size": 768,
-        "Content": "QW5pbWFscyB0aGF0IGJlZW4gYSBzYW1lIGluIHRoZSBwaWN0dXJlIQ==",
-        "Type": "gif"
+        "id": 4,
+        "Name": "Beach",
+        "Size": 1536,
+        "Content": "QmVhY2ggc2hvdWxkIGJlIGEgYmVhY2ggc3Bpbm5lcg==",
+        "Type": "png"
       }
     ],
     "Link": "https://www.restaurant-c.com"

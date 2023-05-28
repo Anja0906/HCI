@@ -3,7 +3,22 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="450" Width="800">
 	<Grid>
-		<TextBlock x:Name="outputTextBlock" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" />
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+
+		<!-- Navigation Panel -->
+		<StackPanel Grid.Column="0" Background="#4EBE60">
+			<Image Source="res/logo.jpeg" Width="200" Height="200"/>
+			<Button Content="Home" Background="#00FFFFFF"/>
+			<Button Content="Products" Background="#00FFFFFF"/>
+			<Button Content="Settings" Background="#00FFFFFF"/>
+		</StackPanel>
+
+		<!-- Main Content Area -->
+		<Grid Grid.Column="1">
+			<!-- Your main content goes here -->
+		</Grid>
 	</Grid>
 </Window>
-

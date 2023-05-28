@@ -63,6 +63,12 @@
     <Compile Include="repository\RestaurantRepository.cs" />
     <Compile Include="repository\TripRepository.cs" />
     <Compile Include="repository\UserRepository.cs" />
+    <Compile Include="service\AccomodationService.cs" />
+    <Compile Include="service\AttractionService.cs" />
+    <Compile Include="service\ClientService.cs" />
+    <Compile Include="service\RestaurantService.cs" />
+    <Compile Include="service\TripService.cs" />
+    <Compile Include="service\UserService.cs" />
     <Compile Include="utils\ListHandler.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -113,5 +119,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Resource Include="res\logo.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

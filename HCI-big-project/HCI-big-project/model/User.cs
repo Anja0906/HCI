@@ -23,5 +23,9 @@ namespace HCI_big_project.model
             Birthdate       = birthdate;
             Role            = role;
         }
+        public override string ToString()
+        {
+            return $"Name: {Name}\nSurname: {Surname}\nEmail: {Email}\nBirthdate: {Birthdate}\nRole: {Role}";
+        }
     }
 }

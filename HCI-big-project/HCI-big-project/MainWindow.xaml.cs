@@ -1,6 +1,7 @@
 ﻿using System;
 using HCI_big_project.model;
-using HCI_big_project.Repository;
+using HCI_big_project.repository;
+using HCI_big_project.service;
 using System.Windows;
 
 namespace HCI_big_project
@@ -13,13 +14,7 @@ namespace HCI_big_project
         public MainWindow()
         {
             InitializeComponent();
-            UserRepository userRepository = new UserRepository();
-            var users = userRepository.GetAllUsers();
             
-            foreach (var user in users)
-            {
-                outputTextBlock.Text += $"Username: {user.Name}, Email: {user.Email}\n";
-            }
         }
     }
 }
