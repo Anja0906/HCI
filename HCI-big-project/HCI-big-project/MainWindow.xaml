@@ -10,7 +10,7 @@
 
 		<!-- Navigation Panel -->
 		<StackPanel Grid.Column="0" Background="#4EBE60">
-			<Image Source="res/logo.jpeg" Width="200" Height="200"/>
+			<Image Source="res/logo.png" Width="200" Height="200"/>
 			<Button Content="Home" Background="#00FFFFFF"/>
 			<Button Content="Products" Background="#00FFFFFF"/>
 			<Button Content="Settings" Background="#00FFFFFF"/>
