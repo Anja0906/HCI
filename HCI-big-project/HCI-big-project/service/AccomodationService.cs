@@ -30,8 +30,7 @@ namespace HCI_big_project.service
 
         public int MakeNewId()
         {
-            return _accommodationRepository.GetAllAccommodations()[
-                _accommodationRepository.GetAllAccommodations().Count - 1].Id + 1;
+            return _accommodationRepository.GetAllAccommodations().Last().Id + 1;
         }
 
         public void DeleteAccommodationById(int accommodationId)

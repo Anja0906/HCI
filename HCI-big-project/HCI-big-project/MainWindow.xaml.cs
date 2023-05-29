@@ -14,7 +14,7 @@ namespace HCI_big_project
         public MainWindow()
         {
             InitializeComponent();
-            
+           
         }
     }
 }
