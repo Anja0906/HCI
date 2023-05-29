@@ -30,7 +30,7 @@ namespace HCI_big_project.service
 
         public int MakeNewId()
         {
-            return _attractionRepository.GetAllAttractions()[_attractionRepository.GetAllAttractions().Count - 1].Id + 1;
+            return _attractionRepository.GetAllAttractions().Last().Id + 1;
         }
 
         public void DeleteAttractionById(int attractionId)

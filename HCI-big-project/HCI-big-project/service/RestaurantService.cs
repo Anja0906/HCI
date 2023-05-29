@@ -25,8 +25,9 @@ namespace HCI_big_project.service
 
         public int MakeNewId()
         {
-            return _restaurantRepository.GetAllRestaurants()[_restaurantRepository.GetAllRestaurants().Count - 1].Id + 1;
+            return _restaurantRepository.GetAllRestaurants().Last().Id + 1;
         }
+        
 
         public void DeleteTripById(int restaurantId)
         {

@@ -24,15 +24,7 @@ namespace HCI_big_project.service
 
         public int MakeNewId()
         {
-            var allTrips = _tripRepository.GetAllTrips();
-            if (allTrips.Count == 0)
-            {
-                return 1;
-            }
-            else
-            {
-                return allTrips.Last().Id + 1;
-            }
+            return _tripRepository.GetAllTrips().Last().Id + 1;
         }
 
         public List<Trip> GetReservedTrips()
