@@ -20,7 +20,12 @@ namespace HCI_big_project.service
             if (index >= 0) {clients[index].Trips.Add(trip);}
             _clientRepository.SaveAll();
         }
-        
+
+        public Client FindClientByEmail(string email)
+        {
+            return _clientRepository.FindClientByEmail(email);
+        }
+
 
 
     }
