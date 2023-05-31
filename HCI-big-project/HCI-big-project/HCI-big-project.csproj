@@ -69,7 +69,19 @@
     <Compile Include="service\RestaurantService.cs" />
     <Compile Include="service\TripService.cs" />
     <Compile Include="service\UserService.cs" />
+    <Compile Include="userControls\SideMenu.xaml.cs">
+      <DependentUpon>SideMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="utils\ListHandler.cs" />
+    <Compile Include="view\AdminMainWindow.xaml.cs">
+      <DependentUpon>AdminMainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\CustomDialogWindow.xaml.cs">
+      <DependentUpon>CustomDialogWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\UserMainWindow.xaml.cs">
+      <DependentUpon>UserMainWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -82,6 +94,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="userControls\SideMenu.xaml" />
+    <Page Include="view\AdminMainWindow.xaml" />
+    <Page Include="view\CustomDialogWindow.xaml" />
+    <Page Include="view\UserMainWindow.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="model\Accommodation.cs" />

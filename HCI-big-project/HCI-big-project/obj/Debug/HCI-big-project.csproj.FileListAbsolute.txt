@@ -31,3 +31,14 @@ C:\Users\bangi\Documents\GitHub\HCI\HCI-big-project\HCI-big-project\obj\Debug\HC
 C:\Users\bangi\Documents\GitHub\HCI\HCI-big-project\HCI-big-project\obj\Debug\HCI_big_project.Properties.Resources.resources
 C:\Users\bangi\Documents\GitHub\HCI\HCI-big-project\HCI-big-project\obj\Debug\HCI-big-project.csproj.GenerateResource.cache
 C:\Users\bangi\Documents\GitHub\HCI\HCI-big-project\HCI-big-project\obj\Debug\HCI-big-project.csproj.CoreCompileInputs.cache
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\userControls\SideMenu.g.cs
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\HCI_big_project_MarkupCompile.lref
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\userControls\SideMenu.baml
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\App.baml
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\UserMainWindow.g.cs
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\UserMainWindow.baml
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\CustomDialogWindow.g.cs
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\CustomDialogWindow.baml
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\AdminMainWindow.g.cs
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\AdminMainWindow.baml

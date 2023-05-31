@@ -19,7 +19,7 @@ namespace HCI_big_project.service
             User user = _userRepository.GetAllUsers()
                 .FirstOrDefault(usr => usr.Email == email && usr.Password == password);
 
-            if (user == null) throw new NullReferenceException("Korisnik ne postoji.");
+            if (user == null) throw new NullReferenceException("Uneti korisnik ne postoji u sistemu!");
             return user;
         }
 

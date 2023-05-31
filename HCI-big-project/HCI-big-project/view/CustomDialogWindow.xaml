@@ -1,0 +1,20 @@
+<Window x:Class="HCI_big_project.view.CustomDialogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        Title="CustomDialogWindow" Height="250" Width="250"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Background="White">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="30*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="1" x:Name="Message" Style="{StaticResource CustomTextBlockStyle}" />
+        <Button Grid.Row="2" Style="{StaticResource CustomButtonStyle}" Content="OK" Width="100" Height="50" HorizontalAlignment="Center" Click="Button_Click"/>
+    </Grid>
+</Window>

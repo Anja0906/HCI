@@ -1,0 +1,38 @@
+<UserControl x:Class="HCI_big_project.userControls.SideMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="Auto" d:DesignWidth="Auto">
+    <Grid Background="#4EBE60">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="10, 10, 10, 0">
+            <Image Source="../res/logo.png" Width="100" Height="100"/>
+        </Grid>
+			
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Visibility="Visible" Name="UserSideMenu">
+            <StackPanel Margin="10">
+                <Button Style="{StaticResource CustomButtonStyle}" Content="Pregled putovanja" x:Name="ButtonTrips" Click="ButtonTrips_OnClick"/>
+                <Button Style="{StaticResource CustomButtonStyle}" Content="Mapa putovanja" x:Name="Map" Click="Map_OnClick"/>
+                <Button Style="{StaticResource CustomButtonStyle}" Content="Rezerviši putovanje" x:Name="ButtonBook" Click="ButtonBook_OnClick"/>
+                <Button Style="{StaticResource CustomButtonStyle}" Content="Kupljena putovanja" x:Name="ButtonBought" Click="ButtonBought_OnClick"/>
+                <Button Style="{StaticResource CustomButtonStyle}" Content="Izloguj se" x:Name="ButtonLogout" Click="ButtonLogout_OnClick"/>
+            </StackPanel>
+        </ScrollViewer>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Visibility="Hidden" Name="AdminSideMenu">
+            <StackPanel Margin="10">
+                <Button Style="{StaticResource CustomButtonStyle}" Content="Pregled putovanja" x:Name="ButtonTripsAdmin" Click="ButtonTripsAdmin_OnClick"/>
+                <Button Style="{StaticResource CustomButtonStyle}" Content="Mapa putovanja" x:Name="MapAdmin" Click="MapAdmin_OnClick"/>
+                <Button Style="{StaticResource CustomButtonStyle}" Content="Kreiraj destinaciju" x:Name="ButtonNewDestination" Click="ButtonNewDestination_OnClick"/>
+                <Button Style="{StaticResource CustomButtonStyle}" Content="Kreiraj hotel" x:Name="ButtonNewHotel" Click="ButtonNewHotel_OnClick"/>
+                <Button Style="{StaticResource CustomButtonStyle}" Content="Kreiraj atrakciju" x:Name="ButtonNewAttraction" Click="ButtonNewAttraction_OnClick"/>
+                <Button Style="{StaticResource CustomButtonStyle}" Content="Izloguj se" x:Name="ButtonLogoutAdmin" Click="ButtonLogoutAdmin_OnClick"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

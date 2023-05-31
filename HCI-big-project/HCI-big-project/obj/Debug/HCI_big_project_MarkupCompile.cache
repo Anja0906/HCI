@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\bangi\Documents\GitHub\HCI\HCI-big-project\HCI-big-project\obj\Debug\
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\
 HCI_big_project
 none
 false
 DEBUG;TRACE
-C:\Users\bangi\Documents\GitHub\HCI\HCI-big-project\HCI-big-project\App.xaml
-11151548125
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\App.xaml
+5-370075158
 
-29-530654553
-10397965840
-MainWindow.xaml;
+331607629101
+10-1859301897
+MainWindow.xaml;userControls\SideMenu.xaml;view\AdminMainWindow.xaml;view\CustomDialogWindow.xaml;view\UserMainWindow.xaml;
 
 False
 
