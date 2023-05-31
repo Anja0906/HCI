@@ -3,7 +3,7 @@ using System.Linq;
 using HCI_big_project.model;
 using HCI_big_project.utils;
 
-namespace HCI_big_project.Repository
+namespace HCI_big_project.repository
 {
     public class ClientRepository
     {
@@ -30,7 +30,7 @@ namespace HCI_big_project.Repository
             return Clients;
         }
 
-        public Client FindClientByName(string email)
+        public Client FindClientByEmail(string email)
         {
             return Clients.FirstOrDefault(client => client.Email.Equals(email));
         }

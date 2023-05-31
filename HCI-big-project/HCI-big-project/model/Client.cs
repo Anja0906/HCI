@@ -18,5 +18,16 @@ namespace HCI_big_project.model
         {
             Trips = trips;
         }
+        public override string ToString()
+        {
+            string tripsString = string.Join("\n", Trips);
+
+            return $"Client Name: {Name}\n" +
+                   $"Surname: {Surname}\n" +
+                   $"Email: {Email}\n" +
+                   $"Birthdate: {Birthdate}\n" +
+                   $"Role: {Role}\n" +
+                   $"Trips:\n{tripsString}";
+        }
     }
 }

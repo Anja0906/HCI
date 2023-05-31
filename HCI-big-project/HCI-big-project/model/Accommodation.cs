@@ -5,6 +5,7 @@ namespace HCI_big_project.model
 {
     public class Accommodation
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public Location Address { get; set; }
         public string Caption { get; set; }
@@ -14,14 +15,27 @@ namespace HCI_big_project.model
 
         public Accommodation(){}
 
-        public Accommodation(string name, Location address, string caption, List<Picture> pictures, double rating, string link)
+        public Accommodation(int id,string name, Location address, string caption, List<Picture> pictures, double rating, string link)
         {
+            Id          = id;
             Name        = name;
             Address     = address;
             Caption     = caption;
             Pictures    = pictures;
             Rating      = rating;
             Link        = link;
+        }
+        public override string ToString()
+        {
+            string picturesString = string.Join("\n", Pictures);
+
+            return $"Accommodation ID: {Id}\n" +
+                   $"Name: {Name}\n" +
+                   $"Address: {Address}\n" +
+                   $"Caption: {Caption}\n" +
+                   $"Pictures:\n{picturesString}\n" +
+                   $"Rating: {Rating}\n" +
+                   $"Link: {Link}";
         }
     }
 }

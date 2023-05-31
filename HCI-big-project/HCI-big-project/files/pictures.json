@@ -1,107 +1,125 @@
 ﻿[
   {
+    "id": 0,
     "Name": "Nature",
     "Size": 1024,
     "Content": "SGVsbG8gd29ybGQh",
     "Type": "jpg"
   },
   {
+    "id": 1,
     "Name": "Cityscape",
     "Size": 2048,
     "Content": "V2VsY29tZSB0byBjcmVhdGUgdGhpcyBmaWxlISAg",
     "Type": "png"
   },
   {
+    "id": 2,
     "Name": "Animals",
     "Size": 512,
     "Content": "QW5pbWFscyB0aGF0IGJlZW4gYSBzYW1lIGluIHRoZSBwaWN0dXJlIQ==",
     "Type": "gif"
   },
   {
+    "id": 3,
     "Name": "Abstract",
     "Size": 768,
     "Content": "QWJzdHJhY3QgdGhhdCBkYXRhIG5lZWRzIHNvbWV0aGluZyBkYXRhIHN0b3JlZCB0byBwaWN0dXJlIQ==",
     "Type": "jpg"
   },
   {
+    "id": 4,
     "Name": "Beach",
     "Size": 1536,
     "Content": "QmVhY2ggc2hvdWxkIGJlIGEgYmVhY2ggc3Bpbm5lcg==",
     "Type": "png"
   },
   {
+    "id": 5,
     "Name": "Mountains",
     "Size": 1280,
     "Content": "TW91bnRhaW5zIHRvIGJlIGEgbW91bnRhaW4gY29tcGxleCBvZiB3aXRob3V0IG1vdW50YWlucyE=",
     "Type": "jpg"
   },
   {
+    "id": 6,
     "Name": "Sunset",
     "Size": 896,
     "Content": "U3Vuc2V0IGluIFN1bnNldCBvciBTdW5zZXQgU3VwcG9ydCBzdW5zZXQ=",
     "Type": "png"
   },
   {
+    "id": 7,
     "Name": "Animals",
     "Size": 768,
     "Content": "QW5pbWFscyB0aGF0IGJlZW4gYSBzYW1lIGluIHRoZSBwaWN0dXJlIQ==",
     "Type": "gif"
   },
   {
+    "id": 8,
     "Name": "Forest",
     "Size": 1792,
     "Content": "Rm9yZXN0IGluIFN0YW5kYXJkIEZvcmVzdCBvZiBGb3Jlc3Q=",
     "Type": "jpg"
   },
   {
+    "id": 9,
     "Name": "Waterfall",
     "Size": 2304,
     "Content": "V2F0ZXJmYWxsIGluIFdhdGVyZmFsbCBvZiBXYXRlcmZhbGw=",
     "Type": "png"
   },
   {
+    "id": 10,
     "Name": "Abstract",
     "Size": 1536,
     "Content": "QWJzdHJhY3QgdGhhdCBkYXRhIG5lZWRzIHNvbWV0aGluZyBkYXRhIHN0b3JlZCB0byBwaWN0dXJlIQ==",
     "Type": "jpg"
   },
   {
+    "id": 11,
     "Name": "Beach",
     "Size": 1280,
     "Content": "QmVhY2ggc2hvdWxkIGJlIGEgYmVhY2ggc3Bpbm5lcg==",
     "Type": "png"
   },
   {
+    "id": 12,
     "Name": "Mountains",
     "Size": 1792,
     "Content": "TW91bnRhaW5zIHRvIGJlIGEgbW91bnRhaW4gY29tcGxleCBvZiB3aXRob3V0IG1vdW50YWlucyE=",
     "Type": "jpg"
   },
   {
+    "id": 13,
     "Name": "Sunset",
     "Size": 896,
     "Content": "U3Vuc2V0IGluIFN1bnNldCBvciBTdW5zZXQgU3VwcG9ydCBzdW5zZXQ=",
     "Type": "png"
   },
   {
+    "id": 14,
     "Name": "Animals",
     "Size": 768,
     "Content": "QW5pbWFscyB0aGF0IGJlZW4gYSBzYW1lIGluIHRoZSBwaWN0dXJlIQ==",
     "Type": "gif"
   },
   {
+    "id": 15,
     "Name": "Forest",
     "Size": 2048,
     "Content": "Rm9yZXN0IGluIFN0YW5kYXJkIEZvcmVzdCBvZiBGb3Jlc3Q=",
     "Type": "jpg"
   },
   {
+    "id": 16,
     "Name": "Waterfall",
     "Size": 2304,
     "Content": "V2F0ZXJmYWxsIGluIFdhdGVyZmFsbCBvZiBXYXRlcmZhbGw=",
     "Type": "png"
   },
   {
+    "id": 17,
     "Name": "City",
     "Size": 1024,
     "Content": "Q2l0eSBvZiBDb3Vwb3JhdGlvbnMgYXJlIGNvbW1vbmx5IGFzIHdlbGwgZG9lc24ndCBsYXJnZSBkZXNpZ25lZCB0byBlbnN1cmUgdGhhdCB3ZWxsIG5lZWRzIHN0b3JlZCB0byBwaWN0dXJlIQ==",

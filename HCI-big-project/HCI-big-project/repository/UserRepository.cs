@@ -4,7 +4,7 @@ using HCI_big_project.model;
 using HCI_big_project.utils;
 
 
-namespace HCI_big_project.Repository
+namespace HCI_big_project.repository
 {
     public class UserRepository
     {

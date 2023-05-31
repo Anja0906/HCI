@@ -1,5 +1,6 @@
 ﻿[
   {
+    "id": 0,
     "Name": "National Park A",
     "Address": {
       "Latitude": 44.7866,
@@ -9,20 +10,23 @@
     "Caption": "Explore the beauty of nature in National Park A",
     "Pictures": [
       {
+        "id": 14,
         "Name": "Animals",
-        "Size": 512,
+        "Size": 768,
         "Content": "QW5pbWFscyB0aGF0IGJlZW4gYSBzYW1lIGluIHRoZSBwaWN0dXJlIQ==",
         "Type": "gif"
       },
       {
-        "Name": "Abstract",
-        "Size": 768,
-        "Content": "QWJzdHJhY3QgdGhhdCBkYXRhIG5lZWRzIHNvbWV0aGluZyBkYXRhIHN0b3JlZCB0byBwaWN0dXJlIQ==",
+        "id": 15,
+        "Name": "Forest",
+        "Size": 2048,
+        "Content": "Rm9yZXN0IGluIFN0YW5kYXJkIEZvcmVzdCBvZiBGb3Jlc3Q=",
         "Type": "jpg"
       }
     ]
   },
   {
+    "id": 1,
     "Name": "Historical Site B",
     "Address": {
       "Latitude": 44.0165,
@@ -32,20 +36,23 @@
     "Caption": "Step into history at Historical Site B",
     "Pictures": [
       {
-        "Name": "Beach",
-        "Size": 1536,
-        "Content": "QmVhY2ggc2hvdWxkIGJlIGEgYmVhY2ggc3Bpbm5lcg==",
+        "id": 16,
+        "Name": "Waterfall",
+        "Size": 2304,
+        "Content": "V2F0ZXJmYWxsIGluIFdhdGVyZmFsbCBvZiBXYXRlcmZhbGw=",
         "Type": "png"
       },
       {
-        "Name": "Mountains",
-        "Size": 1280,
-        "Content": "TW91bnRhaW5zIHRvIGJlIGEgbW91bnRhaW4gY29tcGxleCBvZiB3aXRob3V0IG1vdW50YWlucyE=",
+        "id": 17,
+        "Name": "City",
+        "Size": 1024,
+        "Content": "Q2l0eSBvZiBDb3Vwb3JhdGlvbnMgYXJlIGNvbW1vbmx5IGFzIHdlbGwgZG9lc24ndCBsYXJnZSBkZXNpZ25lZCB0byBlbnN1cmUgdGhhdCB3ZWxsIG5lZWRzIHN0b3JlZCB0byBwaWN0dXJlIQ==",
         "Type": "jpg"
       }
     ]
   },
   {
+    "id": 2,
     "Name": "Landmark C",
     "Address": {
       "Latitude": 45.2671,
@@ -55,12 +62,14 @@
     "Caption": "Admire the iconic Landmark C in Novi Sad",
     "Pictures": [
       {
+        "id": 6,
         "Name": "Sunset",
         "Size": 896,
         "Content": "U3Vuc2V0IGluIFN1bnNldCBvciBTdW5zZXQgU3VwcG9ydCBzdW5zZXQ=",
         "Type": "png"
       },
       {
+        "id": 7,
         "Name": "Animals",
         "Size": 768,
         "Content": "QW5pbWFscyB0aGF0IGJlZW4gYSBzYW1lIGluIHRoZSBwaWN0dXJlIQ==",
@@ -69,6 +78,7 @@
     ]
   },
   {
+    "id": 3,
     "Name": "Historical Site D",
     "Address": {
       "Latitude": 43.3209,
@@ -78,20 +88,23 @@
     "Caption": "Discover the rich history at Historical Site D",
     "Pictures": [
       {
-        "Name": "Forest",
-        "Size": 1792,
-        "Content": "Rm9yZXN0IGluIFN0YW5kYXJkIEZvcmVzdCBvZiBGb3Jlc3Q=",
-        "Type": "jpg"
+        "id": 6,
+        "Name": "Sunset",
+        "Size": 896,
+        "Content": "U3Vuc2V0IGluIFN1bnNldCBvciBTdW5zZXQgU3VwcG9ydCBzdW5zZXQ=",
+        "Type": "png"
       },
       {
-        "Name": "Waterfall",
-        "Size": 2304,
-        "Content": "V2F0ZXJmYWxsIGluIFdhdGVyZmFsbCBvZiBXYXRlcmZhbGw=",
-        "Type": "png"
+        "id": 7,
+        "Name": "Animals",
+        "Size": 768,
+        "Content": "QW5pbWFscyB0aGF0IGJlZW4gYSBzYW1lIGluIHRoZSBwaWN0dXJlIQ==",
+        "Type": "gif"
       }
     ]
   },
   {
+    "id": 4,
     "Name": "Landmark E",
     "Address": {
       "Latitude": 43.8992,
@@ -101,20 +114,23 @@
     "Caption": "Marvel at the impressive Landmark E in Čačak",
     "Pictures": [
       {
-        "Name": "Abstract",
-        "Size": 1536,
-        "Content": "QWJzdHJhY3QgdGhhdCBkYXRhIG5lZWRzIHNvbWV0aGluZyBkYXRhIHN0b3JlZCB0byBwaWN0dXJlIQ==",
-        "Type": "jpg"
+        "id": 2,
+        "Name": "Animals",
+        "Size": 512,
+        "Content": "QW5pbWFscyB0aGF0IGJlZW4gYSBzYW1lIGluIHRoZSBwaWN0dXJlIQ==",
+        "Type": "gif"
       },
       {
-        "Name": "Beach",
-        "Size": 1280,
-        "Content": "QmVhY2ggc2hvdWxkIGJlIGEgYmVhY2ggc3Bpbm5lcg==",
-        "Type": "png"
+        "id": 3,
+        "Name": "Abstract",
+        "Size": 768,
+        "Content": "QWJzdHJhY3QgdGhhdCBkYXRhIG5lZWRzIHNvbWV0aGluZyBkYXRhIHN0b3JlZCB0byBwaWN0dXJlIQ==",
+        "Type": "jpg"
       }
     ]
   },
   {
+    "id": 5,
     "Name": "Nature Reserve F",
     "Address": {
       "Latitude": 43.7419,
@@ -124,60 +140,16 @@
     "Caption": "Immerse yourself in the beauty of Nature Reserve F",
     "Pictures": [
       {
-        "Name": "Mountains",
-        "Size": 1792,
-        "Content": "TW91bnRhaW5zIHRvIGJlIGEgbW91bnRhaW4gY29tcGxleCBvZiB3aXRob3V0IG1vdW50YWlucyE=",
-        "Type": "jpg"
-      },
-      {
-        "Name": "Sunset",
-        "Size": 896,
-        "Content": "U3Vuc2V0IGluIFN1bnNldCBvciBTdW5zZXQgU3VwcG9ydCBzdW5zZXQ=",
-        "Type": "png"
-      }
-    ]
-  },
-  {
-    "Name": "Historical Site G",
-    "Address": {
-      "Latitude": 43.9088,
-      "Longitude": 22.2572,
-      "Address": "Pirot"
-    },
-    "Caption": "Step back in time at Historical Site G in Pirot",
-    "Pictures": [
-      {
+        "id": 2,
         "Name": "Animals",
         "Size": 512,
         "Content": "QW5pbWFscyB0aGF0IGJlZW4gYSBzYW1lIGluIHRoZSBwaWN0dXJlIQ==",
         "Type": "gif"
       },
       {
-        "Name": "Forest",
-        "Size": 1792,
-        "Content": "Rm9yZXN0IGluIFN0YW5kYXJkIEZvcmVzdCBvZiBGb3Jlc3Q=",
-        "Type": "jpg"
-      }
-    ]
-  },
-  {
-    "Name": "Landmark H",
-    "Address": {
-      "Latitude": 44.3989,
-      "Longitude": 20.5531,
-      "Address": "Smederevo"
-    },
-    "Caption": "Admire the iconic Landmark H in Smederevo",
-    "Pictures": [
-      {
-        "Name": "Waterfall",
-        "Size": 2304,
-        "Content": "V2F0ZXJmYWxsIGluIFdhdGVyZmFsbCBvZiBXYXRlcmZhbGw=",
-        "Type": "png"
-      },
-      {
+        "id": 3,
         "Name": "Abstract",
-        "Size": 1536,
+        "Size": 768,
         "Content": "QWJzdHJhY3QgdGhhdCBkYXRhIG5lZWRzIHNvbWV0aGluZyBkYXRhIHN0b3JlZCB0byBwaWN0dXJlIQ==",
         "Type": "jpg"
       }

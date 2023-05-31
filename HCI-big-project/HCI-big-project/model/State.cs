@@ -3,6 +3,7 @@
     public enum State
     {
         Rezervisan,
-        Kupljen
+        Kupljen,
+        Ponuda
     }
 }
