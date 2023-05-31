@@ -29,7 +29,12 @@ namespace HCI_big_project.repository
         {
             return Clients;
         }
-        
+
+        public Client FindClientByEmail(string email)
+        {
+            return Clients.FirstOrDefault(client => client.Email.Equals(email));
+        }
+
         public void SaveAll()
         {
             ListHandler.WriteList(Clients, FilePath);
