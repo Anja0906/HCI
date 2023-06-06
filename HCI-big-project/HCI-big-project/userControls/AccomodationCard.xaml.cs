@@ -1,15 +1,18 @@
 using System.Windows;
 using System.Windows.Controls;
 using HCI_big_project.model;
+using HCI_big_project.view;
 
 namespace HCI_big_project.userControls
 {
     public partial class AccomodationCard : UserControl
     {
         private Accommodation _accommodation;
-        public AccomodationCard(Accommodation accommodation)
+        private User _user;
+        public AccomodationCard(Accommodation accommodation, User user)
         {
             _accommodation = accommodation;
+            _user = user;
             this.DataContext = _accommodation;
             InitializeComponent();
         }
@@ -20,5 +23,12 @@ namespace HCI_big_project.userControls
             DescriptionLabel.Text += _accommodation.Caption;
         }
 
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            AccomodationDetailsWidow accomodationDetailsWidow = new AccomodationDetailsWidow(_accommodation, _user);
+            accomodationDetailsWidow.Show();
+            Window parentWindow = Window.GetWindow(this);
+            if (parentWindow != null) parentWindow.Close();
+        }
     }
 }

@@ -23,7 +23,7 @@
                 <TextBlock Grid.Row="0" x:Name="NameLabel" TextWrapping="Wrap" Foreground="#4EBE60" FontSize="18" VerticalAlignment="Center" >NAZIV: </TextBlock>
                 <TextBlock Grid.Row="1" x:Name="DescriptionLabel" TextWrapping="Wrap" Foreground="#4EBE60" FontSize="18" VerticalAlignment="Center">OPIS: </TextBlock>
             </Grid>
-            <Button Grid.Row="2" Style="{StaticResource CustomButtonStyle}" Content="SAZNAJ VIŠE"/>
+            <Button Grid.Row="2" Style="{StaticResource CustomButtonStyle}" Click="ButtonBase_OnClick" Content="SAZNAJ VIŠE"/>
         </Grid>
     </Border>
 </UserControl>

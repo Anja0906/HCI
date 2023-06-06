@@ -25,7 +25,7 @@ namespace HCI_big_project.view
             Menu.SetUserRole(_user);
             foreach (Attraction attraction in Attractions)
             {
-                Panel.Children.Add(new AttractionCard(attraction));
+                Panel.Children.Add(new AttractionCard(attraction, _user));
             }
         }
     }

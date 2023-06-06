@@ -136,11 +136,17 @@
       <DependentUpon>SideMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="utils\ListHandler.cs" />
+    <Compile Include="view\AccomodationDetailsWidow.xaml.cs">
+      <DependentUpon>AccomodationDetailsWidow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view\AccomodationsWindow.xaml.cs">
       <DependentUpon>AccomodationsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="view\AdminMainWindow.xaml.cs">
       <DependentUpon>AdminMainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\AttractionDetailsWindow.xaml.cs">
+      <DependentUpon>AttractionDetailsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="view\AttractionsWindow.xaml.cs">
       <DependentUpon>AttractionsWindow.xaml</DependentUpon>
@@ -156,6 +162,9 @@
     </Compile>
     <Compile Include="view\NewTripWindow.xaml.cs">
       <DependentUpon>NewTripWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\RestaurantDetailsWindow.xaml.cs">
+      <DependentUpon>RestaurantDetailsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="view\RestaurantsWindow.xaml.cs">
       <DependentUpon>RestaurantsWindow.xaml</DependentUpon>
@@ -183,13 +192,16 @@
     <Page Include="userControls\Card.xaml" />
     <Page Include="userControls\RestaurantCard.xaml" />
     <Page Include="userControls\SideMenu.xaml" />
+    <Page Include="view\AccomodationDetailsWidow.xaml" />
     <Page Include="view\AccomodationsWindow.xaml" />
     <Page Include="view\AdminMainWindow.xaml" />
+    <Page Include="view\AttractionDetailsWindow.xaml" />
     <Page Include="view\AttractionsWindow.xaml" />
     <Page Include="view\CustomDialogWindow.xaml" />
     <Page Include="view\CustomYesNoDialog.xaml" />
     <Page Include="view\NewAttraction.xaml" />
     <Page Include="view\NewTripWindow.xaml" />
+    <Page Include="view\RestaurantDetailsWindow.xaml" />
     <Page Include="view\RestaurantsWindow.xaml" />
     <Page Include="view\TripsWindow.xaml" />
     <Page Include="view\UserMainWindow.xaml" />
@@ -234,6 +246,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="res\menuIcon.png" />
+    <Resource Include="res\mapPin.png" />
     <Content Include="res\ns.jpg" />
     <Resource Include="res\searchIcon.png" />
   </ItemGroup>

@@ -25,7 +25,7 @@ namespace HCI_big_project.view
             Menu.SetUserRole(_user);
             foreach (Restaurant restaurant in Restaurants)
             {
-                Panel.Children.Add(new RestaurantCard(restaurant));
+                Panel.Children.Add(new RestaurantCard(restaurant, _user));
             }
         }
     }

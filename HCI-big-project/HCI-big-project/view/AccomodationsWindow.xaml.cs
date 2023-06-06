@@ -24,7 +24,7 @@ namespace HCI_big_project.view
             Menu.SetUserRole(_user);
             foreach (Accommodation accommodation in Accommodations)
             {
-                Panel.Children.Add(new AccomodationCard(accommodation));
+                Panel.Children.Add(new AccomodationCard(accommodation, _user));
             }
         }
     }
