@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\App.xaml
-5-370075158
-
-331607629101
-10-1859301897
-MainWindow.xaml;userControls\SideMenu.xaml;view\AdminMainWindow.xaml;view\CustomDialogWindow.xaml;view\UserMainWindow.xaml;
+16-712344049
+1-1444277194
+44482718759
+2322447434
+MainWindow.xaml;userControls\AccomodationCard.xaml;userControls\AttractionCard.xaml;userControls\Card.xaml;userControls\RestaurantCard.xaml;userControls\SideMenu.xaml;view\AccomodationsWindow.xaml;view\AdminMainWindow.xaml;view\AttractionsWindow.xaml;view\CustomDialogWindow.xaml;view\CustomYesNoDialog.xaml;view\NewAttraction.xaml;view\NewTripWindow.xaml;view\RestaurantsWindow.xaml;view\TripsWindow.xaml;view\UserMainWindow.xaml;
 
 False
 

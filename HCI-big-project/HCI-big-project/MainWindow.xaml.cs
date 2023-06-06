@@ -3,6 +3,7 @@ using HCI_big_project.model;
 using HCI_big_project.repository;
 using HCI_big_project.service;
 using System.Windows;
+using System.Windows.Input;
 using HCI_big_project.view;
 
 namespace HCI_big_project
@@ -57,6 +58,11 @@ namespace HCI_big_project
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
+        }
+        
+        private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
         }
     }
 }

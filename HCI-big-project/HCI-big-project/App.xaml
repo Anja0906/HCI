@@ -37,6 +37,40 @@
             </Setter>
         </Style>
         
+        <Style x:Key="CustomWhiteButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="White" />
+            <Setter Property="Foreground" Value="#7dcf8a" />
+            <Setter Property="Opacity" Value="1.5" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Height" Value="Auto" />
+            <Setter Property="Width" Value="Auto" />
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" Background="{TemplateBinding Background}" BorderBrush="#4EBE60" BorderThickness="2" CornerRadius="10" Padding="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <ContentPresenter.ContentTemplate>
+                                    <DataTemplate>
+                                        <TextBlock TextWrapping="Wrap" Text="{TemplateBinding Content}" />
+                                    </DataTemplate>
+                                </ContentPresenter.ContentTemplate>
+                            </ContentPresenter>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FFFFFF" TargetName="border" />
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#BFBFBF" TargetName="border" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
         <Style x:Key="CustomTextBoxStyle" TargetType="TextBox">
             <Setter Property="Width" Value="Auto" />
             <Setter Property="Height" Value="Auto" />
@@ -76,10 +110,18 @@
         
         <Style x:Key="CustomLabelStyle" TargetType="Label">
             <Setter Property="Foreground" Value="#4EBE60" />
-            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontSize" Value="14" />
             <Setter Property="Padding" Value="5"/>
             <Setter Property="Margin" Value="0"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        
+        <Style x:Key="LeftLabel" TargetType="Label">
+            <Setter Property="Foreground" Value="#4EBE60" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Margin" Value="0"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
         
@@ -115,5 +157,125 @@
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
         
+        <Style x:Key="RoundedTextBox" TargetType="{x:Type TextBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border Background="Transparent"
+                                BorderBrush="#4EBE60"
+                                BorderThickness="2"
+                                CornerRadius="10">
+                            <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style x:Key="SquaredTextBox" TargetType="{x:Type TextBox}">
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="border" Background="White" BorderBrush="#4EBE60" BorderThickness="2">
+                            <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Text" Value="">
+                                <Setter TargetName="border" Property="BorderBrush" Value="Red"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="ListBoxItem" x:Key="ListBoxCustomItem" >
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border Background="#7dcf8a" 
+                                BorderBrush="White" 
+                                BorderThickness="2" 
+                                CornerRadius="10" 
+                                Margin="1"
+                                Padding="5">
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="1" Color="Gray" Opacity="0.8" BlurRadius="10" />
+                            </Border.Effect>
+                            <TextBlock Text="{Binding Name}" FontWeight="Bold" 
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontSize="15" Foreground="White"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style x:Key="ListBoxCustomStyle" TargetType="ListBox">
+            <Setter Property="Height" Value="160"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBox">
+                        <Border BorderBrush="#4EBE60" 
+                                BorderThickness="2" 
+                                Background="White"
+                                Padding="10"
+                                CornerRadius="10"
+                                MinWidth="150"
+                                Margin="5">
+                            <ScrollViewer>
+                                <ItemsPresenter/>
+                            </ScrollViewer>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="TransparentGreenButton" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderBrush" Value="#4EBE60" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="20">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style x:Key="CustomProgressBar" TargetType="ProgressBar">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ProgressBar">
+                        <Border Background="#EDEDED" BorderBrush="#4EBE60" BorderThickness="1" CornerRadius="5">
+                            <Grid x:Name="PART_Track">
+                                <Rectangle x:Name="PART_Indicator" HorizontalAlignment="Left" Fill="#4EBE60" RadiusX="5" RadiusY="5"/>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+        </Style>
+
+        <Style x:Key="RoundedDatePicker" TargetType="DatePicker">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="#4EBE60"/>
+            <Setter Property="BorderBrush" Value="#4EBE60" ></Setter>
+            <Setter Property="BorderThickness" Value="2"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+        </Style>
+
+
     </Application.Resources>
 </Application>

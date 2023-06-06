@@ -16,7 +16,7 @@ namespace HCI_big_project.service
 
         public void AddNewTrip(Trip trip)
         {
-            if (trip == null) throw new ArgumentNullException(nameof(trip));
+            if (trip == null) throw new ArgumentNullException("Putovanje nije kreirano!");
             var trips = _tripRepository.GetAllTrips();
             trips.Add(trip);
             _tripRepository.SaveAll();

@@ -15,6 +15,6 @@
             <RowDefinition Height="30*"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="1" x:Name="Message" Style="{StaticResource CustomTextBlockStyle}" />
-        <Button Grid.Row="2" Style="{StaticResource CustomButtonStyle}" Content="OK" Width="100" Height="50" HorizontalAlignment="Center" Click="Button_Click"/>
+        <Button Grid.Row="2" Style="{StaticResource CustomButtonStyle}" Content="POTVRDI" Width="100" Height="50" HorizontalAlignment="Center" Click="Button_Click"/>
     </Grid>
 </Window>

@@ -384,5 +384,138 @@
         "PriceLevel": 2
       }
     ]
+  },
+  {
+    "State": 2,
+    "Id": 3,
+    "Name": "Trip B",
+    "Beginning": {
+      "Latitude": 44.7866,
+      "Longitude": 20.4489,
+      "Address": "Beograd"
+    },
+    "End": {
+      "Latitude": 44.0165,
+      "Longitude": 21.0059,
+      "Address": "Niš"
+    },
+    "Form": "2023-06-01T00:00:00",
+    "To": "2023-06-07T00:00:00",
+    "Caption": "Explore the best of Serbia on Trip A",
+    "Price": 500.0,
+    "Attractions": [
+      {
+        "id": 6,
+        "Name": "Landmark E",
+        "Address": {
+          "Latitude": 43.8992,
+          "Longitude": 20.3306,
+          "Address": "Čačak"
+        },
+        "Caption": "Marvel at the impressive Landmark E in Čačak",
+        "Pictures": [
+          {
+            "id": 2,
+            "Name": "Animals",
+            "Size": 512,
+            "Content": "QW5pbWFscyB0aGF0IGJlZW4gYSBzYW1lIGluIHRoZSBwaWN0dXJlIQ==",
+            "Type": "gif"
+          },
+          {
+            "id": 3,
+            "Name": "Abstract",
+            "Size": 768,
+            "Content": "QWJzdHJhY3QgdGhhdCBkYXRhIG5lZWRzIHNvbWV0aGluZyBkYXRhIHN0b3JlZCB0byBwaWN0dXJlIQ==",
+            "Type": "jpg"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "Name": "Nature Reserve F",
+        "Address": {
+          "Latitude": 43.7419,
+          "Longitude": 20.6846,
+          "Address": "Kraljevo"
+        },
+        "Caption": "Immerse yourself in the beauty of Nature Reserve F",
+        "Pictures": [
+          {
+            "id": 2,
+            "Name": "Animals",
+            "Size": 512,
+            "Content": "QW5pbWFscyB0aGF0IGJlZW4gYSBzYW1lIGluIHRoZSBwaWN0dXJlIQ==",
+            "Type": "gif"
+          },
+          {
+            "id": 3,
+            "Name": "Abstract",
+            "Size": 768,
+            "Content": "QWJzdHJhY3QgdGhhdCBkYXRhIG5lZWRzIHNvbWV0aGluZyBkYXRhIHN0b3JlZCB0byBwaWN0dXJlIQ==",
+            "Type": "jpg"
+          }
+        ]
+      }
+    ],
+    "Accommodations": [
+      {
+        "id": 5,
+        "Name": "Hotel J",
+        "Address": {
+          "Latitude": 44.0167,
+          "Longitude": 21.7167,
+          "Address": "Knjaževac"
+        },
+        "Caption": "Scenic hotel in the charming town of Knjaževac",
+        "Pictures": [
+          {
+            "id": 8,
+            "Name": "Sunset",
+            "Size": 896,
+            "Content": "U3Vuc2V0IGluIFN1bnNldCBvciBTdW5zZXQgU3VwcG9ydCBzdW5zZXQ=",
+            "Type": "png"
+          },
+          {
+            "id": 9,
+            "Name": "Animals",
+            "Size": 768,
+            "Content": "QW5pbWFscyB0aGF0IGJlZW4gYSBzYW1lIGluIHRoZSBwaWN0dXJlIQ==",
+            "Type": "gif"
+          }
+        ],
+        "Rating": 4.3,
+        "Link": "https://www.hotel-j.com"
+      }
+    ],
+    "Restaurants": [
+      {
+        "Id": 2,
+        "Name": "Restaurant A",
+        "Address": {
+          "Latitude": 44.7866,
+          "Longitude": 20.4489,
+          "Address": "Beograd"
+        },
+        "Caption": "Enjoy delicious local cuisine at Restaurant A",
+        "Pictures": [
+          {
+            "Id": 7,
+            "Name": "Food",
+            "Size": 1024,
+            "Content": "SGVsbG8gdGhhdCBkYXRhIG5lZWRzIHNvbWV0aGluZyBkYXRhIHN0b3JlZCB0byBwaWN0dXJlIQ==",
+            "Type": "jpg"
+          },
+          {
+            "Id": 8,
+            "Name": "Interior",
+            "Size": 2048,
+            "Content": "SW50ZXJpb3IgdG8gaW5kZXJpb3Igb2YgUmVzdGF1cmFudCBBIHNob3VsZCBiZSB0aGVyZSBkZXNpZ25lZCB0byBwaWN0dXJlIQ==",
+            "Type": "jpg"
+          }
+        ],
+        "Rating": 0.0,
+        "PriceLevel": 2
+      }
+    ]
   }
 ]

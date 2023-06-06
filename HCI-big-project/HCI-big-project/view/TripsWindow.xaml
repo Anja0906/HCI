@@ -1,0 +1,79 @@
+<Window x:Class="HCI_big_project.view.TripsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:HCI_big_project.userControls"
+        xmlns:gmap="clr-namespace:GMap.NET.WindowsPresentation;assembly=GMap.NET.WindowsPresentation"
+        mc:Ignorable="d"
+        Title="TripsWindow" Height="430" Width="750"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        MinWidth="400"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="70*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Width="Auto">
+            <local:SideMenu x:Name="Menu"/>
+        </Grid>
+
+        <Grid Grid.Column="1" Background="#F2F2F2" MinWidth="200">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*" MinHeight="50"/>
+                <RowDefinition Height="40*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="#F2F2F2" MinWidth="200">
+                <gmap:GMapControl x:Name="gmap" Loaded="map_load" 
+                                  MouseDoubleClick="MapControl_MouseDoubleClick" 
+                                  Margin="5" />
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="3"/>
+                    <ColumnDefinition Width="58*"/>
+                    <ColumnDefinition Width="1"/>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Preražite: " Foreground="#4EBE60" Margin="15, 0,0 ,0 "
+                       HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                <Grid Grid.Column="1"></Grid>
+                <TextBox Grid.Column="2" x:Name="searchTextBox" Width="Auto" Height="30" 
+                         Margin="15, 0, 0, 0" VerticalAlignment="Center" 
+                         HorizontalAlignment="Stretch" TextChanged="searchTextBox_TextChanged"
+                         Style="{StaticResource RoundedTextBox}" />
+                <Grid Grid.Column="3"></Grid>
+                <Button Grid.Column="4" Width="30" Height="30" HorizontalAlignment="Center" 
+                        Margin="0, 0, 15, 0" Click="searchButton_Click"
+                        Style="{StaticResource TransparentGreenButton}">
+                    <Button.Content>
+                        <Image Source="../res/searchIcon.png" Grid.Column="2" Width="15" Height="15"/>
+                    </Button.Content>
+                </Button>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Button Style="{StaticResource CustomButtonStyle}" 
+                        Content="Dodaj novo putovanje" 
+                        x:Name="AddTrip"
+                        Height="36"
+                        Click="AddTrip_OnClick"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Right"
+                        Margin="0, 0, 30, 0"
+                />
+            </Grid>
+            <ScrollViewer Grid.Row="3" HorizontalScrollBarVisibility="Auto" 
+                          VerticalScrollBarVisibility="Auto">
+                <WrapPanel Orientation="Horizontal" x:Name="Panel">
+                </WrapPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>

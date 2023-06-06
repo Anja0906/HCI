@@ -14,7 +14,7 @@ namespace HCI_big_project.view
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Menu.SetUserRole(_user.Role);
+            Menu.SetUserRole(_user);
         }
     }
 }

@@ -8,6 +8,22 @@
     "Role": "Administrator"
   },
   {
+    "Name": "Anja",
+    "Surname": "Pi",
+    "Email": "admin",
+    "Password": "admin",
+    "Birthdate": "1990-01-01",
+    "Role": "Administrator"
+  },
+  {
+    "Name": "a",
+    "Surname": "B",
+    "Email": "user",
+    "Password": "user",
+    "Birthdate": "1990-01-01",
+    "Role": "Client"
+  },
+  {
     "Name": "Jane",
     "Surname": "Smith",
     "Email": "jane@example.com",

@@ -70,5 +70,10 @@ namespace HCI_big_project.service
                 _restaurantRepository.SaveAll();
             }
         }
+
+        public List<Restaurant> GetAll()
+        {
+            return _restaurantRepository.GetAllRestaurants();
+        }
     }
 }

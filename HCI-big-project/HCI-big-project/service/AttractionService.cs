@@ -68,5 +68,10 @@ namespace HCI_big_project.service
                 _attractionRepository.SaveAll();
             }
         }
+
+        public List<Attraction> GetAll()
+        {
+            return _attractionRepository.GetAllAttractions();
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using HCI_big_project.model;
 using HCI_big_project.repository;
+using HCI_big_project.view;
 
 namespace HCI_big_project.service
 {
@@ -26,6 +27,16 @@ namespace HCI_big_project.service
         public Accommodation FindById(int id)
         {
             return _accommodationRepository.GetAllAccommodations().FirstOrDefault(res => res.Id == id);
+        }
+        
+        public Accommodation FindByName(string name)
+        {
+            return _accommodationRepository.GetAllAccommodations().FirstOrDefault(res => res.Name == name);
+        }
+
+        public List<Accommodation> GetAll()
+        {
+            return _accommodationRepository.GetAllAccommodations();
         }
 
         public int MakeNewId()
