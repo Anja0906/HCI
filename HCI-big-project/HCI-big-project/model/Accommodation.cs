@@ -33,7 +33,6 @@ namespace HCI_big_project.model
                    $"Name: {Name}\n" +
                    $"Address: {Address}\n" +
                    $"Caption: {Caption}\n" +
-                   $"Pictures:\n{picturesString}\n" +
                    $"Rating: {Rating}\n" +
                    $"Link: {Link}";
         }

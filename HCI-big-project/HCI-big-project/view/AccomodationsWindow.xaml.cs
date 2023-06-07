@@ -27,5 +27,12 @@ namespace HCI_big_project.view
                 Panel.Children.Add(new AccomodationCard(accommodation, _user));
             }
         }
+
+        private void AddAccomodation_OnClick(object sender, RoutedEventArgs e)
+        {
+            NewAccommodationWindow newAccommodationWindow = new NewAccommodationWindow(_user);
+            newAccommodationWindow.Show();
+            
+        }
     }
 }
