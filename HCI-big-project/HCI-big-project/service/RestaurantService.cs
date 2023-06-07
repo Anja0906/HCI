@@ -29,7 +29,7 @@ namespace HCI_big_project.service
         }
         
 
-        public void DeleteTripById(int restaurantId)
+        public void DeleteRestaurantById(int restaurantId)
         {
             List<Restaurant> restaurants = _restaurantRepository.GetAllRestaurants();
             Restaurant restaurantToDelete = restaurants.FirstOrDefault(res => res.Id == restaurantId);
