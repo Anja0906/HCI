@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -12,6 +13,8 @@ using GMap.NET;
 using GMap.NET.MapProviders;
 using GMap.NET.WindowsPresentation;
 using HCI_big_project.model;
+using HCI_big_project.repository;
+using HCI_big_project.service;
 
 namespace HCI_big_project.view
 {
@@ -109,12 +112,30 @@ namespace HCI_big_project.view
 
         private void Update_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            EditAccomodationWindow editAccommodationWindow = new EditAccomodationWindow(_user, Accommodation);
+            editAccommodationWindow.Show();
+            this.Hide();
         }
 
         private void Delete_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            CustomYesNoDialog dialog = new CustomYesNoDialog("Da li ste sigurni da želite da obrisete ovaj smestaj?");
+            bool? result = dialog.ShowDialog();
+
+            if (result == true)
+            {
+                Accommodation.Pictures = new List<Picture>();
+                AccomodationService accomodationService = new AccomodationService(new AccommodationRepository());
+                accomodationService.DeleteAccommodationById(Accommodation.Id);
+                AccomodationsWindow accomodationsWindow = new AccomodationsWindow(_user);
+                accomodationsWindow.Show();
+                this.Hide();
+                
+            }
+            else
+            {
+                // No was clicked, do something else
+            }
         }
     }
 }

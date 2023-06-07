@@ -157,6 +157,9 @@
     <Compile Include="view\CustomYesNoDialog.xaml.cs">
       <DependentUpon>CustomYesNoDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="view\EditAccomodationWindow.xaml.cs">
+      <DependentUpon>EditAccomodationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view\EditRestaurantWindow.xaml.cs">
       <DependentUpon>EditRestaurantWindow.xaml</DependentUpon>
     </Compile>
@@ -214,6 +217,7 @@
     <Page Include="view\AttractionsWindow.xaml" />
     <Page Include="view\CustomDialogWindow.xaml" />
     <Page Include="view\CustomYesNoDialog.xaml" />
+    <Page Include="view\EditAccomodationWindow.xaml" />
     <Page Include="view\EditRestaurantWindow.xaml" />
     <Page Include="view\NewAccommodationWindow.xaml" />
     <Page Include="view\NewAttraction.xaml" />

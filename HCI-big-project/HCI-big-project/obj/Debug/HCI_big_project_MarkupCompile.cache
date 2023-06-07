@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\App.xaml
-24240962492
+251610676157
 1-1444277194
-521499513182
+531189230309
 2322447434
-MainWindow.xaml;userControls\AccomodationCard.xaml;userControls\AttractionCard.xaml;userControls\Card.xaml;userControls\RestaurantCard.xaml;userControls\SideMenu.xaml;view\AccomodationDetailsWidow.xaml;view\AccomodationsWindow.xaml;view\AdminMainWindow.xaml;view\AttractionDetailsWindow.xaml;view\AttractionsWindow.xaml;view\CustomDialogWindow.xaml;view\CustomYesNoDialog.xaml;view\EditRestaurantWindow.xaml;view\NewAccommodationWindow.xaml;view\NewAttraction.xaml;view\NewAttractionWindow.xaml;view\NewRestaurantWindow.xaml;view\NewTripWindow.xaml;view\RestaurantDetailsWindow.xaml;view\RestaurantsWindow.xaml;view\TripDetailsWindow.xaml;view\TripsWindow.xaml;view\UserMainWindow.xaml;
+MainWindow.xaml;userControls\AccomodationCard.xaml;userControls\AttractionCard.xaml;userControls\Card.xaml;userControls\RestaurantCard.xaml;userControls\SideMenu.xaml;view\AccomodationDetailsWidow.xaml;view\AccomodationsWindow.xaml;view\AdminMainWindow.xaml;view\AttractionDetailsWindow.xaml;view\AttractionsWindow.xaml;view\CustomDialogWindow.xaml;view\CustomYesNoDialog.xaml;view\EditAccomodationWindow.xaml;view\EditRestaurantWindow.xaml;view\NewAccommodationWindow.xaml;view\NewAttraction.xaml;view\NewAttractionWindow.xaml;view\NewRestaurantWindow.xaml;view\NewTripWindow.xaml;view\RestaurantDetailsWindow.xaml;view\RestaurantsWindow.xaml;view\TripDetailsWindow.xaml;view\TripsWindow.xaml;view\UserMainWindow.xaml;
 
 False
 
