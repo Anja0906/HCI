@@ -21,7 +21,22 @@
         </Grid>
 
         <Grid Grid.Column="1" Background="#F2F2F2" MinWidth="200">
-            <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="90*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Button Style="{StaticResource CustomButtonStyle}" 
+                        Content="Dodaj novo putovanje" 
+                        x:Name="AddTrip"
+                        Height="36"
+                        Click="AddAttraction_OnClick"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Right"
+                        Margin="0, 0, 30, 0"
+                />
+            </Grid>
+            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled">
                 <WrapPanel Orientation="Horizontal" x:Name="Panel">
                     
                 </WrapPanel>

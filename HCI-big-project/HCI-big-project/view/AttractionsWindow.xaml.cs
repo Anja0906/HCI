@@ -28,5 +28,12 @@ namespace HCI_big_project.view
                 Panel.Children.Add(new AttractionCard(attraction, _user));
             }
         }
+
+        private void AddAttraction_OnClick(object sender, RoutedEventArgs e)
+        {
+            NewAttractionWindow newAttractionWindow = new NewAttractionWindow(_user);
+            newAttractionWindow.Show();
+            this.Hide();
+        }
     }
 }

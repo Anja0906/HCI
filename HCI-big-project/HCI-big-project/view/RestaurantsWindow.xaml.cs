@@ -28,5 +28,12 @@ namespace HCI_big_project.view
                 Panel.Children.Add(new RestaurantCard(restaurant, _user));
             }
         }
+
+        private void AddRestaurant_OnClick(object sender, RoutedEventArgs e)
+        {
+            NewRestaurantWindow newRestaurantWindow = new NewRestaurantWindow(_user);
+            newRestaurantWindow.Show();
+            this.Hide();
+        }
     }
 }

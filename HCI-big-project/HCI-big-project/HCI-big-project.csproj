@@ -163,6 +163,12 @@
     <Compile Include="view\NewAttraction.xaml.cs">
       <DependentUpon>NewAttraction.xaml</DependentUpon>
     </Compile>
+    <Compile Include="view\NewAttractionWindow.xaml.cs">
+      <DependentUpon>NewAttractionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\NewRestaurantWindow.xaml.cs">
+      <DependentUpon>NewRestaurantWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view\NewTripWindow.xaml.cs">
       <DependentUpon>NewTripWindow.xaml</DependentUpon>
     </Compile>
@@ -207,6 +213,8 @@
     <Page Include="view\CustomYesNoDialog.xaml" />
     <Page Include="view\NewAccommodationWindow.xaml" />
     <Page Include="view\NewAttraction.xaml" />
+    <Page Include="view\NewAttractionWindow.xaml" />
+    <Page Include="view\NewRestaurantWindow.xaml" />
     <Page Include="view\NewTripWindow.xaml" />
     <Page Include="view\RestaurantDetailsWindow.xaml" />
     <Page Include="view\RestaurantsWindow.xaml" />
