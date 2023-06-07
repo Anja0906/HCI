@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Net;
@@ -10,6 +11,8 @@ using GMap.NET;
 using GMap.NET.MapProviders;
 using GMap.NET.WindowsPresentation;
 using HCI_big_project.model;
+using HCI_big_project.repository;
+using HCI_big_project.service;
 
 namespace HCI_big_project.view
 {
@@ -100,12 +103,30 @@ namespace HCI_big_project.view
 
         private void Update_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            EditAttractionWindow editAttractionWindow = new EditAttractionWindow(_user, Attraction);
+            editAttractionWindow.Show();
+            this.Hide();
         }
 
         private void Delete_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            CustomYesNoDialog dialog = new CustomYesNoDialog("Da li ste sigurni da želite da obrisete ovu atrakciju?");
+            bool? result = dialog.ShowDialog();
+
+            if (result == true)
+            {
+                Attraction.Pictures = new List<Picture>();
+                AttractionService attractionService = new AttractionService(new AttractionRepository());
+                attractionService.DeleteAttractionById(Attraction.Id);
+                AttractionsWindow attractions = new AttractionsWindow(_user);
+                attractions.Show();
+                this.Hide();
+                
+            }
+            else
+            {
+                // No was clicked, do something else
+            }
         }
         public event PropertyChangedEventHandler PropertyChanged;
         
