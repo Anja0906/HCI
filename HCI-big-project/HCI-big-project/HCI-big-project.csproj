@@ -169,6 +169,9 @@
     <Compile Include="view\RestaurantsWindow.xaml.cs">
       <DependentUpon>RestaurantsWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="view\TripDetailsWindow.xaml.cs">
+      <DependentUpon>TripDetailsWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view\TripsWindow.xaml.cs">
       <DependentUpon>TripsWindow.xaml</DependentUpon>
     </Compile>
@@ -203,6 +206,7 @@
     <Page Include="view\NewTripWindow.xaml" />
     <Page Include="view\RestaurantDetailsWindow.xaml" />
     <Page Include="view\RestaurantsWindow.xaml" />
+    <Page Include="view\TripDetailsWindow.xaml" />
     <Page Include="view\TripsWindow.xaml" />
     <Page Include="view\UserMainWindow.xaml" />
   </ItemGroup>

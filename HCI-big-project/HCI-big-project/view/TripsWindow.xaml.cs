@@ -31,7 +31,7 @@ namespace HCI_big_project.view
             Menu.SetUserRole(_user);
             foreach (Trip trip in Trips)
             {
-                Panel.Children.Add(new Card(trip));
+                Panel.Children.Add(new Card(trip, _user));
             }
         }
 

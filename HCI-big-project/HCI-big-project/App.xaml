@@ -253,6 +253,42 @@
             </Setter>
         </Style>
         
+        <Style TargetType="ListBoxItem" x:Key="OverviewItem">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border x:Name="border" 
+                                Background="White" 
+                                BorderBrush="#4EBE60" 
+                                BorderThickness="2" 
+                                CornerRadius="10" 
+                                Margin="1"
+                                Padding="5"
+                                Height="50"
+                                Width="120"
+                                ToolTip="{Binding TooltipProperty}">
+                            <TextBlock x:Name="TextBlock" Text="{Binding Name}" 
+                                       FontWeight="Bold" 
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       TextWrapping="Wrap"
+                                       FontSize="15" 
+                                       Foreground="#4EBE60"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#4EBE60" />
+                                <Setter TargetName="border" Property="BorderBrush" Value="White" />
+                                <Setter TargetName="TextBlock" Property="Foreground" Value="White" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        
         <Style x:Key="ListBoxCustomStyle" TargetType="ListBox">
             <Setter Property="Height" Value="160"></Setter>
             <Setter Property="Template">

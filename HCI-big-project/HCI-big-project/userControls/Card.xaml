@@ -37,7 +37,7 @@
                             Content="OBRIŠI" Click="ButtonBase2_OnClick"/>
                 </Grid>
             </Grid>
-            <Button Grid.Row="2" Style="{StaticResource CustomButtonStyle}" Content="SAZNAJ VIŠE"/>
+            <Button Grid.Row="2" Style="{StaticResource CustomButtonStyle}" Click="ButtonBase_OnClick" Content="SAZNAJ VIŠE"/>
         </Grid>
     </Border>
 </UserControl>

@@ -88,3 +88,5 @@ C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\Attract
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\AttractionDetailsWindow.baml
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\RestaurantDetailsWindow.g.cs
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\RestaurantDetailsWindow.baml
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\TripDetailsWindow.g.cs
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\TripDetailsWindow.baml

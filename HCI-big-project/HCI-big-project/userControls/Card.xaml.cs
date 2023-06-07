@@ -18,9 +18,11 @@ namespace HCI_big_project.userControls
     public partial class Card : UserControl
     {
         private Trip _trip;
-        public Card(Trip trip)
+        private User _user;
+        public Card(Trip trip, User user)
         {
             _trip = trip;
+            _user = user;
             this.DataContext = _trip;
             InitializeComponent();
         }
@@ -104,6 +106,14 @@ namespace HCI_big_project.userControls
             {
                 // No was clicked, do something else
             }
+        }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            TripDetailsWindow tripDetailsWindow = new TripDetailsWindow(_trip, _user);
+            tripDetailsWindow.Show();
+            Window parentWindow = Window.GetWindow(this);
+            if (parentWindow != null) parentWindow.Close();
         }
     }
 }
