@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\
+D:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\obj\Debug\
 HCI_big_project
 none
 false
 DEBUG;TRACE
-C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\App.xaml
+D:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\App.xaml
 26-713826324
 1-1444277194
-541631494551
-2322447434
+58-500305433
+23-486732526
 MainWindow.xaml;userControls\AccomodationCard.xaml;userControls\AttractionCard.xaml;userControls\Card.xaml;userControls\RestaurantCard.xaml;userControls\SideMenu.xaml;view\AccomodationDetailsWidow.xaml;view\AccomodationsWindow.xaml;view\AdminMainWindow.xaml;view\AttractionDetailsWindow.xaml;view\AttractionsWindow.xaml;view\CustomDialogWindow.xaml;view\CustomYesNoDialog.xaml;view\EditAccomodationWindow.xaml;view\EditAttractionWindow.xaml;view\EditRestaurantWindow.xaml;view\NewAccommodationWindow.xaml;view\NewAttraction.xaml;view\NewAttractionWindow.xaml;view\NewRestaurantWindow.xaml;view\NewTripWindow.xaml;view\RestaurantDetailsWindow.xaml;view\RestaurantsWindow.xaml;view\TripDetailsWindow.xaml;view\TripsWindow.xaml;view\UserMainWindow.xaml;
 
-False
+True
 

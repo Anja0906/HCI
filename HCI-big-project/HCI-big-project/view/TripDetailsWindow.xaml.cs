@@ -36,6 +36,22 @@ namespace HCI_big_project.view
         private void Window_OnLoaded(object sender, RoutedEventArgs e)
         {
             Menu.SetUserRole(_user);
+            SetGrid();
+        }
+
+        private void SetGrid()
+        {
+
+            if (_user.Role == Role.Administrator)
+            {
+                GridUser.Visibility = Visibility.Collapsed;
+                GridAdmin.Visibility = Visibility.Visible;
+            }
+            else if (_user.Role == Role.Client) 
+            {
+                GridUser.Visibility = Visibility.Visible;
+                GridAdmin.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void MapControl_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -90,9 +106,59 @@ namespace HCI_big_project.view
             }
         }
 
+
         private void Update_OnClick(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        private void purchase_OnClick(object sender, RoutedEventArgs e)
+        {
+            CustomYesNoDialog dialog = new CustomYesNoDialog("Da li ste sigurni da želite da kupite putovanje: " + Trip.Name + " ?");
+            bool? result = dialog.ShowDialog();
+
+            if (result == true)
+            {
+                TripService tripService = new TripService(new TripRepository());
+                ClientService clientService = new ClientService(new ClientRepository());
+                Trip.State = State.Kupljen;
+                tripService.AddNewTrip(Trip);
+                clientService.addNewTrip(_user.Email, Trip);
+                Window parentWindow = Window.GetWindow(this);
+                if (parentWindow != null) parentWindow.Close();
+                TripsWindow newWindow = new TripsWindow(_user);
+                newWindow.Show();
+                CustomDialogWindow.Show("Cestitam, uspesno ste rezervisali putovanje:" + Trip.Name);
+
+            }
+            else
+            {
+                // No was clicked, do something else
+            }
+        }
+
+        private void reserve_OnClick(object sender, RoutedEventArgs e)
+        {
+            CustomYesNoDialog dialog = new CustomYesNoDialog("Da li ste sigurni da želite da rezervisete putovanje: " + Trip.Name + " ?");
+            bool? result = dialog.ShowDialog();
+
+            if (result == true)
+            {
+                TripService tripService = new TripService(new TripRepository());
+                ClientService clientService = new ClientService(new ClientRepository());
+                Trip.State = State.Rezervisan;
+                tripService.AddNewTrip(Trip);
+                clientService.addNewTrip(_user.Email, Trip);
+                Window parentWindow = Window.GetWindow(this);
+                if (parentWindow != null) parentWindow.Close();
+                TripsWindow newWindow = new TripsWindow(_user);
+                newWindow.Show();
+                CustomDialogWindow.Show("Cestitam, uspesno ste rezervisali putovanje:" + Trip.Name);
+            }
+            else
+            {
+                // No was clicked, do something else
+            }
         }
 
         private void Delete_OnClick(object sender, RoutedEventArgs e)
