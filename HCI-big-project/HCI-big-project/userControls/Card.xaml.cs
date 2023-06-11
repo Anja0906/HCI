@@ -31,6 +31,21 @@ namespace HCI_big_project.userControls
         {
             NameLabel.Text += _trip.Name;
             DescriptionLabel.Text += _trip.Caption;
+            SetGrid();
+        }
+
+        private void SetGrid()
+        {
+            if (_user.Role == Role.Administrator)
+            {
+                GridUser.Visibility = Visibility.Collapsed;
+                GridAdmin.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                GridUser.Visibility = Visibility.Visible;
+                GridAdmin.Visibility = Visibility.Collapsed;
+            }
         }
         
         private void map_load(object sender, RoutedEventArgs e)
@@ -84,7 +99,10 @@ namespace HCI_big_project.userControls
 
         private void ButtonBase1_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            TripDetailsWindow tripDetailsWindow = new TripDetailsWindow(_trip, _user);
+            tripDetailsWindow.Show();
+            Window parentWindow = Window.GetWindow(this);
+            if (parentWindow != null) parentWindow.Close();
         }
 
         private void ButtonBase2_OnClick(object sender, RoutedEventArgs e)
@@ -109,6 +127,22 @@ namespace HCI_big_project.userControls
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            TripDetailsWindow tripDetailsWindow = new TripDetailsWindow(_trip, _user);
+            tripDetailsWindow.Show();
+            Window parentWindow = Window.GetWindow(this);
+            if (parentWindow != null) parentWindow.Close();
+        }
+
+        private void Buy_OnClick(object sender, RoutedEventArgs e)
+        {
+            TripDetailsWindow tripDetailsWindow = new TripDetailsWindow(_trip, _user);
+            tripDetailsWindow.Show();
+            Window parentWindow = Window.GetWindow(this);
+            if (parentWindow != null) parentWindow.Close();
+        }
+
+        private void Book_OnClick(object sender, RoutedEventArgs e)
         {
             TripDetailsWindow tripDetailsWindow = new TripDetailsWindow(_trip, _user);
             tripDetailsWindow.Show();

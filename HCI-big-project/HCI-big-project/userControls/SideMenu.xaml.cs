@@ -30,7 +30,10 @@ namespace HCI_big_project.userControls
 
         private void ButtonTrips_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new System.NotImplementedException();
+            Window parentWindow = Window.GetWindow(this);
+            if (parentWindow != null) parentWindow.Close();
+            TripsWindow newWindow = new TripsWindow(_user);
+            newWindow.Show();
         }
 
         private void Map_OnClick(object sender, RoutedEventArgs e)

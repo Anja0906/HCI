@@ -17,7 +17,7 @@
                 <Image Source="../res/logo.png" Width="100" Height="100" />
             </Grid>
 
-            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Visibility="Hidden" Name="UserSideMenu">
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Visibility="Visible" Name="UserSideMenu">
                 <StackPanel Margin="10">
                     <Button Style="{StaticResource CustomButtonStyle}" Content="Pregled putovanja" x:Name="ButtonTrips"
                             Click="ButtonTrips_OnClick" />
@@ -31,7 +31,7 @@
                             Click="ButtonLogout_OnClick" />
                 </StackPanel>
             </ScrollViewer>
-            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Visibility="Visible" Name="AdminSideMenu">
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Visibility="Hidden" Name="AdminSideMenu">
                 <StackPanel Margin="10">
                     <Button Style="{StaticResource CustomButtonStyle}" Content="Pregled putovanja"
                             x:Name="ButtonTripsAdmin" Click="ButtonTripsAdmin_OnClick" />
