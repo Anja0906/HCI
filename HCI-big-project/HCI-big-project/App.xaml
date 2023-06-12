@@ -36,7 +36,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
+
         <Style x:Key="CustomWhiteButtonStyle" TargetType="{x:Type Button}">
             <Setter Property="Background" Value="White" />
             <Setter Property="Foreground" Value="#7dcf8a" />
@@ -59,7 +59,8 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#FFFFFF" TargetName="border" />
+                                <Setter Property="Background" Value="#4EBE60" TargetName="border" />
+                                <Setter Property="Foreground" Value="White"></Setter>
                                 <Setter Property="Cursor" Value="Hand" />
                             </Trigger>
                             <Trigger Property="IsPressed" Value="True">
@@ -89,7 +90,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
+
         <Style x:Key="CustomPasswordBoxStyle" TargetType="PasswordBox">
             <Setter Property="Width" Value="Auto" />
             <Setter Property="Height" Value="Auto" />
@@ -107,7 +108,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
+
         <Style x:Key="CustomLabelStyle" TargetType="Label">
             <Setter Property="Foreground" Value="#4EBE60" />
             <Setter Property="FontSize" Value="14" />
@@ -116,7 +117,7 @@
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
-        
+
         <Style x:Key="LeftLabel" TargetType="Label">
             <Setter Property="Foreground" Value="#4EBE60" />
             <Setter Property="FontSize" Value="14" />
@@ -124,7 +125,7 @@
             <Setter Property="Margin" Value="0"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
-        
+
         <Style x:Key="DetailsLabel" TargetType="Label">
             <Setter Property="Foreground" Value="#379547" />
             <Setter Property="FontSize" Value="12" />
@@ -133,7 +134,7 @@
             <Setter Property="Margin" Value="0"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
-        
+
         <Style x:Key="CustomTextBlockStyle" TargetType="TextBlock">
             <Setter Property="Foreground" Value="#4EBE60" />
             <Setter Property="FontSize" Value="20" />
@@ -164,7 +165,7 @@
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
-        
+
         <Style x:Key="H2" TargetType="TextBlock">
             <Setter Property="Foreground" Value="White" />
             <Setter Property="FontSize" Value="18" />
@@ -175,7 +176,7 @@
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
-        
+
         <Style x:Key="RoundedTextBox" TargetType="{x:Type TextBox}">
             <Setter Property="Template">
                 <Setter.Value>
@@ -190,7 +191,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
+
         <Style x:Key="SquaredTextBox" TargetType="{x:Type TextBox}">
             <Setter Property="Margin" Value="5"></Setter>
             <Setter Property="Template">
@@ -208,7 +209,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
+
         <Style x:Key="SimpleSquaredTextBox" TargetType="{x:Type TextBox}">
             <Setter Property="Margin" Value="5"></Setter>
             <Setter Property="Template">
@@ -244,7 +245,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
+
         <Style TargetType="ListBoxItem" x:Key="ImageItem" >
             <Setter Property="HorizontalContentAlignment" Value="Stretch" />
             <Setter Property="Template">
@@ -265,7 +266,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
+
         <Style TargetType="ListBoxItem" x:Key="OverviewItem">
             <Setter Property="HorizontalContentAlignment" Value="Stretch" />
             <Setter Property="Template">
@@ -301,7 +302,7 @@
             </Setter>
         </Style>
 
-        
+
         <Style x:Key="ListBoxCustomStyle" TargetType="ListBox">
             <Setter Property="Height" Value="160"></Setter>
             <Setter Property="Template">
@@ -341,7 +342,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
+
         <Style x:Key="CustomProgressBar" TargetType="ProgressBar">
             <Setter Property="Template">
                 <Setter.Value>
@@ -364,7 +365,7 @@
             <Setter Property="BorderThickness" Value="2"></Setter>
             <Setter Property="Margin" Value="5"></Setter>
         </Style>
-        
+
         <Style x:Key="BorderWithShadowStyle" TargetType="Border">
             <Setter Property="Background" Value="White"/>
             <Setter Property="CornerRadius" Value="15"/>
@@ -374,7 +375,7 @@
             <Setter Property="Opacity" Value="0.7"></Setter>
             <Setter Property="BorderThickness" Value="1"/>
         </Style>
-        
+
         <Style x:Key="DetailsBorder" TargetType="Border">
             <Setter Property="Background" Value="#D9D9D9"/>
             <Setter Property="CornerRadius" Value="15"/>
@@ -383,6 +384,20 @@
             <Setter Property="Height" Value="Auto"></Setter>
             <Setter Property="Opacity" Value="0.7"></Setter>
             <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+
+        <Style x:Key="ComboBoxStyle" TargetType="ComboBox">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#4EBE60"/>
+            <Setter Property="BorderBrush" Value="#4EBE60"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+        <Style TargetType="ComboBoxItem" x:Key="ComboBoxItemStyle">
+            <Style.Triggers>
+                <Trigger Property="ComboBoxItem.IsSelected" Value="True">
+                    <Setter Property="Background" Value="#4EBE60"/>
+                </Trigger>
+            </Style.Triggers>
         </Style>
 
 

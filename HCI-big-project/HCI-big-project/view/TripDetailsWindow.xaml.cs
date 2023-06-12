@@ -126,7 +126,7 @@ namespace HCI_big_project.view
                 clientService.addNewTrip(_user.Email, Trip);
                 Window parentWindow = Window.GetWindow(this);
                 if (parentWindow != null) parentWindow.Close();
-                TripsWindow newWindow = new TripsWindow(_user);
+                BoughtTripsWindows newWindow = new BoughtTripsWindows(_user);
                 newWindow.Show();
                 CustomDialogWindow.Show("Cestitam, uspesno ste rezervisali putovanje:" + Trip.Name);
 
@@ -151,7 +151,7 @@ namespace HCI_big_project.view
                 clientService.addNewTrip(_user.Email, Trip);
                 Window parentWindow = Window.GetWindow(this);
                 if (parentWindow != null) parentWindow.Close();
-                TripsWindow newWindow = new TripsWindow(_user);
+                BookedTripsWindow newWindow = new BookedTripsWindow(_user);
                 newWindow.Show();
                 CustomDialogWindow.Show("Cestitam, uspesno ste rezervisali putovanje:" + Trip.Name);
             }

@@ -23,6 +23,10 @@ namespace HCI_big_project.view
         private void Window_OnLoaded(object sender, RoutedEventArgs e)
         {
             Menu.SetUserRole(_user);
+            if (_user.Role == Role.Client)
+            {
+                Grid1.Visibility = Visibility.Hidden;
+            }
             foreach (Attraction attraction in Attractions)
             {
                 Panel.Children.Add(new AttractionCard(attraction, _user));

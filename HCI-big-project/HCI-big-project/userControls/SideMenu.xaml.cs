@@ -12,7 +12,7 @@ namespace HCI_big_project.userControls
         {
             InitializeComponent();
         }
-        
+
         public void SetUserRole(User user)
         {
             _user = user;
@@ -38,17 +38,26 @@ namespace HCI_big_project.userControls
 
         private void Map_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new System.NotImplementedException();
+            Window parentWindow = Window.GetWindow(this);
+            if (parentWindow != null) parentWindow.Close();
+            TripsMapWindow newWindow = new TripsMapWindow(_user);
+            newWindow.Show();
         }
 
         private void ButtonBook_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new System.NotImplementedException();
+            Window parentWindow = Window.GetWindow(this);
+            if (parentWindow != null) parentWindow.Close();
+            BookedTripsWindow newWindow = new BookedTripsWindow(_user);
+            newWindow.Show();
         }
 
         private void ButtonBought_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new System.NotImplementedException();
+            Window parentWindow = Window.GetWindow(this);
+            if (parentWindow != null) parentWindow.Close();
+            BoughtTripsWindows newWindow = new BoughtTripsWindows(_user);
+            newWindow.Show();
         }
 
         private void ButtonLogout_OnClick(object sender, RoutedEventArgs e)
@@ -69,7 +78,10 @@ namespace HCI_big_project.userControls
 
         private void MapAdmin_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new System.NotImplementedException();
+            Window parentWindow = Window.GetWindow(this);
+            if (parentWindow != null) parentWindow.Close();
+            TripsMapWindow newWindow = new TripsMapWindow(_user);
+            newWindow.Show();
         }
 
         private void ButtonNewDestination_OnClick(object sender, RoutedEventArgs e)
@@ -103,6 +115,13 @@ namespace HCI_big_project.userControls
             MainWindow newWindow = new MainWindow();
             newWindow.Show();
         }
-        
+
+        private void Reports_OnClick(object sender, RoutedEventArgs e)
+        {
+            Window parentWindow = Window.GetWindow(this);
+            if (parentWindow != null) parentWindow.Close();
+            ReportsWindow newWindow = new ReportsWindow(_user);
+            newWindow.Show();
+        }
     }
 }

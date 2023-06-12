@@ -8,16 +8,13 @@ using HCI_big_project.view;
 
 namespace HCI_big_project
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         private UserService _userService = new UserService(new UserRepository());
         public MainWindow()
         {
             InitializeComponent();
-           
+
         }
 
         private void ButtonSubmit_OnClick(object sender, RoutedEventArgs e)
@@ -39,13 +36,13 @@ namespace HCI_big_project
         {
             if (user.Role == Role.Administrator)
             {
-                Window adminMainWindow = new AdminMainWindow(user);
+                Window adminMainWindow = new TripsMapWindow(user);
                 adminMainWindow.Show();
                 this.Hide();
             }
             else if (user.Role == Role.Client)
             {
-                Window userMainWindow = new UserMainWindow(user);
+                Window userMainWindow = new TripsMapWindow(user);
                 userMainWindow.Show();
                 this.Hide();
             }
@@ -55,11 +52,6 @@ namespace HCI_big_project
             }
         }
 
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-        
         private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();

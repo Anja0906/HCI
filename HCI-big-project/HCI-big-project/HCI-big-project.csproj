@@ -63,6 +63,12 @@
       <HintPath>packages\GMap.Net.WPF.1.0.0.1\lib\GMap.NET.WindowsPresentation.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -151,6 +157,12 @@
     <Compile Include="view\AttractionsWindow.xaml.cs">
       <DependentUpon>AttractionsWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="view\BookedTripsWindow.xaml.cs">
+      <DependentUpon>BookedTripsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\BoughtTripsWindows.xaml.cs">
+      <DependentUpon>BoughtTripsWindows.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view\CustomDialogWindow.xaml.cs">
       <DependentUpon>CustomDialogWindow.xaml</DependentUpon>
     </Compile>
@@ -181,6 +193,9 @@
     <Compile Include="view\NewTripWindow.xaml.cs">
       <DependentUpon>NewTripWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="view\ReportsWindow.xaml.cs">
+      <DependentUpon>ReportsWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view\RestaurantDetailsWindow.xaml.cs">
       <DependentUpon>RestaurantDetailsWindow.xaml</DependentUpon>
     </Compile>
@@ -189,6 +204,12 @@
     </Compile>
     <Compile Include="view\TripDetailsWindow.xaml.cs">
       <DependentUpon>TripDetailsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\TripsOverviewCard.xaml.cs">
+      <DependentUpon>TripsOverviewCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\TripsMapWindow.xaml.cs">
+      <DependentUpon>TripsMapWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="view\TripsWindow.xaml.cs">
       <DependentUpon>TripsWindow.xaml</DependentUpon>
@@ -218,6 +239,14 @@
     <Page Include="view\AdminMainWindow.xaml" />
     <Page Include="view\AttractionDetailsWindow.xaml" />
     <Page Include="view\AttractionsWindow.xaml" />
+    <Page Include="view\BookedTripsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\BoughtTripsWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="view\CustomDialogWindow.xaml" />
     <Page Include="view\CustomYesNoDialog.xaml" />
     <Page Include="view\EditAccomodationWindow.xaml" />
@@ -228,9 +257,21 @@
     <Page Include="view\NewAttractionWindow.xaml" />
     <Page Include="view\NewRestaurantWindow.xaml" />
     <Page Include="view\NewTripWindow.xaml" />
+    <Page Include="view\ReportsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="view\RestaurantDetailsWindow.xaml" />
     <Page Include="view\RestaurantsWindow.xaml" />
     <Page Include="view\TripDetailsWindow.xaml" />
+    <Page Include="userControls\TripsOverviewCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\TripsMapWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="view\TripsWindow.xaml" />
     <Page Include="view\UserMainWindow.xaml" />
   </ItemGroup>

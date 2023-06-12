@@ -70,27 +70,32 @@
                                 <Label Grid.Row="1" Grid.Column="0" Content="Naziv:" 
                                        Style="{StaticResource LeftLabel}"/>
                                 <TextBox Grid.Row="1" Grid.Column="1" x:Name="NameInput"
-                                         Style="{StaticResource SquaredTextBox}"/>
+                                         Style="{StaticResource SquaredTextBox}"
+                                         Text="{Binding Trip.Name}"/>
 
                                 <Label Grid.Row="2" Grid.Column="0" Content="Datum početka:" 
                                        Style="{StaticResource LeftLabel}"/>
                                 <DatePicker Grid.Row="2" Grid.Column="1" x:Name="FormInput" 
-                                            Style="{StaticResource RoundedDatePicker}" />
+                                            Style="{StaticResource RoundedDatePicker}" 
+                                            SelectedDate="{Binding Trip.From}" />
 
                                 <Label Grid.Row="3" Grid.Column="0" Content="Datum završetka:"
                                        Style="{StaticResource LeftLabel}"/>
                                 <DatePicker Grid.Row="3" Grid.Column="1" x:Name="ToInput"
-                                            Style="{StaticResource RoundedDatePicker}"/>
+                                            Style="{StaticResource RoundedDatePicker}"
+                                            SelectedDate="{Binding Trip.To}"/>
 
                                 <Label Grid.Row="4" Grid.Column="0" Content="Opis:" 
                                        Style="{StaticResource LeftLabel}"/>
                                 <TextBox Grid.Row="4" Grid.Column="1" x:Name="CaptionInput" 
-                                         Style="{StaticResource SquaredTextBox}"/>
+                                         Style="{StaticResource SquaredTextBox}"
+                                         Text="{Binding Trip.Caption}"/>
 
                                 <Label Grid.Row="5" Grid.Column="0" Content="Cena:" 
                                        Style="{StaticResource LeftLabel}"/>
                                 <TextBox Grid.Row="5" Grid.Column="1" x:Name="PriceInput"
-                                         Style="{StaticResource SquaredTextBox}"/>
+                                         Style="{StaticResource SquaredTextBox}"
+                                         Text="{Binding Trip.Price}"/>
 
                                 <Grid Grid.Row="6" Grid.Column="0" ColumnSpan="2"
                                       VerticalAlignment="Bottom">

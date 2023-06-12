@@ -51,6 +51,10 @@ namespace HCI_big_project.view
         private void Window_OnLoaded(object sender, RoutedEventArgs e)
         {
             Menu.SetUserRole(_user);
+            if (_user.Role == Role.Client)
+            {
+                Grid3.Visibility = Visibility.Hidden;
+            }
         }
         
         private void map_load(object sender, RoutedEventArgs e)

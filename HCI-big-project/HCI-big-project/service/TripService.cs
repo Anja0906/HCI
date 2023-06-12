@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using HCI_big_project.model;
 using HCI_big_project.repository;
+using Microsoft.Ajax.Utilities;
+
 namespace HCI_big_project.service
 {
     public class TripService
@@ -45,6 +47,25 @@ namespace HCI_big_project.service
         public List<Trip> GetPurchasedAndReservedTrips()
         {
             return _tripRepository.GetAllTrips().Where(trip => trip.State == State.Kupljen || trip.State == State.Rezervisan).ToList();
+        }
+
+        public Dictionary<string, int> MakeDictionary(List<Trip> trips)
+        {
+            Dictionary<string, int> purchasedByTrip = new Dictionary<string, int>();
+            foreach (Trip trip in trips)
+            {
+                Console.WriteLine(trip.Name);
+                if (purchasedByTrip.Keys.Contains(trip.Name))
+                {
+                    purchasedByTrip[trip.Name] += 1;
+                }
+                else
+                {
+                    purchasedByTrip[trip.Name] = 1;
+                }
+            }
+
+            return purchasedByTrip;
         }
 
         public List<Trip> GetPurchasedTripsForSpecificTrip(string tripName)

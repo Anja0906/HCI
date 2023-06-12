@@ -18,6 +18,7 @@ namespace HCI_big_project.view
         private AccomodationService _accomodationService;
         private AttractionService _attractionService;
         private RestaurantService _restaurantService;
+        private Trip Trip { get; set; }
         
         public NewTripWindow(User user)
         {

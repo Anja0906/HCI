@@ -23,15 +23,14 @@
 
         <Grid Grid.Column="1" Background="#F2F2F2" MinWidth="200">
             <Grid.RowDefinitions>
-                <RowDefinition Height="40*"/>
+                <RowDefinition Height="15*"/>
                 <RowDefinition Height="10*"/>
                 <RowDefinition Height="10*" MinHeight="50"/>
-                <RowDefinition Height="40*"/>
+                <RowDefinition Height="65*"/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" Background="#F2F2F2" MinWidth="200">
-                <gmap:GMapControl x:Name="gmap" Loaded="map_load" 
-                                  MouseDoubleClick="MapControl_MouseDoubleClick" 
-                                  Margin="5" />
+                <Label Style="{StaticResource CustomLabelStyle}" FontSize="25" FontWeight="Bold"
+                       Content="Pregled svih putovanja"></Label>
             </Grid>
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
@@ -58,10 +57,10 @@
                     </Button.Content>
                 </Button>
             </Grid>
-            <Grid Grid.Row="2">
+            <Grid Grid.Row="2" x:Name="Grid2">
                 <Button Style="{StaticResource CustomButtonStyle}" 
                         Content="Dodaj novo putovanje" 
-                        x:Name="AddTrip"
+                        x:Name="Right"
                         Height="36"
                         Click="AddTrip_OnClick"
                         VerticalAlignment="Top"

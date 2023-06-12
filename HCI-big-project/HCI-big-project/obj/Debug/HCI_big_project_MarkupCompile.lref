@@ -9,6 +9,8 @@ FD:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\view\AccomodationsWindow
 FD:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\view\AdminMainWindow.xaml;;
 FD:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\view\AttractionDetailsWindow.xaml;;
 FD:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\view\AttractionsWindow.xaml;;
+FD:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\view\BookedTripsWindow.xaml;;
+FD:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\view\BoughtTripsWindows.xaml;;
 FD:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\view\CustomYesNoDialog.xaml;;
 FD:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\view\EditAccomodationWindow.xaml;;
 FD:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\view\EditAttractionWindow.xaml;;
@@ -18,9 +20,12 @@ FD:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\view\NewAttraction.xaml;
 FD:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\view\NewAttractionWindow.xaml;;
 FD:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\view\NewRestaurantWindow.xaml;;
 FD:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\view\NewTripWindow.xaml;;
+FD:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\view\ReportsWindow.xaml;;
 FD:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\view\RestaurantDetailsWindow.xaml;;
 FD:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\view\RestaurantsWindow.xaml;;
 FD:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\view\TripDetailsWindow.xaml;;
+FD:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\userControls\TripsOverviewCard.xaml;;
+FD:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\view\TripsMapWindow.xaml;;
 FD:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\view\TripsWindow.xaml;;
 FD:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\view\UserMainWindow.xaml;;
 

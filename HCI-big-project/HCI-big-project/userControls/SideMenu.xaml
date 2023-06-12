@@ -14,16 +14,16 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0" Margin="10, 10, 10, 0">
-                <Image Source="../res/logo.png" Width="100" Height="100" />
+                <Image Source="../res/logo.png" Width="80" Height="80" />
             </Grid>
 
-            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Visibility="Visible" Name="UserSideMenu">
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Visibility="Hidden" Name="UserSideMenu">
                 <StackPanel Margin="10">
                     <Button Style="{StaticResource CustomButtonStyle}" Content="Pregled putovanja" x:Name="ButtonTrips"
                             Click="ButtonTrips_OnClick" />
                     <Button Style="{StaticResource CustomButtonStyle}" Content="Mapa putovanja" x:Name="Map"
                             Click="Map_OnClick" />
-                    <Button Style="{StaticResource CustomButtonStyle}" Content="Rezerviši putovanje"
+                    <Button Style="{StaticResource CustomButtonStyle}" Content="Rezervisana putovanje"
                             x:Name="ButtonBook" Click="ButtonBook_OnClick" />
                     <Button Style="{StaticResource CustomButtonStyle}" Content="Kupljena putovanja"
                             x:Name="ButtonBought" Click="ButtonBought_OnClick" />
@@ -31,7 +31,7 @@
                             Click="ButtonLogout_OnClick" />
                 </StackPanel>
             </ScrollViewer>
-            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Visibility="Hidden" Name="AdminSideMenu">
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Visibility="Visible" Name="AdminSideMenu">
                 <StackPanel Margin="10">
                     <Button Style="{StaticResource CustomButtonStyle}" Content="Pregled putovanja"
                             x:Name="ButtonTripsAdmin" Click="ButtonTripsAdmin_OnClick" />
@@ -43,6 +43,8 @@
                             Click="ButtonNewHotel_OnClick" />
                     <Button Style="{StaticResource CustomButtonStyle}" Content="Pregled atrakcija"
                             x:Name="ButtonNewAttraction" Click="ButtonNewAttraction_OnClick" />
+                    <Button Style="{StaticResource CustomButtonStyle}" Content="Izvestaji"
+                            x:Name="Reports" Click="Reports_OnClick" />
                     <Button Style="{StaticResource CustomButtonStyle}" Content="Izloguj se" x:Name="ButtonLogoutAdmin"
                             Click="ButtonLogoutAdmin_OnClick" />
                 </StackPanel>

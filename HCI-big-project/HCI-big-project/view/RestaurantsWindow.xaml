@@ -22,12 +22,17 @@
 
         <Grid Grid.Column="1" Background="#F2F2F2" MinWidth="200">
             <Grid.RowDefinitions>
+                <RowDefinition Height="15*"/>
                 <RowDefinition Height="10*"/>
-                <RowDefinition Height="90*"/>
+                <RowDefinition Height="75*"/>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0">
+            <Grid Grid.Row="0" Background="#F2F2F2" MinWidth="200">
+                <Label Style="{StaticResource CustomLabelStyle}" FontSize="25" FontWeight="Bold"
+                       Content="Pregled svih restorana"></Label>
+            </Grid>
+            <Grid Grid.Row="1" x:Name="Grid1">
                 <Button Style="{StaticResource CustomButtonStyle}" 
-                        Content="Dodaj novo putovanje" 
+                        Content="Dodaj novi restoran" 
                         x:Name="AddTrip"
                         Height="36"
                         Click="AddRestaurant_OnClick"
@@ -36,7 +41,7 @@
                         Margin="0, 0, 30, 0"
                 />
             </Grid>
-            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled">
+            <ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="Disabled">
                 <WrapPanel Orientation="Horizontal" x:Name="Panel">
                     
                 </WrapPanel>

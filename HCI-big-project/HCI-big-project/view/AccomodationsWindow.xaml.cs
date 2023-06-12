@@ -22,6 +22,10 @@ namespace HCI_big_project.view
         private void AccomodationsWindow_OnLoaded(object sender, RoutedEventArgs e)
         {
             Menu.SetUserRole(_user);
+            if (_user.Role == Role.Client)
+            {
+                Grid1.Visibility = Visibility.Hidden;
+            }
             foreach (Accommodation accommodation in Accommodations)
             {
                 Panel.Children.Add(new AccomodationCard(accommodation, _user));
