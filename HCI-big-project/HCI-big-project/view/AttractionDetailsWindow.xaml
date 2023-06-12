@@ -1,0 +1,125 @@
+<Window x:Class="HCI_big_project.view.AttractionDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:gmap="clr-namespace:GMap.NET.WindowsPresentation;assembly=GMap.NET.WindowsPresentation"
+        xmlns:local="clr-namespace:HCI_big_project.userControls"
+        mc:Ignorable="d"
+        Title="AttractionDetailsWindow" Height="430" Width="750"
+        WindowStartupLocation="CenterScreen"
+        MinWidth="400"
+        Loaded="Window_OnLoaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*" />
+            <ColumnDefinition Width="70*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <local:SideMenu x:Name="Menu" />
+        </Grid>
+
+        <Grid Grid.Column="1" Background="#F2F2F2" MinWidth="200">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25*" />
+                <RowDefinition Height="50*" />
+                <RowDefinition Height="15*" />
+                <RowDefinition Height="10*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="#F2F2F2" MinWidth="200">
+                <gmap:GMapControl x:Name="gmap" Loaded="map_load"
+                                  MouseDoubleClick="MapControl_MouseDoubleClick"
+                                  Margin="5" 
+                                  ToolTip="Lokacija atrakcije"/>
+            </Grid>
+            <Border Grid.Row="1" Style="{StaticResource DetailsBorder}">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50*" />
+                            <ColumnDefinition Width="50*" />
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="1" Style="{StaticResource BorderWithShadowStyle}"
+                                ToolTip="Opste informacije o atrakciji">
+                            <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Style="{StaticResource DetailsLabel}" Content="NAZIV: " />
+                                    <Label Style="{StaticResource DetailsLabel}" Content="{Binding Attraction.Name}" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Style="{StaticResource DetailsLabel}" Content="ADRESA: " />
+                                    <Label Style="{StaticResource DetailsLabel}"
+                                           Content="{Binding Attraction.Address.Address}" />
+                                </StackPanel>
+                                
+                                <Label Style="{StaticResource DetailsLabel}"
+                                       HorizontalAlignment="Left" Content="OPIS: " />
+                                <TextBlock Style="{StaticResource CaptionTextBlockStyle}"
+                                           Text="{Binding Attraction.Caption}"
+                                           HorizontalAlignment="Left">
+                                </TextBlock>
+                            </StackPanel>
+                        </Border>
+
+                        <StackPanel Grid.Column="0"
+                                    ToolTip="Slika atrakcije">
+                            <ContentControl Content="{Binding SelectedImage}" Padding="70">
+                                <ContentControl.ContentTemplate>
+                                    <DataTemplate>
+                                        <Image Source="{Binding}" />
+                                    </DataTemplate>
+                                </ContentControl.ContentTemplate>
+                            </ContentControl>
+                        </StackPanel>
+                    </Grid>
+                </ScrollViewer>
+
+            </Border>
+
+            <Grid Grid.Row="2">
+                <ScrollViewer Height="Auto" VerticalScrollBarVisibility="Auto"
+                              ToolTip="Slike atrakcija">
+                    <ListBox ItemsSource="{Binding Images}"
+                             SelectedItem="{Binding SelectedImage}"
+                             ItemContainerStyle="{StaticResource ImageItem}">
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal" Height="Auto" />
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding}" Width="50" Height="Auto" />
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                        <ListBox.Template>
+                            <ControlTemplate>
+                                <ScrollViewer HorizontalScrollBarVisibility="Auto" Height="Auto">
+                                    <ItemsPresenter Height="Auto" />
+                                </ScrollViewer>
+                            </ControlTemplate>
+                        </ListBox.Template>
+                    </ListBox>
+                </ScrollViewer>
+            </Grid>
+            <Grid Grid.Row="3" x:Name="Grid3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="47*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="47*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="1" Style="{StaticResource CustomButtonStyle}" 
+                        Content="UREDI" Click="Update_OnClick"
+                        MaxHeight="35"
+                        ToolTip="Klikom na ovo dugme mozete urediti atrakciju"/>
+                <Button Grid.Column="3" Style="{StaticResource CustomButtonStyle}" 
+                        Content="OBRIŠI" Click="Delete_OnClick"
+                        MaxHeight="35"
+                        ToolTip="Klikom na ovo dugme mozete obrisati atrakciju"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

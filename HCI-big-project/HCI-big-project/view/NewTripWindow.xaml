@@ -1,0 +1,386 @@
+<Window x:Class="HCI_big_project.view.NewTripWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:HCI_big_project.userControls"
+        xmlns:gmap="clr-namespace:GMap.NET.WindowsPresentation;assembly=GMap.NET.WindowsPresentation"
+        mc:Ignorable="d"
+        Title="NewTripWindow" Height="430" Width="750"
+        WindowStartupLocation="CenterScreen"
+         
+        MinWidth="400"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*" />
+            <ColumnDefinition Width="70*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Width="Auto">
+            <local:SideMenu x:Name="Menu" />
+        </Grid>
+
+        <Grid Grid.Column="1" Background="#F2F2F2" MinWidth="200">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="65*" />
+            </Grid.RowDefinitions>
+            <gmap:GMapControl Grid.Row="0" x:Name="gmap" Loaded="map_load"
+                              MouseDoubleClick="MapControl_MouseDoubleClick"
+                              Margin="5" />
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" x:Name="StepLabel" Content="Korak 1 od 4"
+                       Style="{StaticResource CustomLabelStyle}" />
+                <ProgressBar Grid.Column="1" x:Name="StepProgressBar" Minimum="1" Maximum="4" Value="1"
+                             Style="{StaticResource CustomProgressBar}" Height="20"
+                             VerticalAlignment="Center" />
+            </Grid>
+            <StackPanel Grid.Row="2" x:Name="MainStackPanel">
+                <!-- Step 1 UI -->
+                <Grid x:Name="Step1" Visibility="Visible">
+                    <StackPanel Orientation="Vertical">
+                        <ScrollViewer>
+                            <Grid Margin="10, 0, 10, 10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+
+                                <Grid Grid.Row="0" Grid.Column="0" ColumnSpan="2">
+                                    <Label Content="Osnovne informacije" 
+                                           FontSize="20"
+                                           Style="{StaticResource CustomLabelStyle}"/>
+                                </Grid>
+
+                                <Label Grid.Row="1" Grid.Column="0" Content="Naziv:" 
+                                       Style="{StaticResource LeftLabel}"/>
+                                <TextBox Grid.Row="1" Grid.Column="1" x:Name="NameInput"
+                                         Style="{StaticResource SquaredTextBox}"
+                                         Text="{Binding Trip.Name}"/>
+
+                                <Label Grid.Row="2" Grid.Column="0" Content="Datum početka:" 
+                                       Style="{StaticResource LeftLabel}"/>
+                                <DatePicker Grid.Row="2" Grid.Column="1" x:Name="FormInput" 
+                                            Style="{StaticResource RoundedDatePicker}" 
+                                            SelectedDate="{Binding Trip.From}" />
+
+                                <Label Grid.Row="3" Grid.Column="0" Content="Datum završetka:"
+                                       Style="{StaticResource LeftLabel}"/>
+                                <DatePicker Grid.Row="3" Grid.Column="1" x:Name="ToInput"
+                                            Style="{StaticResource RoundedDatePicker}"
+                                            SelectedDate="{Binding Trip.To}"/>
+
+                                <Label Grid.Row="4" Grid.Column="0" Content="Opis:" 
+                                       Style="{StaticResource LeftLabel}"/>
+                                <TextBox Grid.Row="4" Grid.Column="1" x:Name="CaptionInput" 
+                                         Style="{StaticResource SquaredTextBox}"
+                                         Text="{Binding Trip.Caption}"/>
+
+                                <Label Grid.Row="5" Grid.Column="0" Content="Cena:" 
+                                       Style="{StaticResource LeftLabel}"/>
+                                <TextBox Grid.Row="5" Grid.Column="1" x:Name="PriceInput"
+                                         Style="{StaticResource SquaredTextBox}"
+                                         Text="{Binding Trip.Price}"/>
+
+                                <Grid Grid.Row="6" Grid.Column="0" ColumnSpan="2"
+                                      VerticalAlignment="Bottom">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="25*"/>
+                                        <ColumnDefinition Width="50*"/>
+                                        <ColumnDefinition Width="25*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Button Grid.Column="2" Content="Sledeće" Click="NextButton1_Click" Margin="5" 
+                                            Style="{StaticResource CustomButtonStyle}" />
+                                </Grid>
+                            </Grid>
+                        </ScrollViewer>
+                    </StackPanel>
+                </Grid>
+
+                <!-- Step 2 UI -->
+                <Grid x:Name="Step2" Visibility="Collapsed">
+                    <StackPanel Orientation="Vertical">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50*"/>
+                                <ColumnDefinition Width="50*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20*"/>
+                                <RowDefinition Height="50*"/>
+                                <RowDefinition Height="30*"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Grid.Column="0" ColumnSpan="2">
+                                <Label Content="Atrakcije" 
+                                       FontSize="20"
+                                       Style="{StaticResource CustomLabelStyle}"/>
+                            </Grid>
+                            <StackPanel Grid.Column="0" Grid.Row="1"
+                                        Orientation="Vertical">
+                                <Label Content="Ponudjene atrakcije:"
+                                    Style="{StaticResource CustomLabelStyle}"/>
+                                <ListBox x:Name="AllAttractionListBox" 
+                                         HorizontalContentAlignment="Stretch"
+                                         Style="{StaticResource ListBoxCustomStyle}"
+                                         PreviewMouseLeftButtonDown="SelectedItem_PreviewMouseLeftButtonDown" 
+                                         PreviewMouseMove="MoveItem_PreviewMouseMove"  
+                                         PreviewDragEnter="DragAttraction_PreviewDragEnter" 
+                                         PreviewDragOver="DragOverAttraction_PreviewDragOver" 
+                                         PreviewDrop="DropAttraction_PreviewDrop" 
+                                         ItemContainerStyle="{StaticResource ListBoxCustomItem}"
+                                         AllowDrop="True">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal"
+                                                        HorizontalAlignment="Center"
+                                                        VerticalAlignment="Center"
+                                            >
+                                                <TextBlock Foreground="#4EBE60" Text="{Binding Name}" 
+                                                           HorizontalAlignment="Center"
+                                                           VerticalAlignment="Center"
+                                                           Margin="10"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Grid.Row="1"
+                                        Orientation="Vertical">
+                                <Label Content="Odabrane atrakcije:"
+                                    Style="{StaticResource CustomLabelStyle}"/>
+                                <ListBox x:Name="ChosenAttractionListBox" 
+                                         Style="{StaticResource ListBoxCustomStyle}"
+                                         HorizontalContentAlignment="Stretch"
+                                         PreviewMouseLeftButtonDown="SelectedItem_PreviewMouseLeftButtonDown" 
+                                         PreviewMouseMove="MoveItem_PreviewMouseMove"  
+                                         PreviewDragEnter="DragAttraction_PreviewDragEnter" 
+                                         PreviewDragOver="DragOverAttraction_PreviewDragOver" 
+                                         PreviewDrop="DropAttraction_PreviewDrop" 
+                                         ItemContainerStyle="{StaticResource ListBoxCustomItem}"
+                                         AllowDrop="True">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Foreground="#4EBE60" Text="{Binding Name}" 
+                                                           HorizontalAlignment="Center"
+                                                           VerticalAlignment="Center"
+                                                           Margin="5"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                            </StackPanel>
+                            <Grid Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="0"
+                                  VerticalAlignment="Bottom">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="25*"/>
+                                    <ColumnDefinition Width="50*"/>
+                                    <ColumnDefinition Width="25*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button  Grid.Column="0" Content="Prethodno" Click="BackButton2_Click" Margin="5" 
+                                         Style="{StaticResource CustomButtonStyle}"/>
+                                <Button Grid.Column="2" Content="Sledeće" Click="NextButton2_Click" Margin="5" 
+                                        Style="{StaticResource CustomButtonStyle}" />
+                            </Grid>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+
+                <!-- Step 3 UI -->
+                <Grid x:Name="Step3" Visibility="Collapsed">
+                    <StackPanel Orientation="Vertical">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50*"/>
+                                <ColumnDefinition Width="50*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20*"/>
+                                <RowDefinition Height="50*"/>
+                                <RowDefinition Height="30*"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Grid.Column="0" ColumnSpan="2">
+                                <Label Content="Smestaj" 
+                                       FontSize="20"
+                                       Style="{StaticResource CustomLabelStyle}"/>
+                            </Grid>
+                            <StackPanel Grid.Column="0" Grid.Row="1"
+                                        Orientation="Vertical">
+                                <Label Content="Ponudjeni smestaji:"
+                                       Style="{StaticResource CustomLabelStyle}"/>
+                                <ListBox x:Name="AllAccommodationsListBox"
+                                         HorizontalContentAlignment="Stretch"
+                                         Style="{StaticResource ListBoxCustomStyle}"
+                                         PreviewMouseLeftButtonDown="SelectedItem_PreviewMouseLeftButtonDown" 
+                                         PreviewMouseMove="MoveItem_PreviewMouseMove"  
+                                         PreviewDragEnter="DragAccomodation_PreviewDragEnter" 
+                                         PreviewDragOver="DragOverAccomodation_PreviewDragOver" 
+                                         PreviewDrop="DropAccomodation_PreviewDrop" 
+                                         ItemContainerStyle="{StaticResource ListBoxCustomItem}"
+                                         AllowDrop="True">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal"
+                                                        HorizontalAlignment="Center"
+                                                        VerticalAlignment="Center"
+                                            >
+                                                <TextBlock Foreground="#4EBE60" Text="{Binding Name}" 
+                                                           HorizontalAlignment="Center"
+                                                           VerticalAlignment="Center"
+                                                           Margin="10"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                            </StackPanel>
+                            
+                            <StackPanel Grid.Column="1" Grid.Row="1"
+                                        Orientation="Vertical">
+                                <Label Content="Odabrani smestaji:"
+                                       Style="{StaticResource CustomLabelStyle}"/>
+                                <ListBox x:Name="ChosenAccommodationsListBox" 
+                                         Style="{StaticResource ListBoxCustomStyle}"
+                                         HorizontalContentAlignment="Stretch"
+                                         PreviewMouseLeftButtonDown="SelectedItem_PreviewMouseLeftButtonDown" 
+                                         PreviewMouseMove="MoveItem_PreviewMouseMove" 
+                                         PreviewDragEnter="DragAccomodation_PreviewDragEnter" 
+                                         PreviewDragOver="DragOverAccomodation_PreviewDragOver" 
+                                         PreviewDrop="DropAccomodation_PreviewDrop" 
+                                         ItemContainerStyle="{StaticResource ListBoxCustomItem}"
+                                         AllowDrop="True">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Foreground="#4EBE60" Text="{Binding Name}" 
+                                                           HorizontalAlignment="Center"
+                                                           VerticalAlignment="Center"
+                                                           Margin="5"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                            </StackPanel>
+                            <Grid Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="0"
+                                  VerticalAlignment="Bottom">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="25*"/>
+                                    <ColumnDefinition Width="50*"/>
+                                    <ColumnDefinition Width="25*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button  Grid.Column="0" Content="Prethodno" Click="BackButton3_Click" Margin="5" 
+                                         Style="{StaticResource CustomButtonStyle}"/>
+                                <Button Grid.Column="2" Content="Sledeće" Click="NextButton3_Click" Margin="5" 
+                                        Style="{StaticResource CustomButtonStyle}" />
+                            </Grid>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+
+                <Grid x:Name="Step4" Visibility="Collapsed">
+                    <StackPanel Orientation="Vertical">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50*"/>
+                                <ColumnDefinition Width="50*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20*"/>
+                                <RowDefinition Height="50*"/>
+                                <RowDefinition Height="30*"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Grid.Column="0" ColumnSpan="2">
+                                <Label Content="Restorani" 
+                                       FontSize="20"
+                                       Style="{StaticResource CustomLabelStyle}"/>
+                            </Grid>
+                            <StackPanel Grid.Column="0" Grid.Row="1"
+                                        Orientation="Vertical">
+                                <Label Content="Ponudjeni restorani:"
+                                       Style="{StaticResource CustomLabelStyle}"/>
+                                <ListBox x:Name="AllRestaurantsListBox" 
+                                         HorizontalContentAlignment="Stretch"
+                                         Style="{StaticResource ListBoxCustomStyle}"
+                                         PreviewMouseLeftButtonDown="SelectedItem_PreviewMouseLeftButtonDown" 
+                                         PreviewMouseMove="MoveItem_PreviewMouseMove"  
+                                         PreviewDragEnter="DragRestaurant_PreviewDragEnter" 
+                                         PreviewDragOver="DragOverRestaurant_PreviewDragOver" 
+                                         PreviewDrop="DropRestaurant_PreviewDrop" 
+                                         ItemContainerStyle="{StaticResource ListBoxCustomItem}"
+                                         AllowDrop="True">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal"
+                                                        HorizontalAlignment="Center"
+                                                        VerticalAlignment="Center"
+                                            >
+                                                <TextBlock Foreground="#4EBE60" Text="{Binding Name}" 
+                                                           HorizontalAlignment="Center"
+                                                           VerticalAlignment="Center"
+                                                           Margin="10"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                            </StackPanel>
+                            
+                            <StackPanel Grid.Column="1" Grid.Row="1"
+                                        Orientation="Vertical">
+                                <Label Content="Odabrani restorani:"
+                                       Style="{StaticResource CustomLabelStyle}"/>
+                                <ListBox x:Name="ChosenRestaurantsListBox" 
+                                         Style="{StaticResource ListBoxCustomStyle}"
+                                         HorizontalContentAlignment="Stretch"
+                                         PreviewMouseLeftButtonDown="SelectedItem_PreviewMouseLeftButtonDown" 
+                                         PreviewMouseMove="MoveItem_PreviewMouseMove"  
+                                         PreviewDragEnter="DragRestaurant_PreviewDragEnter" 
+                                         PreviewDragOver="DragOverRestaurant_PreviewDragOver" 
+                                         PreviewDrop="DropRestaurant_PreviewDrop" 
+                                         ItemContainerStyle="{StaticResource ListBoxCustomItem}"
+                                         AllowDrop="True">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Foreground="#4EBE60" Text="{Binding Name}" 
+                                                           HorizontalAlignment="Center"
+                                                           VerticalAlignment="Center"
+                                                           Margin="5"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                            </StackPanel>
+                            <Grid Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="0"
+                                  VerticalAlignment="Bottom">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="25*"/>
+                                    <ColumnDefinition Width="50*"/>
+                                    <ColumnDefinition Width="25*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button  Grid.Column="0" Content="Prethodno" Click="BackButton4_Click" Margin="5" 
+                                         Style="{StaticResource CustomButtonStyle}"/>
+                                <Button Grid.Column="2" Content="Sledeće" Click="NextButton4_Click" Margin="5" 
+                                        Style="{StaticResource CustomButtonStyle}" />
+                            </Grid>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

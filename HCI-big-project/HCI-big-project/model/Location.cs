@@ -10,9 +10,15 @@ namespace HCI_big_project.model
 
         public Location(double latitude, double longitude, string address)
         {
-            Latitude = latitude;
-            Longitude = longitude;
-            Address = address;
+            Latitude    = latitude;
+            Longitude   = longitude;
+            Address     = address;
+        }
+        public override string ToString()
+        {
+            return $"Latitude: {Latitude}\n" +
+                   $"Longitude: {Longitude}\n" +
+                   $"Address: {Address}";
         }
     }
 }

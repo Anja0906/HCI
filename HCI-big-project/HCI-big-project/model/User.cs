@@ -9,19 +9,22 @@ namespace HCI_big_project.model
         public string Email { get; set; }
         public string Password { get; set; }
         public DateTime Birthdate { get; set; }
-        
         public Role Role { get; set; }
 
         public User() {}
 
         public User(string name, string surname, string email, string password, DateTime birthdate, Role role)
         {
-            Name = name;
-            Surname = surname;
-            Email = email;
-            Password = password;
-            Birthdate = birthdate;
-            Role = role;
+            Name            = name;
+            Surname         = surname;
+            Email           = email;
+            Password        = password;
+            Birthdate       = birthdate;
+            Role            = role;
+        }
+        public override string ToString()
+        {
+            return $"Name: {Name}\nSurname: {Surname}\nEmail: {Email}\nBirthdate: {Birthdate}\nRole: {Role}";
         }
     }
 }

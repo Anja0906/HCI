@@ -1,0 +1,87 @@
+<Window x:Class="HCI_big_project.view.ReportsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:HCI_big_project.userControls"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        mc:Ignorable="d"
+        Title="ReportsWindow" Height="430" Width="750"
+        WindowStartupLocation="CenterScreen"
+         
+        MinWidth="400"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="70*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Width="Auto">
+            <local:SideMenu x:Name="Menu"/>
+        </Grid>
+
+        <Grid Grid.Column="1" Background="#F2F2F2" MinWidth="200">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="75*" MinHeight="50"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="#F2F2F2" MinWidth="200">
+                <Label Style="{StaticResource CustomLabelStyle}" FontSize="25" FontWeight="Bold"
+                       Content="Izveštaji"></Label>
+            </Grid>
+            <Grid Grid.Row="1" x:Name="Grid2" MaxWidth="500">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="70*"/>
+                </Grid.ColumnDefinitions>
+                <Label Style="{StaticResource CustomLabelStyle}" Content="Vrsta izvestaja:" FontSize="17"/>
+                <ComboBox ToolTip="Unesite vrstu izvestaja" Grid.Column="1" Width="Auto" Height="30" Style="{StaticResource ComboBoxStyle}" SelectionChanged="ComboBox_SelectionChanged">
+                    <ComboBoxItem Content="Pregled prodatih putovanja u jednom mesecu" Style="{StaticResource ComboBoxItemStyle}"/>
+                    <ComboBoxItem Content="Pregled odredjenih aranzmana po putovanju" Style="{StaticResource ComboBoxItemStyle}"/>
+                </ComboBox>
+            </Grid>
+            <ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="Auto" 
+                          VerticalScrollBarVisibility="Auto" MaxWidth="500">
+                <Grid Grid.Row="1" x:Name="Grid3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="70*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="40*"/>
+                        <RowDefinition Height="40*"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource CustomLabelStyle}" 
+                           Content="Putovanje:" FontSize="17" x:Name="Label1"/>
+                    <ComboBox Grid.Row="0" Grid.Column="1" Width="Auto" Height="30" x:Name="TripsBox"
+                              Style="{StaticResource ComboBoxStyle}" SelectionChanged="Trips_SelectionChanged"
+                              ToolTip="Izaberite naziv putovanja">
+                    </ComboBox>
+                    <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource CustomLabelStyle}" 
+                           Content="Mesec:" FontSize="17" x:Name="Label2"/>
+                    <DatePicker Grid.Row="0" Grid.Column="1" Width="Auto" Height="30" x:Name="DatePicker"
+                              SelectedDateChanged="ChangedDate"
+                              ToolTip="Izaberite datum za filtriranje putovanja">
+                    </DatePicker>
+                    <lvc:CartesianChart ToolTip="Grafikon izvestaja" Grid.Column="0" Grid.Row="1" MinHeight="200" Grid.ColumnSpan="2"
+                                        Series="{Binding SeriesCollection}"
+                                        LegendLocation="Right"
+                                        x:Name="Chart">
+                        <lvc:CartesianChart.AxisX>
+                            <lvc:Axis Labels="{Binding Labels}"></lvc:Axis>
+                        </lvc:CartesianChart.AxisX>
+                        <lvc:CartesianChart.AxisY>
+                            <lvc:Axis></lvc:Axis>
+                        </lvc:CartesianChart.AxisY>
+                    </lvc:CartesianChart>
+                    <ScrollViewer Grid.Column="0" Grid.Row="2" MinHeight="200" Grid.ColumnSpan="2">
+                        <WrapPanel x:Name="Panel" Orientation="Horizontal"></WrapPanel>
+                    </ScrollViewer>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>
