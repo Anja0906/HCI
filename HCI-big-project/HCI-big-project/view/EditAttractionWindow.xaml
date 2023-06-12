@@ -59,7 +59,9 @@
                                     </Grid.ColumnDefinitions>
                                     <Label Style="{StaticResource DetailsLabel}" Content="NAZIV: " />
                                     <TextBox Grid.Column="1" Style="{StaticResource SquaredTextBox}"
-                                             Text="{Binding Attraction.Name}" />
+                                             Text="{Binding Attraction.Name}"
+                                             ToolTip="Izmenite naziv atrakcije"
+                                             x:Name="NameInput"/>
                                 </Grid>
                                 <Grid Grid.Row="1">
                                     <Grid.ColumnDefinitions>
@@ -68,7 +70,9 @@
                                     </Grid.ColumnDefinitions>
                                     <Label Style="{StaticResource DetailsLabel}" Content="ADRESA: " />
                                     <TextBox Grid.Column="1" Style="{StaticResource SquaredTextBox}"
-                                             Text="{Binding Attraction.Address.Address}" />
+                                             Text="{Binding Attraction.Address.Address}" 
+                                             ToolTip="Izmenite adresu atrakcije"
+                                             x:Name="AddressInput"/>
                                 </Grid>
                                 <Grid Grid.Row="4">
                                     <Grid.RowDefinitions>
@@ -78,7 +82,9 @@
                                     <Label Grid.Row="0" Style="{StaticResource DetailsLabel}"
                                            HorizontalAlignment="Left" Content="OPIS: " />
                                     <TextBox Grid.Row="1" Style="{StaticResource SquaredTextBox}"
-                                             Text="{Binding Attraction.Caption}" />
+                                             Text="{Binding Attraction.Caption}"
+                                             ToolTip="Izmenite opis atrakcije"
+                                             x:Name="CaptionInput"/>
                                 </Grid>
                             </Grid>
                         </Border>
@@ -89,11 +95,13 @@
                                     <RowDefinition Height="90*" MaxHeight="150"/>
                                     <RowDefinition Height="10*" />
                                 </Grid.RowDefinitions>
-                                <Image Grid.Row="0" Source="{Binding SelectedImage}" Stretch="Uniform" MaxHeight="150" MaxWidth="150" />
+                                <Image Grid.Row="0" Source="{Binding SelectedImage}" Stretch="Uniform" 
+                                       MaxHeight="150" MaxWidth="150" ToolTip="Slika atrakcije"/>
                                 <Button Grid.Row="1" VerticalAlignment="Bottom"
                                         Style="{StaticResource CustomButtonStyle}"
                                         Click="ButtonBase_OnClick"
-                                        Content="Dodaj sliku" />
+                                        Content="Dodaj sliku" 
+                                        ToolTip="Klikom na ovo dugme mozete dodati sliku"/>
                             </Grid>
                         </StackPanel>
                     </Grid>
@@ -101,7 +109,7 @@
 
             </Border>
 
-            <Grid Grid.Row="2">
+            <Grid Grid.Row="2" ToolTip="Slike atrakcija">
                 <ScrollViewer Height="Auto" VerticalScrollBarVisibility="Auto">
                     <ListBox ItemsSource="{Binding Images}"
                              SelectedItem="{Binding SelectedImage}"
@@ -136,10 +144,12 @@
                 </Grid.ColumnDefinitions>
                 <Button Grid.Column="1" Style="{StaticResource CustomButtonStyle}"
                         Content="POTVRDI" Click="Confirm_OnClick"
-                        MaxHeight="35" />
+                        MaxHeight="35" 
+                        ToolTip="Potvrdite izmene atrakcije"/>
                 <Button Grid.Column="3" Style="{StaticResource CustomButtonStyle}"
                         Content="OTKAZI" Click="Cancel_OnClick"
-                        MaxHeight="35" />
+                        MaxHeight="35" 
+                        ToolTip="Otkazite izmene atrakcije"/>
             </Grid>
         </Grid>
     </Grid>

@@ -59,7 +59,8 @@
                                     </Grid.ColumnDefinitions>
                                     <Label Style="{StaticResource DetailsLabel}" Content="NAZIV: " />
                                     <TextBox Grid.Column="1" Style="{StaticResource SquaredTextBox}"
-                                             Text="{Binding Accommodation.Name}" />
+                                             Text="{Binding Accommodation.Name}" x:Name="NameInput"
+                                             ToolTip="Naziv hotela. Ovo polje je obavezno!"/>
                                 </Grid>
                                 <Grid Grid.Row="1">
                                     <Grid.ColumnDefinitions>
@@ -68,7 +69,8 @@
                                     </Grid.ColumnDefinitions>
                                     <Label Style="{StaticResource DetailsLabel}" Content="ADRESA: " />
                                     <TextBox Grid.Column="1" Style="{StaticResource SquaredTextBox}"
-                                             Text="{Binding Accommodation.Address.Address}" />
+                                             Text="{Binding Accommodation.Address.Address}" x:Name="AddressInput"
+                                             ToolTip="Adresa hotela. Ovo polje je obavezno!"/>
                                 </Grid>
                                 <Grid Grid.Row="2">
                                     <Grid.ColumnDefinitions>
@@ -77,7 +79,8 @@
                                     </Grid.ColumnDefinitions>
                                     <Label Grid.Column="0" Style="{StaticResource DetailsLabel}" Content="OCENA: " />
                                     <TextBox Grid.Column="1" Style="{StaticResource SquaredTextBox}"
-                                             Text="{Binding Accommodation.Rating}" />
+                                             Text="{Binding Accommodation.Rating}" x:Name="RatingInput"
+                                             ToolTip="Ocena hotela. Ovo polje je obavezno!"/>
                                 </Grid>
                                 <Grid Grid.Row="3">
                                     <Grid.ColumnDefinitions>
@@ -86,7 +89,8 @@
                                     </Grid.ColumnDefinitions>
                                     <Label Grid.Column="0" Style="{StaticResource DetailsLabel}" Content="LINK: " />
                                     <TextBox Grid.Column="1" Style="{StaticResource SquaredTextBox}"
-                                             Text="{Binding Accommodation.Link}" />
+                                             Text="{Binding Accommodation.Link}" x:Name="LinkInput" 
+                                             ToolTip="Stranica hotela. Ovo polje je obavezno!"/>
                                 </Grid>
                                 <Grid Grid.Row="4">
                                     <Grid.RowDefinitions>
@@ -96,7 +100,8 @@
                                     <Label Grid.Row="0" Style="{StaticResource DetailsLabel}"
                                            HorizontalAlignment="Left" Content="OPIS: " />
                                     <TextBox Grid.Row="1" Style="{StaticResource SquaredTextBox}"
-                                             Text="{Binding Accommodation.Caption}" />
+                                             Text="{Binding Accommodation.Caption}" x:Name="CaptionInput"
+                                             ToolTip="Opis hotela. Ovo polje je obavezno!"/>
                                 </Grid>
                             </Grid>
                         </Border>
@@ -111,7 +116,8 @@
                                 <Button Grid.Row="1" VerticalAlignment="Bottom"
                                         Style="{StaticResource CustomButtonStyle}"
                                         Click="ButtonBase_OnClick"
-                                        Content="Dodaj sliku" />
+                                        Content="Dodaj sliku"
+                                        ToolTip="Klikom na ovo dugme mozete dodati sliku."/>
                             </Grid>
                         </StackPanel>
                     </Grid>
@@ -154,10 +160,12 @@
                 </Grid.ColumnDefinitions>
                 <Button Grid.Column="1" Style="{StaticResource CustomButtonStyle}"
                         Content="POTVRDI" Click="Confirm_OnClick"
-                        MaxHeight="35" />
+                        MaxHeight="35" 
+                        ToolTip="Potvrda unosa hotela."/>
                 <Button Grid.Column="3" Style="{StaticResource CustomButtonStyle}"
                         Content="OTKAZI" Click="Cancel_OnClick"
-                        MaxHeight="35" />
+                        MaxHeight="35"
+                        ToolTip="Otkazivanje unosa hotela."/>
             </Grid>
         </Grid>
     </Grid>

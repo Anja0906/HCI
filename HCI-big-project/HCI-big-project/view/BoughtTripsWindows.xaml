@@ -11,7 +11,7 @@
         WindowStyle="None"
         MinWidth="400"
         Loaded="Window_Loaded">
-    <Grid>
+    <Grid ToolTip="Kupljena putovanja">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30*"/>
             <ColumnDefinition Width="70*"/>
@@ -29,8 +29,11 @@
             <Grid Grid.Row="0">
                 <Label Style="{StaticResource CustomLabelStyle}" FontSize="25" FontWeight="Bold" Content="Kupljena putovanja"/>
             </Grid>
-            <WrapPanel Grid.Row="1" Orientation="Horizontal" x:Name="Panel">
-            </WrapPanel>
+            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Auto"
+                          VerticalScrollBarVisibility="Auto">
+                <WrapPanel x:Name="Panel">
+                </WrapPanel>
+            </ScrollViewer>
         </Grid>
     </Grid>
 </Window>

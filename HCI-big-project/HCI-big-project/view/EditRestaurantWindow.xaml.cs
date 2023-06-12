@@ -114,22 +114,37 @@ namespace HCI_big_project.view
         {
             if (Restaurant.Address != null)
             {
-                CustomYesNoDialog dialog = new CustomYesNoDialog("Da li ste sigurni da želite da izmenite ovaj restoran?");
-                bool? result = dialog.ShowDialog();
-
-                if (result == true)
+                if (NameInput.Text.Length==0)
                 {
-                    Restaurant.Pictures = new List<Picture>();
-                    RestaurantService restaurantService = new RestaurantService(new RestaurantRepository());
-                    restaurantService.UpdateRestaurant(Restaurant);
-                    RestaurantsWindow restaurants = new RestaurantsWindow(_user);
-                    restaurants.Show();
-                    this.Hide();
-                
+                    CustomDialogWindow.Show("Morate uneti naziv smestaja!");
+                }
+                else if (CaptionInput.Text.Length==0)
+                {
+                    CustomDialogWindow.Show("Morate uneti opis smestaja!");
+                }
+                else if (LinkInput.Text.Length==0)
+                {
+                    CustomDialogWindow.Show("Morate uneti link do smestaja!");
                 }
                 else
                 {
-                    // No was clicked, do something else
+                    CustomYesNoDialog dialog = new CustomYesNoDialog("Da li ste sigurni da želite da izmenite ovaj restoran?");
+                    bool? result = dialog.ShowDialog();
+
+                    if (result == true)
+                    {
+                        Restaurant.Pictures = new List<Picture>();
+                        RestaurantService restaurantService = new RestaurantService(new RestaurantRepository());
+                        restaurantService.UpdateRestaurant(Restaurant);
+                        RestaurantsWindow restaurants = new RestaurantsWindow(_user);
+                        restaurants.Show();
+                        this.Hide();
+                
+                    }
+                    else
+                    {
+                        // No was clicked, do something else
+                    }
                 }
             }
             else

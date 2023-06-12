@@ -39,6 +39,7 @@
                         VerticalAlignment="Top"
                         HorizontalAlignment="Right"
                         Margin="0, 0, 30, 0"
+                        ToolTip="Klikom na ovo dugme mozete dodati novu atrakciju"
                 />
             </Grid>
             <ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="Disabled">

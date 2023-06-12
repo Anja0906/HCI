@@ -36,10 +36,11 @@
                     <Grid Grid.Row="0" Background="#F2F2F2" MinWidth="200" MinHeight="100">
                         <gmap:GMapControl x:Name="gmap" Loaded="map_load"
                                           MouseDoubleClick="MapControl_MouseDoubleClick"
-                                          Margin="5" />
+                                          Margin="5" 
+                                          ToolTip="Mapa putovanja"/>
                     </Grid>
                     <Border Grid.Row="1" Style="{StaticResource BorderWithShadowStyle}">
-                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <ScrollViewer ToolTip="Opste informacije o putovanju" VerticalScrollBarVisibility="Auto">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="35*" />
@@ -103,7 +104,7 @@
                         </ScrollViewer>
 
                     </Border>
-                    <Grid Grid.Row="2">
+                    <Grid Grid.Row="2" ToolTip="Atrakcije koje se posecuju u datom putovanju">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="10*"/>
                             <RowDefinition Height="90*"/>
@@ -138,7 +139,7 @@
                             </ListBox>
                         </ScrollViewer>
                     </Grid>
-                    <Grid Grid.Row="3">
+                    <Grid Grid.Row="3" ToolTip="Smestaju koji se posecuju u datom putovanju">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="10*"/>
                             <RowDefinition Height="90*"/>
@@ -172,7 +173,7 @@
                             </ListBox>
                         </ScrollViewer>
                     </Grid>
-                    <Grid Grid.Row="4">
+                    <Grid Grid.Row="4" ToolTip="Restorani koji se posecuju u datom putovanju">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="10*"/>
                             <RowDefinition Height="90*"/>
@@ -216,10 +217,12 @@
                         </Grid.ColumnDefinitions>
                         <Button Grid.Column="1" Style="{StaticResource CustomButtonStyle}" 
                                 Content="UREDI" 
-                                MaxHeight="35"/>
+                                MaxHeight="35"
+                                ToolTip="Klikom na ovo dugme mozete urediti prikazano putovanje"/>
                         <Button Grid.Column="3" Style="{StaticResource CustomButtonStyle}" 
                                 Content="OBRIŠI" 
-                                MaxHeight="35"/>
+                                MaxHeight="35"
+                                ToolTip="Klikom na ovo dugme mozete obrisati prikazano putovanje"/>
                     </Grid>
 
                     <Grid Grid.Row="5" x:Name="GridUser" Visibility="Visible" >
@@ -232,10 +235,12 @@
                         </Grid.ColumnDefinitions>
                         <Button Grid.Column="1" Style="{StaticResource CustomButtonStyle}" 
                                 Content="KUPI"  Click="purchase_OnClick"
-                                MaxHeight="35"/>
+                                MaxHeight="35"
+                                ToolTip="Klikom na ovo dugme mozete kupiti prikazano putovanje"/>
                         <Button Grid.Column="3" Style="{StaticResource CustomButtonStyle}" 
                                 Content="REZERVISI" Click="reserve_OnClick"
-                                MaxHeight="35"/>
+                                MaxHeight="35"
+                                ToolTip="Klikom na ovo dugme mozete rezervisati prikazano putovanje"/>
                     </Grid>
                 </Grid>
             </ScrollViewer>

@@ -114,23 +114,37 @@ namespace HCI_big_project.view
         {
             if (Attraction.Address != null)
             {
-                CustomYesNoDialog dialog = new CustomYesNoDialog("Da li ste sigurni da želite da dodate uneti smestaj?");
-                bool? result = dialog.ShowDialog();
-
-                if (result == true)
+                if (NameInput.Text.Length==0)
                 {
-                    Attraction.Pictures = new List<Picture>();
-                    AttractionService attractionService = new AttractionService(new AttractionRepository());
-                    attractionService.AddNewAttraction(Attraction);
-                    AttractionsWindow attractions = new AttractionsWindow(_user);
-                    attractions.Show();
-                    this.Hide();
-                
+                    CustomDialogWindow.Show("Morate uneti naziv atrakcije!");
+                }
+                else if (CaptionInput.Text.Length==0)
+                {
+                    CustomDialogWindow.Show("Morate uneti opis atrakcije!");
                 }
                 else
                 {
-                    // No was clicked, do something else
+                    CustomYesNoDialog dialog = new CustomYesNoDialog("Da li ste sigurni da želite da dodate uneti smestaj?");
+                    bool? result = dialog.ShowDialog();
+
+                    if (result == true)
+                    {
+                        Random random = new Random();
+                        Attraction.Id = random.Next(9999);
+                        Attraction.Pictures = new List<Picture>();
+                        AttractionService attractionService = new AttractionService(new AttractionRepository());
+                        attractionService.AddNewAttraction(Attraction);
+                        AttractionsWindow attractions = new AttractionsWindow(_user);
+                        attractions.Show();
+                        this.Hide();
+                
+                    }
+                    else
+                    {
+                        // No was clicked, do something else
+                    }
                 }
+                
             }
             else
             {
@@ -188,6 +202,7 @@ namespace HCI_big_project.view
 
                 if (result == true)
                 {
+                    
                     location = new Location(point.Lat, point.Lng, "Neka adresa");
                     AddMarker(point.Lat, point.Lng);
                     Attraction.Address = location;

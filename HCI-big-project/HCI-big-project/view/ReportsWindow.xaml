@@ -37,7 +37,7 @@
                     <ColumnDefinition Width="70*"/>
                 </Grid.ColumnDefinitions>
                 <Label Style="{StaticResource CustomLabelStyle}" Content="Vrsta izvestaja:" FontSize="17"/>
-                <ComboBox Grid.Column="1" Width="Auto" Height="30" Style="{StaticResource ComboBoxStyle}" SelectionChanged="ComboBox_SelectionChanged">
+                <ComboBox ToolTip="Unesite vrstu izvestaja" Grid.Column="1" Width="Auto" Height="30" Style="{StaticResource ComboBoxStyle}" SelectionChanged="ComboBox_SelectionChanged">
                     <ComboBoxItem Content="Pregled prodatih putovanja u jednom mesecu" Style="{StaticResource ComboBoxItemStyle}"/>
                     <ComboBoxItem Content="Pregled odredjenih aranzmana po putovanju" Style="{StaticResource ComboBoxItemStyle}"/>
                 </ComboBox>
@@ -57,14 +57,16 @@
                     <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource CustomLabelStyle}" 
                            Content="Putovanje:" FontSize="17" x:Name="Label1"/>
                     <ComboBox Grid.Row="0" Grid.Column="1" Width="Auto" Height="30" x:Name="TripsBox"
-                              Style="{StaticResource ComboBoxStyle}" SelectionChanged="Trips_SelectionChanged">
+                              Style="{StaticResource ComboBoxStyle}" SelectionChanged="Trips_SelectionChanged"
+                              ToolTip="Izaberite naziv putovanja">
                     </ComboBox>
                     <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource CustomLabelStyle}" 
                            Content="Mesec:" FontSize="17" x:Name="Label2"/>
                     <DatePicker Grid.Row="0" Grid.Column="1" Width="Auto" Height="30" x:Name="DatePicker"
-                              SelectedDateChanged="ChangedDate">
+                              SelectedDateChanged="ChangedDate"
+                              ToolTip="Izaberite datum za filtriranje putovanja">
                     </DatePicker>
-                    <lvc:CartesianChart Grid.Column="0" Grid.Row="1" MinHeight="200" Grid.ColumnSpan="2"
+                    <lvc:CartesianChart ToolTip="Grafikon izvestaja" Grid.Column="0" Grid.Row="1" MinHeight="200" Grid.ColumnSpan="2"
                                         Series="{Binding SeriesCollection}"
                                         LegendLocation="Right"
                                         x:Name="Chart">

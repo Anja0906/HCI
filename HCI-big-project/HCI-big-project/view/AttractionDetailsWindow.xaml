@@ -31,7 +31,8 @@
             <Grid Grid.Row="0" Background="#F2F2F2" MinWidth="200">
                 <gmap:GMapControl x:Name="gmap" Loaded="map_load"
                                   MouseDoubleClick="MapControl_MouseDoubleClick"
-                                  Margin="5" />
+                                  Margin="5" 
+                                  ToolTip="Lokacija atrakcije"/>
             </Grid>
             <Border Grid.Row="1" Style="{StaticResource DetailsBorder}">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
@@ -40,7 +41,8 @@
                             <ColumnDefinition Width="50*" />
                             <ColumnDefinition Width="50*" />
                         </Grid.ColumnDefinitions>
-                        <Border Grid.Column="1" Style="{StaticResource BorderWithShadowStyle}">
+                        <Border Grid.Column="1" Style="{StaticResource BorderWithShadowStyle}"
+                                ToolTip="Opste informacije o atrakciji">
                             <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
                                 <StackPanel Orientation="Horizontal">
                                     <Label Style="{StaticResource DetailsLabel}" Content="NAZIV: " />
@@ -61,7 +63,8 @@
                             </StackPanel>
                         </Border>
 
-                        <StackPanel Grid.Column="0">
+                        <StackPanel Grid.Column="0"
+                                    ToolTip="Slika atrakcije">
                             <ContentControl Content="{Binding SelectedImage}" Padding="70">
                                 <ContentControl.ContentTemplate>
                                     <DataTemplate>
@@ -76,7 +79,8 @@
             </Border>
 
             <Grid Grid.Row="2">
-                <ScrollViewer Height="Auto" VerticalScrollBarVisibility="Auto">
+                <ScrollViewer Height="Auto" VerticalScrollBarVisibility="Auto"
+                              ToolTip="Slike atrakcija">
                     <ListBox ItemsSource="{Binding Images}"
                              SelectedItem="{Binding SelectedImage}"
                              ItemContainerStyle="{StaticResource ImageItem}">
@@ -110,10 +114,12 @@
                 </Grid.ColumnDefinitions>
                 <Button Grid.Column="1" Style="{StaticResource CustomButtonStyle}" 
                         Content="UREDI" Click="Update_OnClick"
-                        MaxHeight="35"/>
+                        MaxHeight="35"
+                        ToolTip="Klikom na ovo dugme mozete urediti atrakciju"/>
                 <Button Grid.Column="3" Style="{StaticResource CustomButtonStyle}" 
                         Content="OBRIŠI" Click="Delete_OnClick"
-                        MaxHeight="35"/>
+                        MaxHeight="35"
+                        ToolTip="Klikom na ovo dugme mozete obrisati atrakciju"/>
             </Grid>
         </Grid>
     </Grid>

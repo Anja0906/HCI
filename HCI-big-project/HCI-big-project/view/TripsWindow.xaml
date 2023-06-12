@@ -32,31 +32,7 @@
                 <Label Style="{StaticResource CustomLabelStyle}" FontSize="25" FontWeight="Bold"
                        Content="Pregled svih putovanja"></Label>
             </Grid>
-            <Grid Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="3"/>
-                    <ColumnDefinition Width="58*"/>
-                    <ColumnDefinition Width="1"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Content="Preražite: " Foreground="#4EBE60" Margin="15, 0,0 ,0 "
-                       HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
-                <Grid Grid.Column="1"></Grid>
-                <TextBox Grid.Column="2" x:Name="searchTextBox" Width="Auto" Height="30" 
-                         Margin="15, 0, 0, 0" VerticalAlignment="Center" 
-                         HorizontalAlignment="Stretch" TextChanged="searchTextBox_TextChanged"
-                         Style="{StaticResource RoundedTextBox}" />
-                <Grid Grid.Column="3"></Grid>
-                <Button Grid.Column="4" Width="30" Height="30" HorizontalAlignment="Center" 
-                        Margin="0, 0, 15, 0" Click="searchButton_Click"
-                        Style="{StaticResource TransparentGreenButton}">
-                    <Button.Content>
-                        <Image Source="../res/searchIcon.png" Grid.Column="2" Width="15" Height="15"/>
-                    </Button.Content>
-                </Button>
-            </Grid>
+            
             <Grid Grid.Row="2" x:Name="Grid2">
                 <Button Style="{StaticResource CustomButtonStyle}" 
                         Content="Dodaj novo putovanje" 
@@ -66,6 +42,7 @@
                         VerticalAlignment="Top"
                         HorizontalAlignment="Right"
                         Margin="0, 0, 30, 0"
+                        ToolTip="Klikom na ovo dugme mozete dodati novo putovanje"
                 />
             </Grid>
             <ScrollViewer Grid.Row="3" HorizontalScrollBarVisibility="Auto" 

@@ -112,29 +112,52 @@ namespace HCI_big_project.view
 
         private void Confirm_OnClick(object sender, RoutedEventArgs e)
         {
-            if (Accommodation.Address != null)
+            if (NameInput.Text.Length==0)
             {
-                CustomYesNoDialog dialog = new CustomYesNoDialog("Da li ste sigurni da želite da dodate uneti smestaj?");
-                bool? result = dialog.ShowDialog();
-
-                if (result == true)
-                {
-                    Accommodation.Pictures = new List<Picture>();
-                    AccomodationService accomodationService = new AccomodationService(new AccommodationRepository());
-                    accomodationService.UpdateAccommodation(Accommodation);
-                    AccomodationsWindow accomodations = new AccomodationsWindow(_user);
-                    accomodations.Show();
-                    this.Hide();
-                
-                }
-                else
-                {
-                    // No was clicked, do something else
-                }
+                CustomDialogWindow.Show("Morate uneti naziv smestaja!");
+            }
+            else if (AddressInput.Text.Length==0)
+            {
+                CustomDialogWindow.Show("Morate uneti adresu smestaja!");
+            }
+            else if (CaptionInput.Text.Length==0)
+            {
+                CustomDialogWindow.Show("Morate uneti opis smestaja!");
+            }
+            else if (RateInput.Text.Length==0)
+            {
+                CustomDialogWindow.Show("Morate uneti ocenu smestaja!");
+            }
+            else if (LinkInput.Text.Length==0)
+            {
+                CustomDialogWindow.Show("Morate uneti link do smestaja!");
             }
             else
             {
-                CustomDialogWindow.Show("Morate uneti lokaciju smestaja. Desim klikom na mapi oznacite lokaciju!");
+                if (Accommodation.Address != null)
+                {
+                    CustomYesNoDialog dialog = new CustomYesNoDialog("Da li ste sigurni da želite da dodate uneti smestaj?");
+                    bool? result = dialog.ShowDialog();
+
+                    if (result == true)
+                    {
+                        Accommodation.Pictures = new List<Picture>();
+                        AccomodationService accomodationService = new AccomodationService(new AccommodationRepository());
+                        accomodationService.UpdateAccommodation(Accommodation);
+                        AccomodationsWindow accomodations = new AccomodationsWindow(_user);
+                        accomodations.Show();
+                        this.Hide();
+                
+                    }
+                    else
+                    {
+                        // No was clicked, do something else
+                    }
+                }
+                else
+                {
+                    CustomDialogWindow.Show("Morate uneti lokaciju smestaja. Desim klikom na mapi oznacite lokaciju!");
+                }
             }
         }
 

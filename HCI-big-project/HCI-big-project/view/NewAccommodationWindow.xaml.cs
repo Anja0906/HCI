@@ -114,22 +114,50 @@ namespace HCI_big_project.view
         {
             if (Accommodation.Address != null)
             {
-                CustomYesNoDialog dialog = new CustomYesNoDialog("Da li ste sigurni da želite da dodate uneti smestaj?");
-                bool? result = dialog.ShowDialog();
-
-                if (result == true)
+                if (NameInput.Text.Length==0)
                 {
-                    Accommodation.Pictures = new List<Picture>();
-                    AccomodationService accomodationService = new AccomodationService(new AccommodationRepository());
-                    accomodationService.AddNewAccommodation(Accommodation);
-                    AccomodationsWindow accomodations = new AccomodationsWindow(_user);
-                    accomodations.Show();
-                    this.Hide();
-                
+                    CustomDialogWindow.Show("Morate uneti naziv smestaja!");
+                }
+                else if (AddressInput.Text.Length==0)
+                {
+                    CustomDialogWindow.Show("Morate uneti adresu smestaja!");
+                }
+                else if (CaptionInput.Text.Length==0)
+                {
+                    CustomDialogWindow.Show("Morate uneti opis smestaja!");
+                }
+                else if (RatingInput.Text.Length==0)
+                {
+                    CustomDialogWindow.Show("Morate uneti ocenu smestaja!");
+                }
+                else if (LinkInput.Text.Length==0)
+                {
+                    CustomDialogWindow.Show("Morate uneti link do smestaja!");
                 }
                 else
                 {
-                    // No was clicked, do something else
+                    CustomYesNoDialog dialog = new CustomYesNoDialog("Da li ste sigurni da želite da dodate uneti smestaj?");
+                    bool? result = dialog.ShowDialog();
+
+                    if (result == true)
+                    {
+                        
+                        Random random = new Random();
+                        Accommodation.Id = random.Next(9999);
+                        Accommodation.Pictures = new List<Picture>();
+                        AccomodationService accomodationService = new AccomodationService(new AccommodationRepository());
+                        accomodationService.AddNewAccommodation(Accommodation);
+                        AccomodationsWindow accomodations = new AccomodationsWindow(_user);
+                        accomodations.Show();
+                        this.Hide();
+                
+                    }
+                    else
+                    {
+                        AccomodationsWindow accomodationsWindow = new AccomodationsWindow(_user);
+                        accomodationsWindow.Show();
+                        this.Hide();
+                    }
                 }
             }
             else

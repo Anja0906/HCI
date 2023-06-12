@@ -40,20 +40,21 @@
                             <ColumnDefinition Width="50*" />
                             <ColumnDefinition Width="50*" />
                         </Grid.ColumnDefinitions>
-                        <Border Grid.Column="1" Style="{StaticResource BorderWithShadowStyle}">
+                        <Border ToolTip="Opste informacije" Grid.Column="1" Style="{StaticResource BorderWithShadowStyle}">
                             <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
                                 <StackPanel Orientation="Horizontal">
                                     <Label Style="{StaticResource DetailsLabel}" Content="NAZIV: " />
-                                    <Label Style="{StaticResource DetailsLabel}" Content="{Binding Restaurant.Name}" />
+                                    <Label Style="{StaticResource DetailsLabel}" ToolTip="Naziv restorana" Content="{Binding Restaurant.Name}" />
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal">
                                     <Label Style="{StaticResource DetailsLabel}" Content="ADRESA: " />
                                     <Label Style="{StaticResource DetailsLabel}"
-                                           Content="{Binding Restaurant.Address.Address}" />
+                                           Content="{Binding Restaurant.Address.Address}" 
+                                           ToolTip="Adresa restorana"/>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal">
                                     <Label Style="{StaticResource DetailsLabel}" Content="LINK: " />
-                                    <TextBlock VerticalAlignment="Center">
+                                    <TextBlock VerticalAlignment="Center" ToolTip="Link do stranice restorana">
                                         <Hyperlink NavigateUri="{Binding Restaurant.Link}"
                                                    RequestNavigate="Hyperlink_RequestNavigate">
                                             STRANICA HOTELA
@@ -64,12 +65,12 @@
                                        HorizontalAlignment="Left" Content="OPIS: " />
                                 <TextBlock Style="{StaticResource CaptionTextBlockStyle}"
                                            Text="{Binding Restaurant.Caption}"
-                                           HorizontalAlignment="Left">
+                                           HorizontalAlignment="Left" ToolTip="Opis restorana">
                                 </TextBlock>
                             </StackPanel>
                         </Border>
 
-                        <StackPanel Grid.Column="0">
+                        <StackPanel Grid.Column="0" ToolTip="Slika restorana">
                             <ContentControl Content="{Binding SelectedImage}" Padding="20">
                                 <ContentControl.ContentTemplate>
                                     <DataTemplate>
@@ -83,7 +84,7 @@
 
             </Border>
 
-            <Grid Grid.Row="2">
+            <Grid Grid.Row="2" ToolTip="Slike restorana">
                 <ScrollViewer Height="Auto" VerticalScrollBarVisibility="Auto">
                     <ListBox ItemsSource="{Binding Images}"
                              SelectedItem="{Binding SelectedImage}"
@@ -118,10 +119,12 @@
                 </Grid.ColumnDefinitions>
                 <Button Grid.Column="1" Style="{StaticResource CustomButtonStyle}" 
                         Content="UREDI" Click="Update_OnClick"
-                        MaxHeight="35"/>
+                        MaxHeight="35"
+                        ToolTip="Klikom na ovo dugme mozete izmeniti informacije o restoranu"/>
                 <Button Grid.Column="3" Style="{StaticResource CustomButtonStyle}" 
                         Content="OBRIŠI" Click="Delete_OnClick"
-                        MaxHeight="35"/>
+                        MaxHeight="35"
+                        ToolTip="Klikom na ovo dugme mozete obrisati restoran"/>
             </Grid>
         </Grid>
     </Grid>

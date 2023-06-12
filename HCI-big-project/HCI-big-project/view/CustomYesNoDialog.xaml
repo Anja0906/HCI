@@ -18,9 +18,11 @@
         <TextBlock Grid.Row="1" x:Name="Message" Style="{StaticResource CustomTextBlockStyle}" />
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button x:Name="YesButton" Content="POTVRDI" Click="YesButton_Click" 
-                    Style="{StaticResource CustomButtonStyle}"/>
+                    Style="{StaticResource CustomButtonStyle}"
+                    ToolTip="Potvrdite radnju"/>
             <Button x:Name="NoButton" Content="OTKAŽI" Click="NoButton_Click" 
-                    Style="{StaticResource CustomWhiteButtonStyle}"/>
+                    Style="{StaticResource CustomWhiteButtonStyle}"
+                    ToolTip="Otkazite radnju"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -11,7 +11,7 @@
         WindowStyle="None"
         MinWidth="400"
         Loaded="Window_Loaded">
-    <Grid>
+    <Grid ToolTip="Mapa putovanja">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30*"/>
             <ColumnDefinition Width="70*"/>

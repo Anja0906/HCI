@@ -39,9 +39,11 @@
                         VerticalAlignment="Top"
                         HorizontalAlignment="Right"
                         Margin="0, 0, 30, 0"
+                        ToolTip="Klikom na ovo dugme mozete dodati novi restoran"
                 />
             </Grid>
-            <ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="Disabled">
+            <ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="Disabled"
+                          ToolTip="Pregled restorana">
                 <WrapPanel Orientation="Horizontal" x:Name="Panel">
                     
                 </WrapPanel>

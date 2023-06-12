@@ -7,9 +7,7 @@
         mc:Ignorable="d"
         Title="RegistrationWindow" Height="430" Width="750"
         WindowStartupLocation="CenterScreen"
-        Background="Transparent"
-        WindowStyle="None"
-        MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+        WindowStyle="None">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50*" />
@@ -25,7 +23,7 @@
             <Image Grid.Row="0" Source="../res/logo.png" Height="Auto" MaxHeight="200" Width="Auto" Stretch="Uniform"
                    Margin="0,0,0,40" />
             <TextBlock Grid.Row="1" Text="Dobrodošli!" Style="{StaticResource H1}" />
-            <TextBlock Grid.Row="2" Text="Molimo Vas da se ulogujete!" Style="{StaticResource H2}" />
+            <TextBlock Grid.Row="2" Text="Molimo Vas da se registrujete!" Style="{StaticResource H2}" />
         </Grid>
 
         <Grid Grid.Column="1" Background="White">
@@ -53,31 +51,36 @@
                    Style="{StaticResource LeftLabel}" />
             <TextBox Grid.Row="1" Grid.Column="1" x:Name="NameInput"
                      Style="{StaticResource SquaredTextBox}"
-                     Text="{Binding User.Name}" />
+                     Text="{Binding User.Name}"
+                     ToolTip="Unesite ime" />
 
             <Label Grid.Row="2" Grid.Column="0" Content="Prezime:"
                    Style="{StaticResource LeftLabel}" />
             <TextBox Grid.Row="2" Grid.Column="1" x:Name="SurnameInput"
                      Style="{StaticResource SquaredTextBox}"
-                     Text="{Binding User.Surname}" />
+                     Text="{Binding User.Surname}"
+                     ToolTip="Unesite prezime" />
 
             <Label Grid.Row="3" Grid.Column="0" Content="Email:"
                    Style="{StaticResource LeftLabel}" />
             <TextBox Grid.Row="3" Grid.Column="1" x:Name="Email"
                      Style="{StaticResource SquaredTextBox}"
-                     Text="{Binding User.Email}" />
+                     Text="{Binding User.Email}"
+                     ToolTip="Unesite email" />
 
             <Label Grid.Row="4" Grid.Column="0" Content="Lozinka:"
                    Style="{StaticResource LeftLabel}" />
-            <PasswordBox Grid.Row="4" Grid.Column="1" Name="PasswordBox" 
+            <PasswordBox Grid.Row="4" Grid.Column="1" Name="PasswordBox"
                          Style="{StaticResource RegistrationPasswordBoxStyle}"
-                         Password="{Binding User.Password}"/>
+                         Password="{Binding User.Password}"
+                         ToolTip="Unesite lozinku" />
 
             <Label Grid.Row="5" Grid.Column="0" Content="Datum rodjenja:"
                    Style="{StaticResource LeftLabel}" />
             <DatePicker Grid.Row="5" Grid.Column="1" x:Name="ToInput"
                         Style="{StaticResource RoundedDatePicker}"
-                        SelectedDate="{Binding User.Birthdate}"/>
+                        SelectedDate="{Binding User.Birthdate}"
+                        ToolTip="Unesite datum rodjenja" />
 
             <Grid Grid.Row="6" Grid.Column="0" ColumnSpan="2"
                   VerticalAlignment="Bottom">
@@ -87,7 +90,8 @@
                     <ColumnDefinition Width="25*" />
                 </Grid.ColumnDefinitions>
                 <Button Grid.Column="2" Content="Potvrdi" Click="ButtonBase_OnClick" Margin="5"
-                        Style="{StaticResource CustomButtonStyle}" />
+                        Style="{StaticResource CustomButtonStyle}"
+                        ToolTip="Klikom na ovo dugme potvrdjujete registraciju vaseg profila" />
             </Grid>
         </Grid>
     </Grid>
