@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Windows;
 using System.Windows.Controls;
@@ -25,6 +26,7 @@ namespace HCI_big_project.view
             _user = user;
             InitializeComponent();
             this.DataContext = this;
+            StepProgressBar.Value = 1;
             InitListBoxes();
         }
 
@@ -73,25 +75,6 @@ namespace HCI_big_project.view
     
             GMapProvider.WebProxy = WebRequest.GetSystemWebProxy();
             GMapProvider.WebProxy.Credentials = CredentialCache.DefaultCredentials;
-    
-            // foreach (Location l in AttractionsLocations)
-            // {
-            //     GMapMarker marker = new GMapMarker(new PointLatLng(l.Latitude, l.Longitude));
-            //     BitmapImage bi = new BitmapImage();
-            //     bi.BeginInit();
-            //     bi.UriSource = new Uri("pack://application:,,,/Images/redPin.png");
-            //     bi.EndInit();
-            //     Image pinImage = new Image();
-            //     pinImage.Source = bi;
-            //     pinImage.Width = 50; // Adjust as needed
-            //     pinImage.Height = 50; // Adjust as needed
-            //     pinImage.ToolTip = l.Address + " " + l.City;
-            //
-            //     ToolTipService.SetShowDuration(pinImage, Int32.MaxValue);
-            //     ToolTipService.SetInitialShowDelay(pinImage, 0);
-            //     marker.Shape = pinImage;
-            //     gmap.Markers.Add(marker);
-            // }
         }
 
         private void MapControl_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -104,12 +87,51 @@ namespace HCI_big_project.view
         
         private void NextButton1_Click(object sender, RoutedEventArgs e)
         {
-            Step1.Visibility = Visibility.Collapsed;
-            Step2.Visibility = Visibility.Visible;
 
-            // Update progress
-            StepLabel.Content = "Korak 2 od 4";
-            StepProgressBar.Value = 2;
+            if (!ValidateStep1())
+            {
+                CustomDialogWindow.Show("Popunite sve podatke! Sva polja su obavezna!");
+            }
+            else
+            {
+                Step1.Visibility = Visibility.Collapsed;
+                Step2.Visibility = Visibility.Visible;   
+                StepLabel.Content = "Korak 2 od 4";
+                StepProgressBar.Value = 2;
+            }
+        }
+
+        private bool ValidateStep1()
+        {
+            if (NameInput.Text.Length==0  )
+            {
+                CustomDialogWindow.Show("Niste popunili podatke za naziv putovanja! Sva polja su obavezna!");
+                return false;
+            }
+            else if (FormInput.SelectedDate == null)
+            {
+                CustomDialogWindow.Show("Niste izabrali datum pocetka putovanja! Sva polja su obavezna!");
+                return false;
+            }
+            else if (ToInput.SelectedDate == null)
+            {
+                CustomDialogWindow.Show("Niste izabrali datum kraja putovanja! Sva polja su obavezna!");
+                return false;
+            }
+            else if(CaptionInput.Text.Length==0)
+            {
+                CustomDialogWindow.Show("Niste popunili podatke za opis putovanja! Sva polja su obavezna!");
+                return false;
+            }
+            else if(PriceInput.Text.Length==0)
+            {
+                CustomDialogWindow.Show("Niste popunili podatke za cenu putovanja! Sva polja su obavezna!");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         private void BackButton2_Click(object sender, RoutedEventArgs e)
@@ -124,12 +146,18 @@ namespace HCI_big_project.view
 
         private void NextButton2_Click(object sender, RoutedEventArgs e)
         {
-            Step2.Visibility = Visibility.Collapsed;
-            Step3.Visibility = Visibility.Visible;
-
-            // Update progress
-            StepLabel.Content = "Korak 3 od 4";
-            StepProgressBar.Value = 3;
+            if (ChosenAttractionListBox.Items.Count==0)
+            {
+                CustomDialogWindow.Show("Niste prevukli zeljene atrakcije! Minimalno morate previci jednu atrakciju!");
+            }
+            else
+            {
+                Step2.Visibility = Visibility.Collapsed;
+                Step3.Visibility = Visibility.Visible;
+                StepLabel.Content = "Korak 3 od 4";
+                StepProgressBar.Value = 3;
+            }
+            
         }
 
         private void BackButton3_Click(object sender, RoutedEventArgs e)
@@ -142,16 +170,19 @@ namespace HCI_big_project.view
             StepProgressBar.Value = 2;
         }
 
-        // ...
-
         private void NextButton3_Click(object sender, RoutedEventArgs e)
         {
-            Step3.Visibility = Visibility.Collapsed;
-            Step4.Visibility = Visibility.Visible;
-
-            // Update progress
-            StepLabel.Content = "Korak 4 od 4";
-            StepProgressBar.Value = 4;
+            if (ChosenAccommodationsListBox.Items.Count==0)
+            {
+                CustomDialogWindow.Show("Niste prevukli zeljene smestaje! Minimalno morate previci jedan smestaj!");
+            }
+            else
+            {
+                Step3.Visibility = Visibility.Collapsed;
+                Step4.Visibility = Visibility.Visible;
+                StepLabel.Content = "Korak 4 od 4";
+                StepProgressBar.Value = 4;
+            }
         }
 
         private void BackButton4_Click(object sender, RoutedEventArgs e)
@@ -307,17 +338,75 @@ namespace HCI_big_project.view
 
         private void NextButton4_Click(object sender, RoutedEventArgs e)
         {
-            CustomYesNoDialog dialog = new CustomYesNoDialog("Da li ste sigurni da želite da potvrdite dodavanje novog putovanja?" );
-            bool? result = dialog.ShowDialog();
-
-            if (result == true)
+            if (ChosenRestaurantsListBox.Items.Count==0)
             {
-                // dodaj novo
+                CustomDialogWindow.Show("Niste prevukli zeljene restorane! Minimalno morate previci jedan restoran!");
             }
             else
             {
-                // No was clicked, do something else
+                CustomYesNoDialog dialog = new CustomYesNoDialog("Da li ste sigurni da želite da potvrdite dodavanje novog putovanja?" );
+                bool? result = dialog.ShowDialog();
+
+                if (result == true)
+                {
+                    PopulateData();
+                    TripService tripService = new TripService(new TripRepository());
+                    tripService.AddNewTrip(Trip);
+                    TripsWindow tripsWindow = new TripsWindow(_user);
+                    tripsWindow.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    TripsWindow tripsWindow = new TripsWindow(_user);
+                    tripsWindow.Show();
+                    this.Hide();
+                }
             }
+            
+            
+        }
+
+        private void PopulateData()
+        {
+            List<Attraction> attractions = new List<Attraction>();
+
+            foreach (var item in ChosenAttractionListBox.Items)
+            {
+                Attraction attraction = item as Attraction;
+                if (attraction != null)
+                {
+                    attractions.Add(attraction);
+                }
+            }
+            
+            List<Accommodation> accommodations = new List<Accommodation>();
+
+            foreach (var item in ChosenAccommodationsListBox.Items)
+            {
+                Accommodation accommodation = item as Accommodation;
+
+                if (accommodation != null)
+                {
+                    accommodations.Add(accommodation);
+                }
+            }
+            List<Restaurant> restaurants = new List<Restaurant>();
+            foreach (var item in ChosenRestaurantsListBox.Items)
+            {
+                Restaurant restaurant = item as Restaurant;
+
+                if (restaurant != null)
+                {
+                    restaurants.Add(restaurant);
+                }
+            }
+
+            Trip.Accommodations = accommodations;
+            Trip.Attractions = attractions;
+            Trip.Restaurants = restaurants;
+            Trip.State = State.Ponuda;
+            MessageBox.Show(Trip.ToString());
         }
     }
 }

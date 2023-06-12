@@ -29,9 +29,9 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" Background="#F2F2F2" MinWidth="200">
                 <Label Style="{StaticResource CustomLabelStyle}" FontSize="25" FontWeight="Bold"
-                       Content="Izvestaji"></Label>
+                       Content="Izveštaji"></Label>
             </Grid>
-            <Grid Grid.Row="1" x:Name="Grid2">
+            <Grid Grid.Row="1" x:Name="Grid2" MaxWidth="500">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="30*"/>
                     <ColumnDefinition Width="70*"/>
@@ -43,7 +43,7 @@
                 </ComboBox>
             </Grid>
             <ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="Auto" 
-                          VerticalScrollBarVisibility="Auto">
+                          VerticalScrollBarVisibility="Auto" MaxWidth="500">
                 <Grid Grid.Row="1" x:Name="Grid3">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="30*"/>
@@ -51,22 +51,33 @@
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="20*"/>
-                        <RowDefinition Height="80*"/>
+                        <RowDefinition Height="40*"/>
+                        <RowDefinition Height="40*"/>
                     </Grid.RowDefinitions>
                     <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource CustomLabelStyle}" 
-                           Content="Putovanje:" FontSize="17"/>
+                           Content="Putovanje:" FontSize="17" x:Name="Label1"/>
                     <ComboBox Grid.Row="0" Grid.Column="1" Width="Auto" Height="30" x:Name="TripsBox"
                               Style="{StaticResource ComboBoxStyle}" SelectionChanged="Trips_SelectionChanged">
                     </ComboBox>
-                    <lvc:CartesianChart Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"  Series="{Binding SeriesCollection}" 
-                                        LegendLocation="Right">
+                    <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource CustomLabelStyle}" 
+                           Content="Mesec:" FontSize="17" x:Name="Label2"/>
+                    <DatePicker Grid.Row="0" Grid.Column="1" Width="Auto" Height="30" x:Name="DatePicker"
+                              SelectedDateChanged="ChangedDate">
+                    </DatePicker>
+                    <lvc:CartesianChart Grid.Column="0" Grid.Row="1" MinHeight="200" Grid.ColumnSpan="2"
+                                        Series="{Binding SeriesCollection}"
+                                        LegendLocation="Right"
+                                        x:Name="Chart">
                         <lvc:CartesianChart.AxisX>
-                            <lvc:Axis Title="Sales Man" Labels="{Binding Labels}"></lvc:Axis>
+                            <lvc:Axis Labels="{Binding Labels}"></lvc:Axis>
                         </lvc:CartesianChart.AxisX>
                         <lvc:CartesianChart.AxisY>
-                            <lvc:Axis Title="Sold Apps"></lvc:Axis>
+                            <lvc:Axis></lvc:Axis>
                         </lvc:CartesianChart.AxisY>
                     </lvc:CartesianChart>
+                    <ScrollViewer Grid.Column="0" Grid.Row="2" MinHeight="200" Grid.ColumnSpan="2">
+                        <WrapPanel x:Name="Panel" Orientation="Horizontal"></WrapPanel>
+                    </ScrollViewer>
                 </Grid>
             </ScrollViewer>
         </Grid>

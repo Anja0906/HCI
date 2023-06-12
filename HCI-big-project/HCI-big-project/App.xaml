@@ -108,6 +108,24 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        
+        <Style x:Key="RegistrationPasswordBoxStyle" TargetType="PasswordBox">
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type PasswordBox}">
+                        <Border x:Name="border" Background="White" BorderBrush="#4EBE60" BorderThickness="2">
+                            <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Password" Value="">
+                                <Setter TargetName="border" Property="BorderBrush" Value="Red"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
 
         <Style x:Key="CustomLabelStyle" TargetType="Label">
             <Setter Property="Foreground" Value="#4EBE60" />
@@ -387,9 +405,7 @@
         </Style>
 
         <Style x:Key="ComboBoxStyle" TargetType="ComboBox">
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="Background" Value="#4EBE60"/>
-            <Setter Property="BorderBrush" Value="#4EBE60"/>
+            <Setter Property="Foreground" Value="#4EBE60"/>
             <Setter Property="FontSize" Value="15"/>
         </Style>
         <Style TargetType="ComboBoxItem" x:Key="ComboBoxItemStyle">

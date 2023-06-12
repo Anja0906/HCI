@@ -10,15 +10,16 @@
              MouseLeftButtonDown="Card_MouseLeftButtonDown"
              MouseEnter="TripsOverviewCard_OnMouseEnter"
              MouseLeave="TripsOverviewCard_OnMouseLeave">
-    <Border x:Name="Border" Background="#D9D9D9" Padding="10" Margin="10" CornerRadius="15" Width="200" Height="Auto">
+    <Border x:Name="Border" Background="#D9D9D9" Padding="10" Margin="10" 
+            CornerRadius="15" Width="230" Height="Auto"
+            ToolTip="Klikni da saznas vise!">
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="60"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="70"/>
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" x:Name="NameLabel" TextWrapping="Wrap" Foreground="#4EBE60" FontSize="18" VerticalAlignment="Center" >NAZIV:</TextBlock>
             <TextBlock Grid.Row="1" x:Name="DescriptionLabel" TextWrapping="Wrap" Foreground="#4EBE60" FontSize="18" VerticalAlignment="Center">OPIS:</TextBlock>
-
         </Grid>
     </Border>
 </UserControl>

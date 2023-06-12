@@ -56,5 +56,12 @@ namespace HCI_big_project
         {
             this.DragMove();
         }
+
+        private void RegistrationButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            RegistrationWindow userMainWindow = new RegistrationWindow();
+            userMainWindow.Show();
+            this.Hide();
+        }
     }
 }

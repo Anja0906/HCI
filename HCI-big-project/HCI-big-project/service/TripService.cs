@@ -68,6 +68,11 @@ namespace HCI_big_project.service
             return purchasedByTrip;
         }
 
+        public Trip FindTripByName(string name)
+        {
+            return _tripRepository.FindTripByName(name);
+        }
+
         public List<Trip> GetPurchasedTripsForSpecificTrip(string tripName)
         {
             return _tripRepository.GetAllTrips().Where(trip => trip.State == State.Kupljen && trip.Name.ToLower().Trim() == tripName.ToLower().Trim()).ToList();

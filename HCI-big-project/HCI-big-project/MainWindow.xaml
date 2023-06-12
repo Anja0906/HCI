@@ -15,13 +15,17 @@
 
 		<Grid Grid.Column="0" Background="#4EBE60">
 			<Grid.RowDefinitions>
-				<RowDefinition Height="60*"/>
-				<RowDefinition Height="20*"/>
-				<RowDefinition Height="20*"/>
+				<RowDefinition Height="40*"/>
+				<RowDefinition Height="15*"/>
+				<RowDefinition Height="15*"/>
+				<RowDefinition Height="30*"/>
 			</Grid.RowDefinitions>
 			<Image Grid.Row="0" Source="../res/logo.png" Height="Auto" MaxHeight="200" Width="Auto" Stretch="Uniform" Margin="0,0,0,40"/>
 			<TextBlock Grid.Row="1" Text="Dobrodošli!" Style="{StaticResource H1}" />
 			<TextBlock Grid.Row="2" Text="Molimo Vas da se ulogujete!" Style="{StaticResource H2}"/>
+			<Button Grid.Row="3" Click="RegistrationButton_OnClick"
+			        Style="{StaticResource CustomWhiteButtonStyle}"
+			        Width="150" Height="40" Content="Registruj se" />
 		</Grid>
 
 		<Grid Grid.Column="1" Background="White">

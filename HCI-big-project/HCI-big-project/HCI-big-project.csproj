@@ -141,6 +141,9 @@
     <Compile Include="userControls\SideMenu.xaml.cs">
       <DependentUpon>SideMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="userControls\TripsCount.xaml.cs">
+      <DependentUpon>TripsCount.xaml</DependentUpon>
+    </Compile>
     <Compile Include="utils\ListHandler.cs" />
     <Compile Include="view\AccomodationDetailsWidow.xaml.cs">
       <DependentUpon>AccomodationDetailsWidow.xaml</DependentUpon>
@@ -193,6 +196,9 @@
     <Compile Include="view\NewTripWindow.xaml.cs">
       <DependentUpon>NewTripWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="view\RegistrationWindow.xaml.cs">
+      <DependentUpon>RegistrationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view\ReportsWindow.xaml.cs">
       <DependentUpon>ReportsWindow.xaml</DependentUpon>
     </Compile>
@@ -234,6 +240,7 @@
     <Page Include="userControls\Card.xaml" />
     <Page Include="userControls\RestaurantCard.xaml" />
     <Page Include="userControls\SideMenu.xaml" />
+    <Page Include="userControls\TripsCount.xaml" />
     <Page Include="view\AccomodationDetailsWidow.xaml" />
     <Page Include="view\AccomodationsWindow.xaml" />
     <Page Include="view\AdminMainWindow.xaml" />
@@ -257,6 +264,7 @@
     <Page Include="view\NewAttractionWindow.xaml" />
     <Page Include="view\NewRestaurantWindow.xaml" />
     <Page Include="view\NewTripWindow.xaml" />
+    <Page Include="view\RegistrationWindow.xaml" />
     <Page Include="view\ReportsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

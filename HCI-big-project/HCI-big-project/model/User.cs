@@ -9,7 +9,6 @@ namespace HCI_big_project.model
         public string Email { get; set; }
         public string Password { get; set; }
         public DateTime Birthdate { get; set; }
-        
         public Role Role { get; set; }
 
         public User() {}

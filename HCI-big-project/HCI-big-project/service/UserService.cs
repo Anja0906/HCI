@@ -22,6 +22,14 @@ namespace HCI_big_project.service
             if (user == null) throw new NullReferenceException("Uneti korisnik ne postoji u sistemu!");
             return user;
         }
+        
+        public void AddNewUser(User user)
+        {
+            if (user == null) throw new ArgumentNullException("Nazalost niste se pravilno registrovali!");
+            var users = _userRepository.GetAllUsers();
+            users.Add(user);
+            _userRepository.SaveAll();
+        }
 
     }
 }
