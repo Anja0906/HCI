@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="AccomodationsWindow" Height="430" Width="750"
         WindowStartupLocation="CenterScreen"
-        WindowStyle="None"
         MinWidth="400"
         Loaded="AccomodationsWindow_OnLoaded">
     <Grid>

@@ -14,17 +14,13 @@ namespace HCI_big_project.view
         public RegistrationWindow()
         {
             User = new User();
+            DataContext = this;
             InitializeComponent();
-        }
-        
-        private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            this.DragMove();
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(User.ToString());
+              
         }
     }
 }

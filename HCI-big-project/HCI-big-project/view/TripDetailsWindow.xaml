@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="TripDetailsWindow" Height="430" Width="750"
         WindowStartupLocation="CenterScreen"
-        WindowStyle="None"
+         
         MinWidth="400"
         Loaded="Window_OnLoaded">
     <Grid>
@@ -218,10 +218,12 @@
                         <Button Grid.Column="1" Style="{StaticResource CustomButtonStyle}" 
                                 Content="UREDI" 
                                 MaxHeight="35"
+                                Click="Uredi_Click"
                                 ToolTip="Klikom na ovo dugme mozete urediti prikazano putovanje"/>
                         <Button Grid.Column="3" Style="{StaticResource CustomButtonStyle}" 
                                 Content="OBRIŠI" 
                                 MaxHeight="35"
+                                Click="Obrisi_Click"
                                 ToolTip="Klikom na ovo dugme mozete obrisati prikazano putovanje"/>
                     </Grid>
 

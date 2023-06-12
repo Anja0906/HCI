@@ -118,13 +118,25 @@ namespace HCI_big_project.view
                 {
                     CustomDialogWindow.Show("Morate uneti naziv smestaja!");
                 }
+                else if (NameInput.Text.Length>30)
+                {
+                    CustomDialogWindow.Show("Naziv smestaja sadrzi previse karaktera!");
+                }
                 else if (AddressInput.Text.Length==0)
                 {
                     CustomDialogWindow.Show("Morate uneti adresu smestaja!");
                 }
+                else if (AddressInput.Text.Length>30)
+                {
+                    CustomDialogWindow.Show("Adresa smestaja sadrzi previse karaktera!");
+                }
                 else if (CaptionInput.Text.Length==0)
                 {
                     CustomDialogWindow.Show("Morate uneti opis smestaja!");
+                }
+                else if (CaptionInput.Text.Length>100)
+                {
+                    CustomDialogWindow.Show("Opis smestaja sadrzi previse karaktera!");
                 }
                 else if (RatingInput.Text.Length==0)
                 {
@@ -133,6 +145,10 @@ namespace HCI_big_project.view
                 else if (LinkInput.Text.Length==0)
                 {
                     CustomDialogWindow.Show("Morate uneti link do smestaja!");
+                }
+                else if (LinkInput.Text.Length>30)
+                {
+                    CustomDialogWindow.Show("Link do stranice smestaja sadrzi previse karaktera!");
                 }
                 else
                 {

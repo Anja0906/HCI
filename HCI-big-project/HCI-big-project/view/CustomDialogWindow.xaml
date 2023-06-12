@@ -6,7 +6,7 @@
         mc:Ignorable="d"
         Title="CustomDialogWindow" Height="250" Width="250"
         WindowStartupLocation="CenterScreen"
-        WindowStyle="None"
+         
         Background="White">
     <Grid Margin="10">
         <Grid.RowDefinitions>

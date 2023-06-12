@@ -36,12 +36,8 @@ C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\HCI_big_proj
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\userControls\SideMenu.baml
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\App.baml
-C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\UserMainWindow.g.cs
-C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\UserMainWindow.baml
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\CustomDialogWindow.g.cs
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\CustomDialogWindow.baml
-C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\AdminMainWindow.g.cs
-C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\AdminMainWindow.baml
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\bin\Debug\AjaxMin.dll
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\bin\Debug\EntityFramework.dll
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\bin\Debug\EntityFramework.SqlServer.dll
@@ -72,8 +68,6 @@ C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\CustomY
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\CustomYesNoDialog.baml
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\NewTripWindow.g.cs
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\NewTripWindow.baml
-C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\NewAttraction.g.cs
-C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\NewAttraction.baml
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\userControls\AttractionCard.g.cs
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\AttractionsWindow.g.cs
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\userControls\AttractionCard.baml

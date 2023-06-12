@@ -5,7 +5,6 @@
         Title="MainWindow" Height="430" Width="750"
         WindowStartupLocation="CenterScreen"
         Background="Transparent"
-        WindowStyle="None"
         MouseLeftButtonDown="Grid_MouseLeftButtonDown">
     <Grid>
         <Grid.ColumnDefinitions>

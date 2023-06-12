@@ -118,9 +118,17 @@ namespace HCI_big_project.view
                 {
                     CustomDialogWindow.Show("Morate uneti naziv atrakcije!");
                 }
+                else if (NameInput.Text.Length>30)
+                {
+                    CustomDialogWindow.Show("Naziv atrakcije sadrzi previse karaktera!");
+                }
                 else if (CaptionInput.Text.Length==0)
                 {
                     CustomDialogWindow.Show("Morate uneti opis atrakcije!");
+                }
+                else if (NameInput.Text.Length>100)
+                {
+                    CustomDialogWindow.Show("Opis atrakcije sadrzi previse karaktera!");
                 }
                 else
                 {

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="RegistrationWindow" Height="430" Width="750"
         WindowStartupLocation="CenterScreen"
-        WindowStyle="None">
+         >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50*" />

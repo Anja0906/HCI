@@ -12,7 +12,7 @@ using HCI_big_project.service;
 
 namespace HCI_big_project.view
 {
-    public partial class NewTripWindow : Window
+    public partial class EditTripWindow1 : Window
     {
         private User _user;
 
@@ -21,12 +21,12 @@ namespace HCI_big_project.view
         private RestaurantService _restaurantService;
         private Trip Trip { get; set; }
         
-        public NewTripWindow(User user)
+        public EditTripWindow1(User user, Trip trip)
         {
             _user = user;
             InitializeComponent();
             this.DataContext = this;
-            Trip = new Trip();
+            Trip = trip;
             StepProgressBar.Value = 1;
             InitListBoxes();
         }
@@ -357,7 +357,7 @@ namespace HCI_big_project.view
                 {
                     PopulateData();
                     TripService tripService = new TripService(new TripRepository());
-                    tripService.AddNewTrip(Trip);
+                    tripService.UpdateTrip(Trip);
                     TripsWindow tripsWindow = new TripsWindow(_user);
                     tripsWindow.Show();
                     this.Hide();

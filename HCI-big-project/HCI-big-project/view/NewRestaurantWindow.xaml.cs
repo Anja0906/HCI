@@ -116,19 +116,31 @@ namespace HCI_big_project.view
             {
                 if (NameInput.Text.Length==0)
                 {
-                    CustomDialogWindow.Show("Morate uneti naziv smestaja!");
+                    CustomDialogWindow.Show("Morate uneti naziv restorana!");
+                }
+                else if (NameInput.Text.Length>30)
+                {
+                    CustomDialogWindow.Show("Naziv restorana sadrzi previse karaktera!");
                 }
                 else if (CaptionInput.Text.Length==0)
                 {
-                    CustomDialogWindow.Show("Morate uneti opis smestaja!");
+                    CustomDialogWindow.Show("Morate uneti opis restorana!");
+                }
+                else if (CaptionInput.Text.Length>100)
+                {
+                    CustomDialogWindow.Show("Opis restorana sadrzi previse karaktera!");
                 }
                 else if (LinkInput.Text.Length==0)
                 {
-                    CustomDialogWindow.Show("Morate uneti link do smestaja!");
+                    CustomDialogWindow.Show("Morate uneti link do restorana!");
+                }
+                else if (LinkInput.Text.Length>30)
+                {
+                    CustomDialogWindow.Show("Link do stranice restorana sadrzi previse karaktera!");
                 }
                 else
                 {
-                    CustomYesNoDialog dialog = new CustomYesNoDialog("Da li ste sigurni da želite da dodate uneti smestaj?");
+                    CustomYesNoDialog dialog = new CustomYesNoDialog("Da li ste sigurni da želite da dodate uneti restoran?");
                     bool? result = dialog.ShowDialog();
 
                     if (result == true)
@@ -156,7 +168,7 @@ namespace HCI_big_project.view
 
         private void Cancel_OnClick(object sender, RoutedEventArgs e)
         {
-            CustomYesNoDialog dialog = new CustomYesNoDialog("Da li ste sigurni da želite da odustanete od dodavanja smestaja? ");
+            CustomYesNoDialog dialog = new CustomYesNoDialog("Da li ste sigurni da želite da odustanete od dodavanja restorana? ");
             bool? result = dialog.ShowDialog();
 
             if (result == true)

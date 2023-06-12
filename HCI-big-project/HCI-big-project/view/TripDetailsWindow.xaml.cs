@@ -180,5 +180,32 @@ namespace HCI_big_project.view
                 // No was clicked, do something else
             }
         }
+
+        private void Uredi_Click(object sender, RoutedEventArgs e)
+        {
+            EditTripWindow1 editTripWindow = new EditTripWindow1(_user, Trip);
+            editTripWindow.Show();
+            this.Hide();
+        }
+
+        private void Obrisi_Click(object sender, RoutedEventArgs e)
+        {
+            CustomYesNoDialog dialog = new CustomYesNoDialog("Da li ste sigurni da želite da obrisete ovaj restoran?");
+            bool? result = dialog.ShowDialog();
+
+            if (result == true)
+            {
+                TripService tripService = new TripService(new TripRepository());
+                tripService.DeleteTripById(Trip.Id);
+                TripsWindow tripsWindow = new TripsWindow(_user);
+                tripsWindow.Show();
+                this.Hide();
+                
+            }
+            else
+            {
+                // No was clicked, do something else
+            }
+        }
     }
 }
