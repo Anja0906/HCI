@@ -15,7 +15,6 @@ namespace HelpSistem
         {
             InitializeComponent();
             string curDir = Directory.GetCurrentDirectory();
-            MessageBox.Show(curDir);
             string path = String.Format("../../html/{0}.html", key);
             if (!File.Exists(path))
             {
