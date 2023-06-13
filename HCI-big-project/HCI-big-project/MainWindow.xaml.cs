@@ -4,7 +4,9 @@ using HCI_big_project.repository;
 using HCI_big_project.service;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media;
 using HCI_big_project.view;
+using HelpSistem;
 
 namespace HCI_big_project
 {
@@ -30,6 +32,12 @@ namespace HCI_big_project
             {
                 CustomDialogWindow.Show(nullReferenceException.Message);
             }
+        }
+        
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            string helpKey = "StartWindowBANE";
+            HelpProvider.ShowHelp(helpKey, this);
         }
 
         private void OpenWindow(User user)
@@ -57,11 +65,12 @@ namespace HCI_big_project
             this.DragMove();
         }
 
-        private void RegistrationButton_OnClick(object sender, RoutedEventArgs e)
+        private void RegistrationClick(object sender, RoutedEventArgs e)
         {
-            RegistrationWindow userMainWindow = new RegistrationWindow();
-            userMainWindow.Show();
+            RegistrationWindow registrationWindow = new RegistrationWindow();
+            registrationWindow.Show();
             this.Hide();
         }
+        
     }
 }

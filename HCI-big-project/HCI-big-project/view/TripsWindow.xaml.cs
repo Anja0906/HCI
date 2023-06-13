@@ -11,6 +11,7 @@ using HCI_big_project.model;
 using HCI_big_project.repository;
 using HCI_big_project.service;
 using HCI_big_project.userControls;
+using HelpSistem;
 
 namespace HCI_big_project.view
 {
@@ -24,6 +25,20 @@ namespace HCI_big_project.view
             _user = user;
             Trips = _tripService.GetOfferedTrips();
             InitializeComponent();
+        }
+        
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            string helpKey = "PregledPutovanja";
+            if (_user.Role==Role.Administrator)
+            {
+                helpKey = "PregledPutovanjaUser";
+            }
+            else
+            {
+                helpKey = "PregledPutovanja";
+            }
+            HelpProvider.ShowHelp(helpKey, this);
         }
         
         private void Window_Loaded(object sender, RoutedEventArgs e)

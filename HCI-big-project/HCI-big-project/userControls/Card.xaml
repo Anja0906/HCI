@@ -7,6 +7,9 @@
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300"
              Loaded="Card_OnLoaded">
+    <UserControl.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Help" Executed="CommandBinding_Executed" />
+    </UserControl.CommandBindings>
     <Border Background="#D9D9D9" Padding="10" Margin="5" CornerRadius="15" Width="200" Height="Auto">
         <Grid>
             <Grid.RowDefinitions>

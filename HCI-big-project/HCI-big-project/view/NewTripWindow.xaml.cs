@@ -9,6 +9,7 @@ using GMap.NET.MapProviders;
 using HCI_big_project.model;
 using HCI_big_project.repository;
 using HCI_big_project.service;
+using HelpSistem;
 
 namespace HCI_big_project.view
 {
@@ -100,6 +101,28 @@ namespace HCI_big_project.view
                 StepLabel.Content = "Korak 2 od 4";
                 StepProgressBar.Value = 2;
             }
+        }
+        
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            string helpKey = "PravljenjeNovogPutovanja";
+            if (Step1.Visibility == Visibility.Visible)
+            {
+                helpKey = "PravljenjeNovogPutovanja";
+            }
+            if (Step2.Visibility == Visibility.Visible)
+            {
+                helpKey = "PravljenjeNovogPutovanjaKorak2";
+            }
+            if (Step3.Visibility == Visibility.Visible)
+            {
+                helpKey = "PravljenjeNovogPutovanjaKorak3";
+            }
+            if (Step4.Visibility == Visibility.Visible)
+            {
+                helpKey = "PravljenjeNovogPutovanjaKorak4";
+            }
+            HelpProvider.ShowHelp(helpKey, this);
         }
 
         private bool ValidateStep1()

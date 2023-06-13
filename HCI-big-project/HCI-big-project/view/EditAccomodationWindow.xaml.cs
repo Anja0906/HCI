@@ -13,6 +13,7 @@ using GMap.NET.WindowsPresentation;
 using HCI_big_project.model;
 using HCI_big_project.repository;
 using HCI_big_project.service;
+using HelpSistem;
 
 namespace HCI_big_project.view
 {
@@ -41,6 +42,11 @@ namespace HCI_big_project.view
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SelectedImage)));
                 }
             }
+        }
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            string helpKey = "UrediHotel";
+            HelpProvider.ShowHelp(helpKey, this);
         }
         public EditAccomodationWindow(User user, Accommodation accommodation)
         {

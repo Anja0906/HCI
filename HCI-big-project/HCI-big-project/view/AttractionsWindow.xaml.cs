@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using System.Windows;
+using System.Windows.Input;
 using HCI_big_project.model;
 using HCI_big_project.repository;
 using HCI_big_project.service;
 using HCI_big_project.userControls;
+using HelpSistem;
 
 namespace HCI_big_project.view
 {
@@ -31,6 +33,12 @@ namespace HCI_big_project.view
             {
                 Panel.Children.Add(new AttractionCard(attraction, _user));
             }
+        }
+        
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            string helpKey = "PregledAtrakcija";
+            HelpProvider.ShowHelp(helpKey, this);
         }
 
         private void AddAttraction_OnClick(object sender, RoutedEventArgs e)

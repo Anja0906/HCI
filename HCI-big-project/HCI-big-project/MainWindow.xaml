@@ -6,6 +6,9 @@
         WindowStartupLocation="CenterScreen"
         Background="Transparent"
         MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Help" Executed="CommandBinding_Executed" />
+    </Window.CommandBindings>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50*"/>
@@ -22,8 +25,8 @@
             <Image Grid.Row="0" Source="../res/logo.png" Height="Auto" MaxHeight="200" Width="Auto" Stretch="Uniform" Margin="0,0,0,40"/>
             <TextBlock Grid.Row="1" Text="Dobrodošli!" Style="{StaticResource H1}" />
             <TextBlock Grid.Row="2" Text="Molimo Vas da se ulogujete!" Style="{StaticResource H2}"/>
-            <Button Grid.Row="3" Click="RegistrationButton_OnClick"
-			        Style="{StaticResource CustomWhiteButtonStyle}"
+            <Button Grid.Row="3" Click="RegistrationClick"
+			        Style="{StaticResource CustomButtonStyle}"
 			        Width="150" Height="40" Content="Registruj se" />
         </Grid>
 

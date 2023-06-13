@@ -11,6 +11,7 @@ using HCI_big_project.model;
 using HCI_big_project.repository;
 using HCI_big_project.service;
 using HCI_big_project.userControls;
+using HelpSistem;
 using LiveCharts;
 using LiveCharts.Wpf;
 
@@ -36,6 +37,12 @@ namespace HCI_big_project.view
                 _seriesCollection = value;
                 OnPropertyChanged();
             }
+        }
+        
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            string helpKey = "StartWindowBANE";
+            HelpProvider.ShowHelp(helpKey, this);
         }
 
         public string[] Labels

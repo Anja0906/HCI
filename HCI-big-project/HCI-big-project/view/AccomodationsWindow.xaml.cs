@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using System.Windows;
+using System.Windows.Input;
 using HCI_big_project.model;
 using HCI_big_project.repository;
 using HCI_big_project.service;
 using HCI_big_project.userControls;
+using HelpSistem;
 
 namespace HCI_big_project.view
 {
@@ -17,6 +19,12 @@ namespace HCI_big_project.view
             _user = user;
             Accommodations = _accomodationService.GetAll();
             InitializeComponent();
+        }
+        
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            string helpKey = "PregledHotela";
+            HelpProvider.ShowHelp(helpKey, this);
         }
 
         private void AccomodationsWindow_OnLoaded(object sender, RoutedEventArgs e)

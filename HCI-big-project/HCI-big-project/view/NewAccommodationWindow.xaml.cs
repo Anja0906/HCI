@@ -13,6 +13,7 @@ using GMap.NET.WindowsPresentation;
 using HCI_big_project.model;
 using HCI_big_project.repository;
 using HCI_big_project.service;
+using HelpSistem;
 
 namespace HCI_big_project.view
 {
@@ -109,6 +110,11 @@ namespace HCI_big_project.view
             }
         }
 
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            string helpKey = "UrediHotel";
+            HelpProvider.ShowHelp(helpKey, this);
+        }
 
         private void Confirm_OnClick(object sender, RoutedEventArgs e)
         {

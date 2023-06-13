@@ -6,6 +6,9 @@
              mc:Ignorable="d"
              d:DesignHeight="Auto" d:DesignWidth="Auto"
              Background="#4EBE60">
+    <UserControl.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Help" Executed="CommandBinding_Executed" />
+    </UserControl.CommandBindings>
     <Grid>
         <Grid Background="#4EBE60">
             <Grid.RowDefinitions>

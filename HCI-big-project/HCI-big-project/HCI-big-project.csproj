@@ -111,6 +111,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Helper\HelpProvider.cs" />
+    <Compile Include="Helper\HelpViewer.xaml.cs" />
+    <Compile Include="Helper\JavaScriptControlHelper.cs" />
     <Compile Include="model\State.cs" />
     <Compile Include="repository\AccommodationRepository.cs" />
     <Compile Include="repository\AttractionRepository.cs" />
@@ -217,6 +220,7 @@
     <Compile Include="view\TripsWindow.xaml.cs">
       <DependentUpon>TripsWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Helper\HelpViewer.xaml" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -316,6 +320,58 @@
   <ItemGroup>
     <Resource Include="res\menuIcon.png" />
     <Resource Include="res\mapPin.png" />
+    <Content Include="html\DetaljanPregledAtrakcija.html" />
+    <Content Include="html\DetaljanPregledHotela.html" />
+    <Content Include="html\DetaljanPregledPutovanja.html" />
+    <Content Include="html\DetaljanPregledRestorana.html" />
+    <Content Include="html\KupiRezervisiSaznajVIseOPutovanju.html" />
+    <Content Include="html\KupljenaPutovanjaUser.html" />
+    <Content Include="html\PravljenjeNovogPutovanja.html" />
+    <Content Include="html\PravljenjeNovogPutovanjaKorak2.html" />
+    <Content Include="html\PravljenjeNovogPutovanjaKorak3.html" />
+    <Content Include="html\PravljenjeNovogPutovanjaKorak4.html" />
+    <Content Include="html\PregledAtrakcija.html" />
+    <Content Include="html\PregledHotela.html" />
+    <Content Include="html\PregledMapaPutovanje.html" />
+    <Content Include="html\PregledPutovanja.html" />
+    <Content Include="html\PregledPutovanjaUser.html" />
+    <Content Include="html\PregledRestorana.html" />
+    <Content Include="html\RezervisanaPutovanjaUser.html" />
+    <Content Include="html\SideBar.html" />
+    <Content Include="html\slike\DetaljanPregledPutovanja.png" />
+    <Content Include="html\slike\DetaljanPregledPutovanjaAdmin.png" />
+    <Content Include="html\slike\DetaljanPregledRestorana.png" />
+    <Content Include="html\slike\DetaljniPregledAtrakcije.png" />
+    <Content Include="html\slike\DetaljnoOputovnju.png" />
+    <Content Include="html\slike\HotelCard.png" />
+    <Content Include="html\slike\HotelMamaCita.png" />
+    <Content Include="html\slike\IzmenaAtrakcije.png" />
+    <Content Include="html\slike\IzmenaHotela.png" />
+    <Content Include="html\slike\IzmenaRestorana.png" />
+    <Content Include="html\slike\IzmendsaaHotela.png" />
+    <Content Include="html\slike\KarticaZaPutovanjeAdmin.png" />
+    <Content Include="html\slike\KreiranjePutovanjaKorak4.png" />
+    <Content Include="html\slike\KreiranjePutovanjeKorak1.png" />
+    <Content Include="html\slike\KreiranjePutovanjeKorak3.png" />
+    <Content Include="html\slike\KupljenaPutovanja.png" />
+    <Content Include="html\slike\Login.png" />
+    <Content Include="html\slike\Login1.png" />
+    <Content Include="html\slike\LoginPopUpNeuspeno.png" />
+    <Content Include="html\slike\MapaPutovanja.png" />
+    <Content Include="html\slike\NovaAtrakcija.png" />
+    <Content Include="html\slike\PravljenjeNovogPutovanjaKorak2.png" />
+    <Content Include="html\slike\PregledPutovanja.png" />
+    <Content Include="html\slike\PregledPutovanjaUser.png" />
+    <Content Include="html\slike\PregledPutovanjaUserCard.png" />
+    <Content Include="html\slike\PregledRestorana.png" />
+    <Content Include="html\slike\rezervisanaPutovanja.png" />
+    <Content Include="html\slike\Screenshot 2023-06-12 at 22.26.47.png" />
+    <Content Include="html\slike\SideBar.png" />
+    <Content Include="html\StartWindowBANE.html" />
+    <Content Include="html\style.css" />
+    <Content Include="html\UrediAtrakcije.html" />
+    <Content Include="html\UrediHotel.html" />
+    <Content Include="html\UrediRestoran.html" />
     <Content Include="res\ns.jpg" />
     <Resource Include="res\searchIcon.png" />
   </ItemGroup>

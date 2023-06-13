@@ -11,6 +11,7 @@ using GMap.NET.WindowsPresentation;
 using HCI_big_project.model;
 using HCI_big_project.repository;
 using HCI_big_project.service;
+using HelpSistem;
 
 namespace HCI_big_project.view
 {
@@ -30,6 +31,12 @@ namespace HCI_big_project.view
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             Menu.SetUserRole(_user);
+        }
+        
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            string helpKey = "PregledMapaPutovanje";
+            HelpProvider.ShowHelp(helpKey, this);
         }
         
         private void map_load(object sender, RoutedEventArgs e)

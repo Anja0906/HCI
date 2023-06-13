@@ -10,6 +10,7 @@ using HCI_big_project.model;
 using HCI_big_project.repository;
 using HCI_big_project.service;
 using HCI_big_project.userControls;
+using HelpSistem;
 
 namespace HCI_big_project.view
 {
@@ -32,6 +33,12 @@ namespace HCI_big_project.view
             {
                 Panel.Children.Add(new TripsOverviewCard(trip, _user));
             }
+        }
+        
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            string helpKey = "KupljenaPutovanjaUser";
+            HelpProvider.ShowHelp(helpKey, this);
         }
         
     }
