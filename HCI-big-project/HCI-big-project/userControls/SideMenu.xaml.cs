@@ -1,7 +1,9 @@
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using HCI_big_project.model;
 using HCI_big_project.view;
+using HelpSistem;
 
 namespace HCI_big_project.userControls
 {
@@ -11,6 +13,12 @@ namespace HCI_big_project.userControls
         public SideMenu()
         {
             InitializeComponent();
+        }
+        
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            string helpKey = "SideBar";
+            HelpProvider.ShowHelp(helpKey, Window.GetWindow(this));
         }
 
         public void SetUserRole(User user)

@@ -10,6 +10,9 @@
         WindowStartupLocation="CenterScreen"
         MinWidth="400"
         Loaded="Window_OnLoaded">
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Help" Executed="CommandBinding_Executed" />
+    </Window.CommandBindings>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30*" />

@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using HCI_big_project.repository;
 using HCI_big_project.service;
 using HCI_big_project.view;
+using HelpSistem;
 
 namespace HCI_big_project.userControls
 {
@@ -25,6 +26,12 @@ namespace HCI_big_project.userControls
             _user = user;
             this.DataContext = _trip;
             InitializeComponent();
+        }
+        
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            string helpKey = "KupiRezervisiSaznajVIseOPutovanju";
+            HelpProvider.ShowHelp(helpKey, Window.GetWindow(this));
         }
 
         private void Card_OnLoaded(object sender, RoutedEventArgs e)
@@ -67,25 +74,6 @@ namespace HCI_big_project.userControls
     
             GMapProvider.WebProxy = WebRequest.GetSystemWebProxy();
             GMapProvider.WebProxy.Credentials = CredentialCache.DefaultCredentials;
-    
-            // foreach (Attraction attraction in _trip.Attractions)
-            // {
-            //     GMapMarker marker = new GMapMarker(new PointLatLng(attraction.Address.Latitude, attraction.Address.Longitude));
-            //     BitmapImage bi = new BitmapImage();
-            //     bi.BeginInit();
-            //     bi.UriSource = new Uri("pack://application:,,,/Images/redPin.png");
-            //     bi.EndInit();
-            //     Image pinImage = new Image();
-            //     pinImage.Source = bi;
-            //     pinImage.Width = 50; // Adjust as needed
-            //     pinImage.Height = 50; // Adjust as needed
-            //     pinImage.ToolTip = attraction.Address;
-            //
-            //     ToolTipService.SetShowDuration(pinImage, Int32.MaxValue);
-            //     ToolTipService.SetInitialShowDelay(pinImage, 0);
-            //     marker.Shape = pinImage;
-            //     gmap.Markers.Add(marker);
-            // }
         }
 
         private void MapControl_MouseDoubleClick(object sender, MouseButtonEventArgs e)

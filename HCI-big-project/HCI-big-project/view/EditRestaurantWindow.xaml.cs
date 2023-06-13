@@ -13,6 +13,7 @@ using GMap.NET.WindowsPresentation;
 using HCI_big_project.model;
 using HCI_big_project.repository;
 using HCI_big_project.service;
+using HelpSistem;
 
 namespace HCI_big_project.view
 {
@@ -53,6 +54,12 @@ namespace HCI_big_project.view
                 SelectedImage = Images[0];
             }
             InitializeComponent();
+        }
+        
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            string helpKey = "UrediRestoran";
+            HelpProvider.ShowHelp(helpKey, this);
         }
 
         private void Window_OnLoaded(object sender, RoutedEventArgs e)

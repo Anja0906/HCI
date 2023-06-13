@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\App.xaml
-311783024297
-1-1444277194
-59-767079529
+32-1933989134
+53301820196
+621778835393
 25-1678255571
-MainWindow.xaml;userControls\AccomodationCard.xaml;userControls\AttractionCard.xaml;userControls\Card.xaml;userControls\RestaurantCard.xaml;userControls\SideMenu.xaml;userControls\TripsCount.xaml;view\AccomodationDetailsWidow.xaml;view\AccomodationsWindow.xaml;view\AttractionDetailsWindow.xaml;view\AttractionsWindow.xaml;view\BookedTripsWindow.xaml;view\BoughtTripsWindows.xaml;view\CustomDialogWindow.xaml;view\CustomYesNoDialog.xaml;view\EditAccomodationWindow.xaml;view\EditAttractionWindow.xaml;view\EditRestaurantWindow.xaml;view\EditTripWindow1.xaml;view\NewAccommodationWindow.xaml;view\NewAttractionWindow.xaml;view\NewRestaurantWindow.xaml;view\NewTripWindow.xaml;view\RegistrationWindow.xaml;view\ReportsWindow.xaml;view\RestaurantDetailsWindow.xaml;view\RestaurantsWindow.xaml;view\TripDetailsWindow.xaml;userControls\TripsOverviewCard.xaml;view\TripsMapWindow.xaml;view\TripsWindow.xaml;
+Helper\HelpViewer.xaml;MainWindow.xaml;userControls\AccomodationCard.xaml;userControls\AttractionCard.xaml;userControls\Card.xaml;userControls\RestaurantCard.xaml;userControls\SideMenu.xaml;userControls\TripsCount.xaml;view\AccomodationDetailsWidow.xaml;view\AccomodationsWindow.xaml;view\AttractionDetailsWindow.xaml;view\AttractionsWindow.xaml;view\BookedTripsWindow.xaml;view\BoughtTripsWindows.xaml;view\CustomDialogWindow.xaml;view\CustomYesNoDialog.xaml;view\EditAccomodationWindow.xaml;view\EditAttractionWindow.xaml;view\EditRestaurantWindow.xaml;view\EditTripWindow1.xaml;view\NewAccommodationWindow.xaml;view\NewAttractionWindow.xaml;view\NewRestaurantWindow.xaml;view\NewTripWindow.xaml;view\RegistrationWindow.xaml;view\ReportsWindow.xaml;view\RestaurantDetailsWindow.xaml;view\RestaurantsWindow.xaml;view\TripDetailsWindow.xaml;userControls\TripsOverviewCard.xaml;view\TripsMapWindow.xaml;view\TripsWindow.xaml;
 
-True
+False
 

@@ -9,6 +9,7 @@ using GMap.NET.MapProviders;
 using HCI_big_project.model;
 using HCI_big_project.repository;
 using HCI_big_project.service;
+using HelpSistem;
 
 namespace HCI_big_project.view
 {
@@ -29,6 +30,12 @@ namespace HCI_big_project.view
             Trip = trip;
             StepProgressBar.Value = 1;
             InitListBoxes();
+        }
+        
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            string helpKey = "PravljenjeNovogPutovanja";
+            HelpProvider.ShowHelp(helpKey, this);
         }
 
         private void InitListBoxes()

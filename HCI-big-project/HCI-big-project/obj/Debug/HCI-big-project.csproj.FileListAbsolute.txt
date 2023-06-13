@@ -224,3 +224,7 @@ D:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\obj\Debug\userControls\Tr
 D:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\RegistrationWindow.g.cs
 D:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\obj\Debug\userControls\TripsCount.baml
 D:\source\repos\cs\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\RegistrationWindow.baml
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\EditTripWindow1.g.cs
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\view\EditTripWindow1.baml
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\Helper\HelpViewer.baml
+C:\Users\ANJA\Desktop\HCI\HCI-big-project\HCI-big-project\obj\Debug\Helper\HelpViewer.g.cs
